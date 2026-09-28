@@ -1,0 +1,431 @@
+{
+  "aggregate": {
+    "num_trajectories": 8,
+    "normalized_accuracy": 0.0,
+    "average_cost": 0.0,
+    "average_tool_calls": 0.0,
+    "deep_search_usage_rate": 0.0,
+    "direct_answer_without_tool_rate": 0.0,
+    "invalid_action_rate": 1.0,
+    "episodes_with_invalid_action_rate": 1.0,
+    "truncation_rate": 0.0,
+    "tool_execution_errors": 0,
+    "termination_counts": {
+      "invalid_action": 8
+    }
+  },
+  "by_task_type": {
+    "list/filter": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 0.0,
+      "average_tool_calls": 0.0,
+      "deep_search_usage_rate": 0.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 1.0,
+      "episodes_with_invalid_action_rate": 1.0,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "invalid_action": 2
+      }
+    },
+    "multi-condition": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 0.0,
+      "average_tool_calls": 0.0,
+      "deep_search_usage_rate": 0.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 1.0,
+      "episodes_with_invalid_action_rate": 1.0,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "invalid_action": 2
+      }
+    },
+    "single-hop": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 0.0,
+      "average_tool_calls": 0.0,
+      "deep_search_usage_rate": 0.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 1.0,
+      "episodes_with_invalid_action_rate": 1.0,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "invalid_action": 2
+      }
+    },
+    "two-hop": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 0.0,
+      "average_tool_calls": 0.0,
+      "deep_search_usage_rate": 0.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 1.0,
+      "episodes_with_invalid_action_rate": 1.0,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "invalid_action": 2
+      }
+    }
+  },
+  "action_usage": {
+    "lookup": {
+      "count": 0,
+      "fraction": 0
+    },
+    "search": {
+      "count": 0,
+      "fraction": 0
+    },
+    "deep_search": {
+      "count": 0,
+      "fraction": 0
+    },
+    "direct_answer": {
+      "count": 0,
+      "fraction": 0
+    }
+  },
+  "tool_call_usage": {
+    "lookup": {
+      "count": 0,
+      "fraction": 0
+    },
+    "search": {
+      "count": 0,
+      "fraction": 0
+    },
+    "deep_search": {
+      "count": 0,
+      "fraction": 0
+    }
+  },
+  "first_action_counts": {
+    "no_executed_action": 8
+  },
+  "proposed_action_counts": {
+    "deep_search": 15,
+    "unparsed": 1
+  },
+  "first_proposed_action_counts": {
+    "deep_search": 7,
+    "unparsed": 1
+  },
+  "diagnostics": {
+    "episodes_with_identical_repeated_calls": [],
+    "list_like_string_answers": [],
+    "parse_error_counts": {
+      "Missing or extra arguments": 7,
+      "Invalid JSON: Expecting value: line 1 column 107 (char 106)": 1,
+      "query must be an object with table/where/select/reduce only": 7,
+      "Invalid field path": 1
+    }
+  },
+  "diversity": {
+    "task-032": {
+      "group_size": 2,
+      "unique_tool_sequences": 1,
+      "unique_final_answers": 0,
+      "missing_final_answers": 2,
+      "cost_variance": 0,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        }
+      ]
+    },
+    "task-033": {
+      "group_size": 2,
+      "unique_tool_sequences": 1,
+      "unique_final_answers": 0,
+      "missing_final_answers": 2,
+      "cost_variance": 0,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        }
+      ]
+    },
+    "task-000": {
+      "group_size": 2,
+      "unique_tool_sequences": 1,
+      "unique_final_answers": 0,
+      "missing_final_answers": 2,
+      "cost_variance": 0,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        }
+      ]
+    },
+    "task-001": {
+      "group_size": 2,
+      "unique_tool_sequences": 1,
+      "unique_final_answers": 0,
+      "missing_final_answers": 2,
+      "cost_variance": 0,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [],
+          "final_answer": null,
+          "cost": 0,
+          "termination_reason": "invalid_action"
+        }
+      ]
+    }
+  },
+  "task_level": [
+    {
+      "task_id": "task-032",
+      "task_type": "list/filter",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-032",
+      "task_type": "list/filter",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 1,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-033",
+      "task_type": "multi-condition",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-033",
+      "task_type": "multi-condition",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-000",
+      "task_type": "single-hop",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-000",
+      "task_type": "single-hop",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-001",
+      "task_type": "two-hop",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-001",
+      "task_type": "two-hop",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 0,
+      "number_of_tool_calls": 0,
+      "deep_search_used": false,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 2,
+      "action_attempts": 2,
+      "invalid_arguments": 2,
+      "repair_attempts": 1,
+      "tool_execution_errors": 0,
+      "tool_sequence": [],
+      "final_answer": null
+    }
+  ],
+  "run": {
+    "config": {
+      "policy": {
+        "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "device": "cpu",
+        "dtype": "float32",
+        "cpu_fallback": true,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_new_tokens": 192,
+        "max_context_tokens": 8192,
+        "do_sample": true,
+        "cache_dir": "../.hf-cache/hub",
+        "local_files_only": true,
+        "cpu_threads": 4
+      },
+      "rollout": {
+        "max_steps": 4,
+        "max_tool_calls": 3,
+        "max_parse_retries": 1,
+        "seed": 2026
+      },
+      "environment": {
+        "top_k": 5
+      },
+      "task_count": 4,
+      "group_size": 2,
+      "output_dir": "data/cpu_smoke",
+      "report_path": "reports/base_policy_analysis_cpu_smoke.md"
+    },
+    "runtime": {
+      "device": "cpu",
+      "dtype": "float32",
+      "torch_version": "2.8.0",
+      "transformers_version": "4.57.6",
+      "resolved_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "elapsed_seconds": 92.87887287139893,
+    "task_ids": [
+      "task-032",
+      "task-033",
+      "task-000",
+      "task-001"
+    ],
+    "kb_sha256": "fa01f5ceded2f75eb053df2045c147d48c0376dc1aee4ef22e44512bf3283775",
+    "public_tasks_sha256": "83cf8ea10d1b3643805a14443c2ec7566185e86674d718c7e65194cae1064c23",
+    "evaluation_tasks_sha256": "158385f6cf1afd615d65d0dca9f4656cf17e8210559f8ab3be7a340b00b139a9",
+    "prompt_sha256": "b57570547ef456b81c159ea6a04deae97ea69f1b7b59e82d6c55ce8ca6f81ec8",
+    "archive_note": "Initial prompt pilot. Preserved before adding explicit argument templates to the system prompt; not pooled with the final CPU smoke."
+  }
+}

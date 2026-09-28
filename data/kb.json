@@ -1,0 +1,933 @@
+{
+  "students": {
+    "s00": {
+      "id": "s00",
+      "name": "Student-00",
+      "advisor": "p03",
+      "year": 3,
+      "courses": [
+        "c01",
+        "c03",
+        "c06"
+      ],
+      "clubs": [
+        "b00",
+        "b03"
+      ],
+      "projects": []
+    },
+    "s01": {
+      "id": "s01",
+      "name": "Student-01",
+      "advisor": "p03",
+      "year": 1,
+      "courses": [
+        "c01",
+        "c04",
+        "c06"
+      ],
+      "clubs": [
+        "b00",
+        "b03"
+      ],
+      "projects": [
+        "j00",
+        "j03",
+        "j04"
+      ]
+    },
+    "s02": {
+      "id": "s02",
+      "name": "Student-02",
+      "advisor": "p03",
+      "year": 1,
+      "courses": [
+        "c02",
+        "c05",
+        "c06"
+      ],
+      "clubs": [
+        "b00",
+        "b02"
+      ],
+      "projects": []
+    },
+    "s03": {
+      "id": "s03",
+      "name": "Student-03",
+      "advisor": "p01",
+      "year": 1,
+      "courses": [
+        "c00",
+        "c04",
+        "c06"
+      ],
+      "clubs": [
+        "b02",
+        "b03"
+      ],
+      "projects": []
+    },
+    "s04": {
+      "id": "s04",
+      "name": "Student-04",
+      "advisor": "p00",
+      "year": 4,
+      "courses": [
+        "c00",
+        "c01",
+        "c05"
+      ],
+      "clubs": [
+        "b00",
+        "b03"
+      ],
+      "projects": [
+        "j03"
+      ]
+    },
+    "s05": {
+      "id": "s05",
+      "name": "Student-05",
+      "advisor": "p02",
+      "year": 2,
+      "courses": [
+        "c03",
+        "c04",
+        "c05"
+      ],
+      "clubs": [
+        "b01",
+        "b03"
+      ],
+      "projects": [
+        "j00"
+      ]
+    },
+    "s06": {
+      "id": "s06",
+      "name": "Student-06",
+      "advisor": "p04",
+      "year": 2,
+      "courses": [
+        "c04",
+        "c05",
+        "c06"
+      ],
+      "clubs": [
+        "b01"
+      ],
+      "projects": [
+        "j00",
+        "j03"
+      ]
+    },
+    "s07": {
+      "id": "s07",
+      "name": "Student-07",
+      "advisor": "p02",
+      "year": 1,
+      "courses": [
+        "c02",
+        "c03",
+        "c06"
+      ],
+      "clubs": [
+        "b01",
+        "b02"
+      ],
+      "projects": []
+    },
+    "s08": {
+      "id": "s08",
+      "name": "Student-08",
+      "advisor": "p00",
+      "year": 2,
+      "courses": [
+        "c00",
+        "c03",
+        "c06"
+      ],
+      "clubs": [
+        "b01",
+        "b03"
+      ],
+      "projects": [
+        "j01"
+      ]
+    },
+    "s09": {
+      "id": "s09",
+      "name": "Student-09",
+      "advisor": "p03",
+      "year": 2,
+      "courses": [
+        "c01",
+        "c05",
+        "c07"
+      ],
+      "clubs": [
+        "b02",
+        "b03"
+      ],
+      "projects": [
+        "j01",
+        "j03"
+      ]
+    },
+    "s10": {
+      "id": "s10",
+      "name": "Student-10",
+      "advisor": "p03",
+      "year": 3,
+      "courses": [
+        "c01",
+        "c04",
+        "c06"
+      ],
+      "clubs": [
+        "b02",
+        "b03"
+      ],
+      "projects": [
+        "j04"
+      ]
+    },
+    "s11": {
+      "id": "s11",
+      "name": "Student-11",
+      "advisor": "p00",
+      "year": 2,
+      "courses": [
+        "c01",
+        "c03",
+        "c04"
+      ],
+      "clubs": [
+        "b00",
+        "b03"
+      ],
+      "projects": []
+    },
+    "s12": {
+      "id": "s12",
+      "name": "Student-12",
+      "advisor": "p03",
+      "year": 4,
+      "courses": [
+        "c02",
+        "c05",
+        "c06"
+      ],
+      "clubs": [
+        "b00",
+        "b01"
+      ],
+      "projects": [
+        "j00",
+        "j01"
+      ]
+    },
+    "s13": {
+      "id": "s13",
+      "name": "Student-13",
+      "advisor": "p02",
+      "year": 1,
+      "courses": [
+        "c00",
+        "c04",
+        "c07"
+      ],
+      "clubs": [
+        "b02"
+      ],
+      "projects": []
+    },
+    "s14": {
+      "id": "s14",
+      "name": "Student-14",
+      "advisor": "p02",
+      "year": 2,
+      "courses": [
+        "c01",
+        "c03",
+        "c04"
+      ],
+      "clubs": [
+        "b00",
+        "b02"
+      ],
+      "projects": [
+        "j01"
+      ]
+    },
+    "s15": {
+      "id": "s15",
+      "name": "Student-15",
+      "advisor": "p02",
+      "year": 2,
+      "courses": [
+        "c01",
+        "c05",
+        "c06"
+      ],
+      "clubs": [
+        "b00",
+        "b01"
+      ],
+      "projects": []
+    },
+    "s16": {
+      "id": "s16",
+      "name": "Student-16",
+      "advisor": "p02",
+      "year": 3,
+      "courses": [
+        "c00",
+        "c02",
+        "c04"
+      ],
+      "clubs": [
+        "b00",
+        "b03"
+      ],
+      "projects": []
+    },
+    "s17": {
+      "id": "s17",
+      "name": "Student-17",
+      "advisor": "p03",
+      "year": 1,
+      "courses": [
+        "c00",
+        "c01",
+        "c03"
+      ],
+      "clubs": [
+        "b00"
+      ],
+      "projects": [
+        "j02"
+      ]
+    },
+    "s18": {
+      "id": "s18",
+      "name": "Student-18",
+      "advisor": "p04",
+      "year": 4,
+      "courses": [
+        "c01",
+        "c02",
+        "c05"
+      ],
+      "clubs": [
+        "b01",
+        "b03"
+      ],
+      "projects": [
+        "j03",
+        "j04"
+      ]
+    },
+    "s19": {
+      "id": "s19",
+      "name": "Student-19",
+      "advisor": "p03",
+      "year": 3,
+      "courses": [
+        "c03",
+        "c04",
+        "c05"
+      ],
+      "clubs": [
+        "b02"
+      ],
+      "projects": []
+    },
+    "s20": {
+      "id": "s20",
+      "name": "Student-20",
+      "advisor": "p01",
+      "year": 1,
+      "courses": [
+        "c03",
+        "c04",
+        "c07"
+      ],
+      "clubs": [
+        "b01"
+      ],
+      "projects": []
+    },
+    "s21": {
+      "id": "s21",
+      "name": "Student-21",
+      "advisor": "p00",
+      "year": 1,
+      "courses": [
+        "c00",
+        "c04",
+        "c05"
+      ],
+      "clubs": [
+        "b01"
+      ],
+      "projects": [
+        "j02"
+      ]
+    },
+    "s22": {
+      "id": "s22",
+      "name": "Student-22",
+      "advisor": "p00",
+      "year": 2,
+      "courses": [
+        "c00",
+        "c01",
+        "c07"
+      ],
+      "clubs": [
+        "b02"
+      ],
+      "projects": [
+        "j02"
+      ]
+    },
+    "s23": {
+      "id": "s23",
+      "name": "Student-23",
+      "advisor": "p04",
+      "year": 4,
+      "courses": [
+        "c03",
+        "c04",
+        "c05"
+      ],
+      "clubs": [
+        "b01"
+      ],
+      "projects": [
+        "j02",
+        "j04"
+      ]
+    },
+    "s24": {
+      "id": "s24",
+      "name": "Student-24",
+      "advisor": "p00",
+      "year": 4,
+      "courses": [
+        "c03",
+        "c06",
+        "c07"
+      ],
+      "clubs": [
+        "b00",
+        "b01"
+      ],
+      "projects": []
+    },
+    "s25": {
+      "id": "s25",
+      "name": "Student-25",
+      "advisor": "p00",
+      "year": 1,
+      "courses": [
+        "c03",
+        "c05",
+        "c06"
+      ],
+      "clubs": [
+        "b00",
+        "b02"
+      ],
+      "projects": [
+        "j01",
+        "j02"
+      ]
+    },
+    "s26": {
+      "id": "s26",
+      "name": "Student-26",
+      "advisor": "p01",
+      "year": 2,
+      "courses": [
+        "c02",
+        "c05",
+        "c06"
+      ],
+      "clubs": [
+        "b01"
+      ],
+      "projects": [
+        "j04"
+      ]
+    },
+    "s27": {
+      "id": "s27",
+      "name": "Student-27",
+      "advisor": "p03",
+      "year": 2,
+      "courses": [
+        "c01",
+        "c03",
+        "c07"
+      ],
+      "clubs": [
+        "b02"
+      ],
+      "projects": [
+        "j00",
+        "j01"
+      ]
+    },
+    "s28": {
+      "id": "s28",
+      "name": "Student-28",
+      "advisor": "p04",
+      "year": 1,
+      "courses": [
+        "c01",
+        "c03",
+        "c04"
+      ],
+      "clubs": [
+        "b00"
+      ],
+      "projects": [
+        "j00",
+        "j03"
+      ]
+    },
+    "s29": {
+      "id": "s29",
+      "name": "Student-29",
+      "advisor": "p03",
+      "year": 4,
+      "courses": [
+        "c01",
+        "c06",
+        "c07"
+      ],
+      "clubs": [
+        "b03"
+      ],
+      "projects": [
+        "j02",
+        "j04"
+      ]
+    }
+  },
+  "courses": {
+    "c00": {
+      "id": "c00",
+      "name": "Course-00",
+      "professor": "p00",
+      "credits": 4,
+      "students": [
+        "s03",
+        "s04",
+        "s08",
+        "s13",
+        "s16",
+        "s17",
+        "s21",
+        "s22"
+      ],
+      "schedule": "h00"
+    },
+    "c01": {
+      "id": "c01",
+      "name": "Course-01",
+      "professor": "p04",
+      "credits": 2,
+      "students": [
+        "s00",
+        "s01",
+        "s04",
+        "s09",
+        "s10",
+        "s11",
+        "s14",
+        "s15",
+        "s17",
+        "s18",
+        "s22",
+        "s27",
+        "s28",
+        "s29"
+      ],
+      "schedule": "h01"
+    },
+    "c02": {
+      "id": "c02",
+      "name": "Course-02",
+      "professor": "p04",
+      "credits": 3,
+      "students": [
+        "s02",
+        "s07",
+        "s12",
+        "s16",
+        "s18",
+        "s26"
+      ],
+      "schedule": "h02"
+    },
+    "c03": {
+      "id": "c03",
+      "name": "Course-03",
+      "professor": "p00",
+      "credits": 2,
+      "students": [
+        "s00",
+        "s05",
+        "s07",
+        "s08",
+        "s11",
+        "s14",
+        "s17",
+        "s19",
+        "s20",
+        "s23",
+        "s24",
+        "s25",
+        "s27",
+        "s28"
+      ],
+      "schedule": "h03"
+    },
+    "c04": {
+      "id": "c04",
+      "name": "Course-04",
+      "professor": "p00",
+      "credits": 2,
+      "students": [
+        "s01",
+        "s03",
+        "s05",
+        "s06",
+        "s10",
+        "s11",
+        "s13",
+        "s14",
+        "s16",
+        "s19",
+        "s20",
+        "s21",
+        "s23",
+        "s28"
+      ],
+      "schedule": "h04"
+    },
+    "c05": {
+      "id": "c05",
+      "name": "Course-05",
+      "professor": "p01",
+      "credits": 4,
+      "students": [
+        "s02",
+        "s04",
+        "s05",
+        "s06",
+        "s09",
+        "s12",
+        "s15",
+        "s18",
+        "s19",
+        "s21",
+        "s23",
+        "s25",
+        "s26"
+      ],
+      "schedule": "h05"
+    },
+    "c06": {
+      "id": "c06",
+      "name": "Course-06",
+      "professor": "p04",
+      "credits": 2,
+      "students": [
+        "s00",
+        "s01",
+        "s02",
+        "s03",
+        "s06",
+        "s07",
+        "s08",
+        "s10",
+        "s12",
+        "s15",
+        "s24",
+        "s25",
+        "s26",
+        "s29"
+      ],
+      "schedule": "h06"
+    },
+    "c07": {
+      "id": "c07",
+      "name": "Course-07",
+      "professor": "p04",
+      "credits": 2,
+      "students": [
+        "s09",
+        "s13",
+        "s20",
+        "s22",
+        "s24",
+        "s27",
+        "s29"
+      ],
+      "schedule": "h07"
+    }
+  },
+  "professors": {
+    "p00": {
+      "id": "p00",
+      "name": "Professor-00",
+      "department": "Ecology"
+    },
+    "p01": {
+      "id": "p01",
+      "name": "Professor-01",
+      "department": "Logic"
+    },
+    "p02": {
+      "id": "p02",
+      "name": "Professor-02",
+      "department": "Logic"
+    },
+    "p03": {
+      "id": "p03",
+      "name": "Professor-03",
+      "department": "Ecology"
+    },
+    "p04": {
+      "id": "p04",
+      "name": "Professor-04",
+      "department": "Robotics"
+    }
+  },
+  "projects": {
+    "j00": {
+      "id": "j00",
+      "name": "Project-00",
+      "professor": "p00",
+      "members": [
+        "s01",
+        "s05",
+        "s06",
+        "s12",
+        "s27",
+        "s28"
+      ]
+    },
+    "j01": {
+      "id": "j01",
+      "name": "Project-01",
+      "professor": "p03",
+      "members": [
+        "s08",
+        "s09",
+        "s12",
+        "s14",
+        "s25",
+        "s27"
+      ]
+    },
+    "j02": {
+      "id": "j02",
+      "name": "Project-02",
+      "professor": "p03",
+      "members": [
+        "s17",
+        "s21",
+        "s22",
+        "s23",
+        "s25",
+        "s29"
+      ]
+    },
+    "j03": {
+      "id": "j03",
+      "name": "Project-03",
+      "professor": "p04",
+      "members": [
+        "s01",
+        "s04",
+        "s06",
+        "s09",
+        "s18",
+        "s28"
+      ]
+    },
+    "j04": {
+      "id": "j04",
+      "name": "Project-04",
+      "professor": "p03",
+      "members": [
+        "s01",
+        "s10",
+        "s18",
+        "s23",
+        "s26",
+        "s29"
+      ]
+    }
+  },
+  "clubs": {
+    "b00": {
+      "id": "b00",
+      "name": "Club-00",
+      "members": [
+        "s00",
+        "s01",
+        "s02",
+        "s04",
+        "s11",
+        "s12",
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s24",
+        "s25",
+        "s28"
+      ]
+    },
+    "b01": {
+      "id": "b01",
+      "name": "Club-01",
+      "members": [
+        "s05",
+        "s06",
+        "s07",
+        "s08",
+        "s12",
+        "s15",
+        "s18",
+        "s20",
+        "s21",
+        "s23",
+        "s24",
+        "s26"
+      ]
+    },
+    "b02": {
+      "id": "b02",
+      "name": "Club-02",
+      "members": [
+        "s02",
+        "s03",
+        "s07",
+        "s09",
+        "s10",
+        "s13",
+        "s14",
+        "s19",
+        "s22",
+        "s25",
+        "s27"
+      ]
+    },
+    "b03": {
+      "id": "b03",
+      "name": "Club-03",
+      "members": [
+        "s00",
+        "s01",
+        "s03",
+        "s04",
+        "s05",
+        "s08",
+        "s09",
+        "s10",
+        "s11",
+        "s16",
+        "s18",
+        "s29"
+      ]
+    }
+  },
+  "schedules": {
+    "h00": {
+      "id": "h00",
+      "course": "c00",
+      "classroom": "r00",
+      "day": "Monday",
+      "time": "09:00"
+    },
+    "h01": {
+      "id": "h01",
+      "course": "c01",
+      "classroom": "r01",
+      "day": "Monday",
+      "time": "09:00"
+    },
+    "h02": {
+      "id": "h02",
+      "course": "c02",
+      "classroom": "r02",
+      "day": "Monday",
+      "time": "09:00"
+    },
+    "h03": {
+      "id": "h03",
+      "course": "c03",
+      "classroom": "r03",
+      "day": "Monday",
+      "time": "09:00"
+    },
+    "h04": {
+      "id": "h04",
+      "course": "c04",
+      "classroom": "r00",
+      "day": "Tuesday",
+      "time": "09:00"
+    },
+    "h05": {
+      "id": "h05",
+      "course": "c05",
+      "classroom": "r01",
+      "day": "Tuesday",
+      "time": "09:00"
+    },
+    "h06": {
+      "id": "h06",
+      "course": "c06",
+      "classroom": "r02",
+      "day": "Tuesday",
+      "time": "09:00"
+    },
+    "h07": {
+      "id": "h07",
+      "course": "c07",
+      "classroom": "r03",
+      "day": "Tuesday",
+      "time": "09:00"
+    }
+  },
+  "classrooms": {
+    "r00": {
+      "id": "r00",
+      "name": "Room-00",
+      "capacity": 30
+    },
+    "r01": {
+      "id": "r01",
+      "name": "Room-01",
+      "capacity": 30
+    },
+    "r02": {
+      "id": "r02",
+      "name": "Room-02",
+      "capacity": 30
+    },
+    "r03": {
+      "id": "r03",
+      "name": "Room-03",
+      "capacity": 60
+    }
+  }
+}

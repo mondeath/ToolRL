@@ -1,0 +1,530 @@
+{
+  "aggregate": {
+    "num_trajectories": 8,
+    "normalized_accuracy": 0.125,
+    "average_cost": 12.875,
+    "average_tool_calls": 2.125,
+    "deep_search_usage_rate": 1.0,
+    "direct_answer_without_tool_rate": 0.0,
+    "invalid_action_rate": 0.1111111111111111,
+    "episodes_with_invalid_action_rate": 0.125,
+    "truncation_rate": 0.125,
+    "tool_execution_errors": 3,
+    "termination_counts": {
+      "direct_answer": 6,
+      "max_tool_calls": 1,
+      "invalid_action": 1
+    }
+  },
+  "by_task_type": {
+    "list/filter": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 17.0,
+      "average_tool_calls": 2.5,
+      "deep_search_usage_rate": 1.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 0.0,
+      "episodes_with_invalid_action_rate": 0.0,
+      "truncation_rate": 0.5,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "direct_answer": 1,
+        "max_tool_calls": 1
+      }
+    },
+    "multi-condition": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 17.0,
+      "average_tool_calls": 2.5,
+      "deep_search_usage_rate": 1.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 0.0,
+      "episodes_with_invalid_action_rate": 0.0,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 3,
+      "termination_counts": {
+        "direct_answer": 2
+      }
+    },
+    "single-hop": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.0,
+      "average_cost": 8.5,
+      "average_tool_calls": 1.5,
+      "deep_search_usage_rate": 1.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 0.0,
+      "episodes_with_invalid_action_rate": 0.0,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "direct_answer": 2
+      }
+    },
+    "two-hop": {
+      "num_trajectories": 2,
+      "normalized_accuracy": 0.5,
+      "average_cost": 9.0,
+      "average_tool_calls": 2.0,
+      "deep_search_usage_rate": 1.0,
+      "direct_answer_without_tool_rate": 0.0,
+      "invalid_action_rate": 0.375,
+      "episodes_with_invalid_action_rate": 0.5,
+      "truncation_rate": 0.0,
+      "tool_execution_errors": 0,
+      "termination_counts": {
+        "invalid_action": 1,
+        "direct_answer": 1
+      }
+    }
+  },
+  "action_usage": {
+    "lookup": {
+      "count": 3,
+      "fraction": 0.13043478260869565
+    },
+    "search": {
+      "count": 2,
+      "fraction": 0.08695652173913043
+    },
+    "deep_search": {
+      "count": 12,
+      "fraction": 0.5217391304347826
+    },
+    "direct_answer": {
+      "count": 6,
+      "fraction": 0.2608695652173913
+    }
+  },
+  "tool_call_usage": {
+    "lookup": {
+      "count": 3,
+      "fraction": 0.17647058823529413
+    },
+    "search": {
+      "count": 2,
+      "fraction": 0.11764705882352941
+    },
+    "deep_search": {
+      "count": 12,
+      "fraction": 0.7058823529411765
+    }
+  },
+  "first_action_counts": {
+    "deep_search": 7,
+    "search": 1
+  },
+  "proposed_action_counts": {
+    "deep_search": 15,
+    "direct_answer": 6,
+    "search": 3,
+    "lookup": 3
+  },
+  "first_proposed_action_counts": {
+    "deep_search": 7,
+    "search": 1
+  },
+  "diagnostics": {
+    "episodes_with_identical_repeated_calls": [
+      {
+        "task_id": "task-032",
+        "rollout_id": 0,
+        "repeated_calls": 1
+      },
+      {
+        "task_id": "task-033",
+        "rollout_id": 0,
+        "repeated_calls": 1
+      }
+    ],
+    "list_like_string_answers": [
+      {
+        "task_id": "task-032",
+        "rollout_id": 0
+      },
+      {
+        "task_id": "task-033",
+        "rollout_id": 0
+      },
+      {
+        "task_id": "task-033",
+        "rollout_id": 1
+      },
+      {
+        "task_id": "task-000",
+        "rollout_id": 0
+      },
+      {
+        "task_id": "task-000",
+        "rollout_id": 1
+      }
+    ],
+    "parse_error_counts": {
+      "Invalid operator": 1,
+      "Unknown field for table: advisor_id": 1,
+      "Unknown table": 1
+    }
+  },
+  "diversity": {
+    "task-032": {
+      "group_size": 2,
+      "unique_tool_sequences": 2,
+      "unique_final_answers": 1,
+      "missing_final_answers": 1,
+      "cost_variance": 1,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [
+            "deep_search",
+            "deep_search",
+            "direct_answer"
+          ],
+          "final_answer": "[\"s01\", \"s02\", \"s03\", \"s07\", \"s13\", \"s17\", \"s20\", \"s21\", \"s25\", \"s28\"]",
+          "cost": 16,
+          "termination_reason": "direct_answer"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [
+            "deep_search",
+            "deep_search",
+            "search"
+          ],
+          "final_answer": null,
+          "cost": 18,
+          "termination_reason": "max_tool_calls"
+        }
+      ]
+    },
+    "task-033": {
+      "group_size": 2,
+      "unique_tool_sequences": 2,
+      "unique_final_answers": 2,
+      "missing_final_answers": 0,
+      "cost_variance": 1,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [
+            "search",
+            "deep_search",
+            "deep_search",
+            "direct_answer"
+          ],
+          "final_answer": "[\"student_id_1\", \"student_id_2\"]",
+          "cost": 18,
+          "termination_reason": "direct_answer"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [
+            "deep_search",
+            "deep_search",
+            "direct_answer"
+          ],
+          "final_answer": "[\"s00\", \"s01\", \"s02\", \"s03\", \"s04\", \"s05\", \"s06\", \"s07\", \"s08\", \"s09\", \"s10\", \"s11\", \"s12\", \"s13\", \"s14\", \"s15\", \"s16\", \"s17\", \"s18\", \"s19\", \"s20\", \"s21\", \"s22\", \"s23\", \"s24\", \"s25\", \"s26\", \"s27\", \"s28\", \"s29\"]",
+          "cost": 16,
+          "termination_reason": "direct_answer"
+        }
+      ]
+    },
+    "task-000": {
+      "group_size": 2,
+      "unique_tool_sequences": 2,
+      "unique_final_answers": 2,
+      "missing_final_answers": 0,
+      "cost_variance": 0.25,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [
+            "deep_search",
+            "lookup",
+            "direct_answer"
+          ],
+          "final_answer": "[]",
+          "cost": 9,
+          "termination_reason": "direct_answer"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [
+            "deep_search",
+            "direct_answer"
+          ],
+          "final_answer": "[\"s00\"]",
+          "cost": 8,
+          "termination_reason": "direct_answer"
+        }
+      ]
+    },
+    "task-001": {
+      "group_size": 2,
+      "unique_tool_sequences": 2,
+      "unique_final_answers": 1,
+      "missing_final_answers": 1,
+      "cost_variance": 0,
+      "rollouts": [
+        {
+          "rollout_id": 0,
+          "tool_sequence": [
+            "deep_search",
+            "lookup"
+          ],
+          "final_answer": null,
+          "cost": 9,
+          "termination_reason": "invalid_action"
+        },
+        {
+          "rollout_id": 1,
+          "tool_sequence": [
+            "deep_search",
+            "lookup",
+            "direct_answer"
+          ],
+          "final_answer": "Ecology",
+          "cost": 9,
+          "termination_reason": "direct_answer"
+        }
+      ]
+    }
+  },
+  "task_level": [
+    {
+      "task_id": "task-032",
+      "task_type": "list/filter",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 16,
+      "number_of_tool_calls": 2,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "direct_answer",
+      "truncated": false,
+      "invalid_action_attempts": 0,
+      "action_attempts": 3,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "deep_search",
+        "direct_answer"
+      ],
+      "final_answer": "[\"s01\", \"s02\", \"s03\", \"s07\", \"s13\", \"s17\", \"s20\", \"s21\", \"s25\", \"s28\"]"
+    },
+    {
+      "task_id": "task-032",
+      "task_type": "list/filter",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 18,
+      "number_of_tool_calls": 3,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "max_tool_calls",
+      "truncated": true,
+      "invalid_action_attempts": 0,
+      "action_attempts": 4,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "deep_search",
+        "search"
+      ],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-033",
+      "task_type": "multi-condition",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 18,
+      "number_of_tool_calls": 3,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "direct_answer",
+      "truncated": false,
+      "invalid_action_attempts": 0,
+      "action_attempts": 4,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 3,
+      "tool_sequence": [
+        "search",
+        "deep_search",
+        "deep_search",
+        "direct_answer"
+      ],
+      "final_answer": "[\"student_id_1\", \"student_id_2\"]"
+    },
+    {
+      "task_id": "task-033",
+      "task_type": "multi-condition",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 16,
+      "number_of_tool_calls": 2,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "direct_answer",
+      "truncated": false,
+      "invalid_action_attempts": 0,
+      "action_attempts": 3,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "deep_search",
+        "direct_answer"
+      ],
+      "final_answer": "[\"s00\", \"s01\", \"s02\", \"s03\", \"s04\", \"s05\", \"s06\", \"s07\", \"s08\", \"s09\", \"s10\", \"s11\", \"s12\", \"s13\", \"s14\", \"s15\", \"s16\", \"s17\", \"s18\", \"s19\", \"s20\", \"s21\", \"s22\", \"s23\", \"s24\", \"s25\", \"s26\", \"s27\", \"s28\", \"s29\"]"
+    },
+    {
+      "task_id": "task-000",
+      "task_type": "single-hop",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 9,
+      "number_of_tool_calls": 2,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "direct_answer",
+      "truncated": false,
+      "invalid_action_attempts": 0,
+      "action_attempts": 3,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "lookup",
+        "direct_answer"
+      ],
+      "final_answer": "[]"
+    },
+    {
+      "task_id": "task-000",
+      "task_type": "single-hop",
+      "rollout_id": 1,
+      "correctness": false,
+      "total_cost": 8,
+      "number_of_tool_calls": 1,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "direct_answer",
+      "truncated": false,
+      "invalid_action_attempts": 0,
+      "action_attempts": 2,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "direct_answer"
+      ],
+      "final_answer": "[\"s00\"]"
+    },
+    {
+      "task_id": "task-001",
+      "task_type": "two-hop",
+      "rollout_id": 0,
+      "correctness": false,
+      "total_cost": 9,
+      "number_of_tool_calls": 2,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "invalid_action",
+      "truncated": false,
+      "invalid_action_attempts": 3,
+      "action_attempts": 5,
+      "invalid_arguments": 3,
+      "repair_attempts": 2,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "lookup"
+      ],
+      "final_answer": null
+    },
+    {
+      "task_id": "task-001",
+      "task_type": "two-hop",
+      "rollout_id": 1,
+      "correctness": true,
+      "total_cost": 9,
+      "number_of_tool_calls": 2,
+      "deep_search_used": true,
+      "direct_answer_without_tool": false,
+      "termination_reason": "direct_answer",
+      "truncated": false,
+      "invalid_action_attempts": 0,
+      "action_attempts": 3,
+      "invalid_arguments": 0,
+      "repair_attempts": 0,
+      "tool_execution_errors": 0,
+      "tool_sequence": [
+        "deep_search",
+        "lookup",
+        "direct_answer"
+      ],
+      "final_answer": "Ecology"
+    }
+  ],
+  "run": {
+    "config": {
+      "policy": {
+        "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "device": "cpu",
+        "dtype": "float32",
+        "cpu_fallback": true,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_new_tokens": 192,
+        "max_context_tokens": 8192,
+        "do_sample": true,
+        "cache_dir": "../.hf-cache/hub",
+        "local_files_only": true,
+        "cpu_threads": 4
+      },
+      "rollout": {
+        "max_steps": 4,
+        "max_tool_calls": 3,
+        "max_parse_retries": 1,
+        "seed": 2026
+      },
+      "environment": {
+        "top_k": 5
+      },
+      "task_count": 4,
+      "group_size": 2,
+      "output_dir": "data/cpu_smoke",
+      "report_path": "reports/base_policy_analysis_cpu_smoke.md"
+    },
+    "runtime": {
+      "device": "cpu",
+      "dtype": "float32",
+      "torch_version": "2.8.0",
+      "transformers_version": "4.57.6",
+      "resolved_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "elapsed_seconds": 367.22858214378357,
+    "task_ids": [
+      "task-032",
+      "task-033",
+      "task-000",
+      "task-001"
+    ],
+    "kb_sha256": "fa01f5ceded2f75eb053df2045c147d48c0376dc1aee4ef22e44512bf3283775",
+    "public_tasks_sha256": "83cf8ea10d1b3643805a14443c2ec7566185e86674d718c7e65194cae1064c23",
+    "evaluation_tasks_sha256": "158385f6cf1afd615d65d0dca9f4656cf17e8210559f8ab3be7a340b00b139a9",
+    "prompt_sha256": "cc4b2d9210690e8181434fb19c0f366432036cb07fa6b947ed9fc0fe9b1bb9bf"
+  }
+}

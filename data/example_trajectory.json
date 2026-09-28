@@ -1,0 +1,68 @@
+{
+  "task_id": "task-000",
+  "question": "What is the advisor ID of student s00?",
+  "steps": [
+    {
+      "action": "lookup",
+      "tool_call_index": 0,
+      "cost": 1
+    },
+    {
+      "action": "direct_answer",
+      "arguments": {
+        "final_answer": "p03"
+      },
+      "cost": 0
+    }
+  ],
+  "tool_calls": [
+    {
+      "tool_name": "lookup",
+      "arguments": {
+        "entity": "s00",
+        "field": "advisor"
+      },
+      "observation": {
+        "value": "p03",
+        "evidence": [
+          {
+            "entity": "s00",
+            "field": "advisor",
+            "value": "p03"
+          }
+        ]
+      },
+      "cost": 1
+    }
+  ],
+  "observations": [
+    {
+      "value": "p03",
+      "evidence": [
+        {
+          "entity": "s00",
+          "field": "advisor",
+          "value": "p03"
+        }
+      ]
+    }
+  ],
+  "final_answer": "p03",
+  "total_cost": 1,
+  "metadata": {
+    "strategy": "economical",
+    "seed": 42,
+    "scripted_reference_plan": true
+  },
+  "policy_model": null,
+  "sampling_config": {},
+  "raw_outputs": [],
+  "parse_status": [],
+  "termination_reason": null,
+  "truncated": false,
+  "number_of_steps": 0,
+  "tool_sequence": [],
+  "token_ids": [],
+  "action_token_mask": [],
+  "logprobs": []
+}

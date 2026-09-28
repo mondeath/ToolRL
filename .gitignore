@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Test / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Model / ML caches
+hf-cache/
+.cache/
+wandb/
+
+# Large runtime artifacts
+checkpoints/
+outputs/
+runs/
+logs/
+
+# Temporary files
+*.tmp
+*.log
