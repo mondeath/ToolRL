@@ -19,11 +19,15 @@ def write_json(path, value):
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + '\n', encoding='utf-8')
 
 
-def run_baseline(output_dir, cache_dir):
+def run_baseline(output_dir, cache_dir, model_name=None, revision=None):
+    if (model_name is None) != (revision is None):
+        raise ValueError("model_name and revision must be supplied together")
     output_dir = Path(output_dir).expanduser().resolve()
     config_path = ROOT / 'configs/policy.json'
     reward_config_path = ROOT / 'configs/default.json'
     config = json.loads(config_path.read_text())
+    if model_name is not None:
+        config['policy'].update(model_name=model_name, revision=revision)
     config['policy'].update(device='cuda:0', cpu_fallback=False, dtype='auto',
                             do_sample=False, local_files_only=True,
                             cache_dir=str(Path(cache_dir).expanduser().resolve()))
@@ -57,6 +61,8 @@ def run_baseline(output_dir, cache_dir):
     write_json(output_dir / 'runtime_metadata.json', run)
     started = time.time()
     policy = HuggingFacePolicy(config['policy'])
+    policy.runtime_metadata.update(
+        model_name=config['policy']['model_name'], revision=config['policy']['revision'])
     run['runtime'] = policy.runtime_metadata
     write_json(output_dir / 'runtime_metadata.json', run)
     rollout_config = RolloutConfig(**config['rollout'])
@@ -92,11 +98,15 @@ def run_baseline(output_dir, cache_dir):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--model-name', help='Override policy model; requires --revision. Default: configs/policy.json.')
+    parser.add_argument('--revision', help='Pinned model revision; requires --model-name. Default: configs/policy.json.')
     parser.add_argument('--cache-dir', type=Path, default=Path('/root/shared-nvme/hf-cache'))
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'data/gpu_baseline_8x1',
                         help='Must not already exist; relative paths resolve from the working directory.')
     args = parser.parse_args()
-    run_baseline(args.output_dir, args.cache_dir)
+    if (args.model_name is None) != (args.revision is None):
+        parser.error('--model-name and --revision must be supplied together')
+    run_baseline(args.output_dir, args.cache_dir, model_name=args.model_name, revision=args.revision)
 
 
 if __name__ == '__main__':
