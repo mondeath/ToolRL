@@ -8,7 +8,7 @@ import time
 from src.env_v1 import Environment, generate_kb
 from src.env_v1.tasks import generate_tasks, initial_state
 from src.env_v1.evaluation import evaluate, summarize
-from src.evaluation.model_scale import select_tasks, annotate, diagnostics
+from src.evaluation.model_scale import select_tasks, annotate, diagnostics, normalize_dtype, resolve_dtype
 from src.env_v1.protocol import ACTION_SCHEMA, SYSTEM_PROMPT
 from src.tasks import public_task
 from src.rollouts import rollout, RolloutConfig
@@ -22,7 +22,8 @@ def main():
     p.add_argument('--failure-rate', type=float, default=0)
     p.add_argument('--output', type=Path)
     p.add_argument('--model', help='One of the three pinned Qwen2.5 diagnostic models')
-    p.add_argument('--device', default='cpu', choices=['cpu', 'cuda'], help='Common execution device; dtype stays float32')
+    p.add_argument('--device', default='cpu', choices=['cpu', 'cuda'], help='Common execution device')
+    p.add_argument('--dtype', type=normalize_dtype, choices=['float32', 'bfloat16'], help='bf16 alias accepted; default CUDA=bfloat16, CPU=float32')
     group = p.add_mutually_exclusive_group()
     group.add_argument('--task-ids', nargs='+')
     group.add_argument('--task-ids-file', type=Path)
@@ -30,6 +31,10 @@ def main():
     args = p.parse_args()
     if not 1 <= args.task_count <= 40: p.error('task-count must be 1..40')
     if not 0 <= args.failure_rate <= 1: p.error('failure-rate must be 0..1')
+    try:
+        dtype = resolve_dtype(args.device, args.dtype)
+    except ValueError as exc:
+        p.error(str(exc))
     kb = generate_kb()
     ids = args.task_ids
     if args.task_ids_file:
@@ -42,11 +47,16 @@ def main():
     if args.model and args.model not in models:
         p.error('model must be one of: ' + ', '.join(models))
     if args.output is None:
-        args.output = (ROOT/'results/model_scale'/models[args.model]['directory']/'results.jsonl') if args.model else ROOT.parent/'results/env_v1_baseline.jsonl'
+        if args.model or args.device != 'cpu':
+            model = args.model or 'Qwen/Qwen2.5-1.5B-Instruct'
+            args.output = ROOT/'results'/f'model_scale_{args.device}_{dtype}'/models[model]['directory']/'results.jsonl'
+        else:
+            args.output = ROOT.parent/'results/env_v1_baseline.jsonl'
     args.output.parent.mkdir(parents=True, exist_ok=True)
     config = json.loads((ROOT/'configs/policy_cpu_smoke.json').read_text())['policy']
     config.update(cache_dir=str((ROOT/config['cache_dir']).resolve()), do_sample=False, max_new_tokens=256, max_context_tokens=16384)
     config['device'] = args.device
+    config['dtype'] = dtype
     if args.device == 'cuda':
         config['cpu_fallback'] = False
     if args.model:

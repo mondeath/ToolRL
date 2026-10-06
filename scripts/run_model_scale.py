@@ -12,7 +12,7 @@ from src.env_v1 import generate_kb
 from src.env_v1.tasks import generate_tasks
 from src.env_v1.protocol import ACTION_SCHEMA, SYSTEM_PROMPT
 from src.env_v1.evaluation import summarize
-from src.evaluation.model_scale import annotate, diagnostics, digest, select_tasks
+from src.evaluation.model_scale import annotate, diagnostics, digest, select_tasks, normalize_dtype, resolve_dtype
 
 
 def load_contract():
@@ -33,13 +33,18 @@ def load_contract():
     return contract, tasks
 
 
-def validate_run(summary, contract, tasks, model, device=None):
+def validate_run(summary, contract, tasks, model, device=None, dtype=None):
     run, frozen = summary['run'], contract['frozen']
     if run['failure_rate'] != 0 or run['rollout_config'] != frozen['rollout']:
         raise ValueError('Failure/rollout settings changed')
     config = run['model_config']
     if any(config.get(k) != v for k, v in frozen['policy'].items()):
         raise ValueError('Generation settings changed')
+    actual_dtype = run['runtime']['dtype']
+    if config.get('dtype') not in ('float32', 'bfloat16') or actual_dtype != config['dtype']:
+        raise ValueError('Dtype configuration/runtime mismatch')
+    if dtype and actual_dtype != normalize_dtype(dtype):
+        raise ValueError('Runtime dtype differs; use a new output directory for a uniform precision run')
     if config['model_name'] != model or config['revision'] != contract['models'][model]['revision']:
         raise ValueError('Wrong model/revision')
     if device and run['runtime']['device'] != device:
@@ -56,7 +61,7 @@ def reuse_baseline(destination, contract, tasks):
     source = ROOT/'results/env_v1_baseline.jsonl'
     summary = json.loads(source.with_suffix('.summary.json').read_text())
     all_tasks = json.loads(source.with_suffix('.tasks.json').read_text())
-    validate_run(summary, contract, all_tasks, model, device='cpu')
+    validate_run(summary, contract, all_tasks, model, device='cpu', dtype='float32')
     if digest(all_tasks) != contract['frozen']['all_tasks_sha256']:
         raise ValueError('Archived full task set changed')
     indexed = {r['task_id']: r for r in map(json.loads, source.read_text().splitlines())}
@@ -80,7 +85,7 @@ def reuse_baseline(destination, contract, tasks):
     return result
 
 
-def write_report(output_root, contract, tasks, report):
+def write_report(output_root, contract, tasks, report, dtype=None):
     lines = ['# Model Scale Diagnostic', '',
         '固定 15 题，L1/L2/L3 各 5 题；任务 ID、权重 revision 和行为源码哈希保存在 configs/env_v1_diagnostic_tasks.json 与 configs/env_v1_model_scale.json。', '',
         '| Model | Overall | L1 | L2 | L3 | Max-tool-call rate | Repeated actions | Avg cost | Deep search calls | Status / runtime |',
@@ -106,8 +111,9 @@ def write_report(output_root, contract, tasks, report):
         completed.append(summary)
     lines += ['', 'Repeated actions = 每条轨迹内相邻、完全相同的已执行 tool name + arguments 的额外调用数之和；JSON 键顺序不影响判定。例如 A,A,A 计 2 次，A,B,A 计 0 次。包含执行后失败的调用，不含解析失败或预算阻止的提案。', '',
         '`answer_ready_but_continued` 统一为 null：本阶段不严格推断 observation 是否足以构造答案，仅使用上述连续重复指标；null 不是 false。', '',
-        '统一 failure_rate=0、do_sample=false、max_tool_calls=8、max_steps=9、max_new_tokens=256、max_context_tokens=16384、seed=2026、float32；没有更改环境、task、tool schema、system prompt、evaluator 或 reward。', '']
+        '统一 failure_rate=0、do_sample=false、max_tool_calls=8、max_steps=9、max_new_tokens=256、max_context_tokens=16384、seed=2026；云端默认 bfloat16，表中的 float32 仅为历史参考，不能替代本轮 bfloat16 结果。没有更改环境、task、tool schema、system prompt、evaluator 或 reward。', '']
     comparable = len(completed) == 3 and len({(s['run']['runtime']['device'], s['run']['runtime']['dtype'], s['run']['runtime'].get('torch_version'), s['run']['runtime'].get('transformers_version')) for s in completed}) == 1
+    comparable = comparable and (dtype is None or all(s['run']['runtime']['dtype'] == dtype for s in completed))
     lines += ['## 当前结论', '']
     if not comparable:
         lines += ['证据尚不足以区分 1.5B 的 agent capability floor 与环境/protocol 问题。待三个模型在相同云端设备、精度和依赖版本下完成后再对照；CPU 归档不能当作完全相同 CUDA 配置的结果。', '']
@@ -117,9 +123,9 @@ def write_report(output_root, contract, tasks, report):
         '实际 Git 根目录是 experiment/。下面命令从 clone 后的仓库根目录执行；若使用当前 ToolRL 工作区，先 cd experiment。详见 [MODEL_SCALE_RUNBOOK.md](MODEL_SCALE_RUNBOOK.md)。', '',
         '```bash', 'python -m pip install -r requirements-inference.lock.txt -r requirements-test.txt', 'pytest -q',
         'python scripts/run_model_scale.py --download-only',
-        'python scripts/run_model_scale.py --device cuda --output-root results/model_scale_cuda',
+        'python scripts/run_model_scale.py --device cuda --dtype bf16 --output-root results/model_scale_cuda_bfloat16',
         '```', '',
-        '不同输出根目录用于保留已归档 CPU 结果；每个模型目录仍包含 results.jsonl、summary.json、run.log。正式对照统一在 CUDA 上重新跑三个模型，无逐模型调参。', '']
+        '不同输出根目录用于保留已归档 CPU 结果；每个模型目录仍包含 results.jsonl、summary.json、run.log。正式对照统一在 CUDA/bfloat16 上重新跑三个模型，无逐模型调参。', '']
     report.write_text('\n'.join(lines))
 
 
@@ -130,8 +136,15 @@ def main():
     mode.add_argument('--download-only', action='store_true')
     mode.add_argument('--report-only', action='store_true')
     p.add_argument('--device', choices=['cpu', 'cuda'], default='cuda')
-    p.add_argument('--output-root', type=Path, default=ROOT/'results/model_scale')
+    p.add_argument('--dtype', type=normalize_dtype, choices=['float32', 'bfloat16'], help='bf16 alias accepted; default CUDA=bfloat16, CPU=float32')
+    p.add_argument('--output-root', type=Path)
     args = p.parse_args()
+    try:
+        dtype = resolve_dtype(args.device, args.dtype)
+    except ValueError as exc:
+        p.error(str(exc))
+    if args.output_root is None:
+        args.output_root = ROOT/'results'/('model_scale' if args.prepare else f'model_scale_{args.device}_{dtype}')
     contract, tasks = load_contract()
     if args.download_only:
         from huggingface_hub import snapshot_download
@@ -146,7 +159,7 @@ def main():
             if summary_path.exists():
                 existing = json.loads(summary_path.read_text())
                 if existing.get('status') != 'not_run':
-                    validate_run(existing, contract, tasks, model, device=None if args.prepare else args.device)
+                    validate_run(existing, contract, tasks, model, device=None if args.prepare else args.device, dtype=None if args.prepare else dtype)
                     continue
             if (directory/'results.jsonl').exists() and (directory/'results.jsonl').stat().st_size:
                 raise ValueError('Partial output exists; preserve it and choose a fresh output root')
@@ -160,14 +173,14 @@ def main():
                     (directory/'run.log').write_text('NOT RUN: cloud inference pending. No performance measurements.\n')
                 continue
             command = [sys.executable, str(ROOT/'scripts/run_env_v1.py'), '--model', model,
-                       '--device', args.device, '--task-ids-file', str(ROOT/'configs/env_v1_diagnostic_tasks.json'),
+                       '--device', args.device, '--dtype', dtype, '--task-ids-file', str(ROOT/'configs/env_v1_diagnostic_tasks.json'),
                        '--failure-rate', '0', '--output', str(directory/'results.jsonl')]
             environment = dict(os.environ, HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1')
             with (directory/'run.log').open('w') as log:
                 log.write(json.dumps(dict(command=command))+'\n'); log.flush()
                 subprocess.run(command, stdout=log, stderr=subprocess.STDOUT, env=environment, check=True)
-            validate_run(json.loads(summary_path.read_text()), contract, tasks, model, args.device)
-    write_report(args.output_root, contract, tasks, ROOT/'MODEL_SCALE_DIAGNOSTIC.md')
+            validate_run(json.loads(summary_path.read_text()), contract, tasks, model, args.device, dtype)
+    write_report(args.output_root, contract, tasks, ROOT/'MODEL_SCALE_DIAGNOSTIC.md', dtype=None if args.prepare else dtype)
 
 
 if __name__ == '__main__':

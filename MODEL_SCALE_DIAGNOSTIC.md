@@ -12,7 +12,7 @@ Repeated actions = 每条轨迹内相邻、完全相同的已执行 tool name + 
 
 `answer_ready_but_continued` 统一为 null：本阶段不严格推断 observation 是否足以构造答案，仅使用上述连续重复指标；null 不是 false。
 
-统一 failure_rate=0、do_sample=false、max_tool_calls=8、max_steps=9、max_new_tokens=256、max_context_tokens=16384、seed=2026、float32；没有更改环境、task、tool schema、system prompt、evaluator 或 reward。
+统一 failure_rate=0、do_sample=false、max_tool_calls=8、max_steps=9、max_new_tokens=256、max_context_tokens=16384、seed=2026；云端默认 bfloat16，表中的 float32 仅为历史参考，不能替代本轮 bfloat16 结果。没有更改环境、task、tool schema、system prompt、evaluator 或 reward。
 
 ## 当前结论
 
@@ -26,7 +26,7 @@ Repeated actions = 每条轨迹内相邻、完全相同的已执行 tool name + 
 python -m pip install -r requirements-inference.lock.txt -r requirements-test.txt
 pytest -q
 python scripts/run_model_scale.py --download-only
-python scripts/run_model_scale.py --device cuda --output-root results/model_scale_cuda
+python scripts/run_model_scale.py --device cuda --dtype bf16 --output-root results/model_scale_cuda_bfloat16
 ```
 
-不同输出根目录用于保留已归档 CPU 结果；每个模型目录仍包含 results.jsonl、summary.json、run.log。正式对照统一在 CUDA 上重新跑三个模型，无逐模型调参。
+不同输出根目录用于保留已归档 CPU 结果；每个模型目录仍包含 results.jsonl、summary.json、run.log。正式对照统一在 CUDA/bfloat16 上重新跑三个模型，无逐模型调参。

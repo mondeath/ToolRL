@@ -51,3 +51,16 @@ def diagnostics(rows):
         answer_ready_but_continued=None,
         answer_ready_method='not_inferred; consecutive identical executed tool+arguments calls used as the permitted proxy',
     )
+
+
+def normalize_dtype(value):
+    return {'bf16': 'bfloat16', 'fp32': 'float32'}.get(value, value)
+
+
+def resolve_dtype(device, requested=None):
+    dtype = normalize_dtype(requested or ('bfloat16' if device == 'cuda' else 'float32'))
+    if dtype not in ('float32', 'bfloat16'):
+        raise ValueError('dtype must be float32 or bfloat16 (bf16)')
+    if device == 'cpu' and dtype != 'float32':
+        raise ValueError('This inference adapter uses float32 on CPU; use --device cuda for bfloat16')
+    return dtype

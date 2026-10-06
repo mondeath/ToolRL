@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT/'scripts'))
 import run_env_v1
 import run_model_scale
-from src.evaluation.model_scale import annotate, diagnostics, select_tasks
+from src.evaluation.model_scale import annotate, diagnostics, select_tasks, normalize_dtype, resolve_dtype
 from src.env_v1 import generate_kb
 from src.env_v1.tasks import generate_tasks
 from src.policies import PolicyOutput
@@ -80,6 +80,7 @@ class ModelScaleTests(unittest.TestCase):
                     self.assertIn('repeated_identical_action_count',r)
                 self.assertEqual(seen[-1]['revision'],contract['models'][model]['revision'])
                 self.assertFalse(seen[-1]['cpu_fallback'])
+                self.assertEqual(seen[-1]['dtype'], 'bfloat16')
                 for k,v in contract['frozen']['policy'].items(): self.assertEqual(seen[-1][k],v)
                 summary=json.loads(output.with_name('summary.json').read_text())
                 run_model_scale.validate_run(summary,contract,tasks,model,'cuda')
@@ -104,7 +105,7 @@ class ModelScaleTests(unittest.TestCase):
                 run_model_scale.validate_run(summary,contract,tasks,model,'cuda')
             for key,value in [('do_sample',True),('max_new_tokens',512),('dtype','float16')]:
                 bad=deepcopy(summary);bad['run']['model_config'][key]=value
-                with self.assertRaisesRegex(ValueError,'Generation'):
+                with self.assertRaisesRegex(ValueError,'Dtype' if key=='dtype' else 'Generation'):
                     run_model_scale.validate_run(bad,contract,tasks,model)
             with self.assertRaisesRegex(ValueError,'Task order'):
                 run_model_scale.validate_run(summary,contract,list(reversed(tasks)),model)
@@ -137,10 +138,13 @@ class ModelScaleTests(unittest.TestCase):
                 summary=deepcopy(template)
                 summary.pop('provenance')
                 summary['run']['model_config'].update(model_name=model,revision=contract['models'][model]['revision'],device='cuda')
-                summary['run']['runtime']['device']='cuda'
+                dtype=command[command.index('--dtype')+1]
+                self.assertEqual(dtype,'bfloat16')
+                summary['run']['model_config']['dtype']=dtype
+                summary['run']['runtime'].update(device='cuda',dtype=dtype)
                 destination.write_text(data)
                 destination.with_name('summary.json').write_text(json.dumps(summary))
-            argv=['run_model_scale','--device','cuda','--output-root',str(base/'cloud')]
+            argv=['run_model_scale','--device','cuda','--dtype','bf16','--output-root',str(base/'cloud')]
             with patch.object(sys,'argv',argv),patch.object(run_model_scale.subprocess,'run',side_effect=fake_run),patch.object(run_model_scale,'write_report') as report:
                 run_model_scale.main()
                 report.assert_called_once()
@@ -170,3 +174,26 @@ class ModelScaleTests(unittest.TestCase):
         for call,(model,spec) in zip(download.call_args_list,contract['models'].items()):
             self.assertEqual(call.args[0],model)
             self.assertEqual(call.kwargs['revision'],spec['revision'])
+
+
+    def test_dtype_defaults_aliases_and_cpu_guard(self):
+        self.assertEqual(resolve_dtype('cuda'), 'bfloat16')
+        self.assertEqual(resolve_dtype('cpu'), 'float32')
+        self.assertEqual(resolve_dtype('cuda', 'bf16'), 'bfloat16')
+        self.assertEqual(resolve_dtype('cuda', 'fp32'), 'float32')
+        for dtype in ('float16', 'int8'):
+            with self.assertRaises(ValueError): resolve_dtype('cuda', dtype)
+        for module in (run_env_v1, run_model_scale):
+            with patch.object(sys,'argv',['runner','--device','cpu','--dtype','bf16']),contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):
+                module.main()
+
+    def test_float32_archive_cannot_be_reused_as_bfloat16(self):
+        contract,tasks=run_model_scale.load_contract()
+        model='Qwen/Qwen2.5-1.5B-Instruct'
+        with tempfile.TemporaryDirectory() as folder:
+            summary=run_model_scale.reuse_baseline(Path(folder),contract,tasks)
+            with self.assertRaisesRegex(ValueError,'Runtime dtype differs'):
+                run_model_scale.validate_run(summary,contract,tasks,model,dtype='bfloat16')
+            summary['run']['model_config']['dtype']='bfloat16'
+            with self.assertRaisesRegex(ValueError,'configuration/runtime mismatch'):
+                run_model_scale.validate_run(summary,contract,tasks,model)

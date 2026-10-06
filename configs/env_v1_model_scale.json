@@ -19,7 +19,6 @@
     "prompt_sha256": "df165bfb8a53c50442e0a44bddda8c9ff4a5f472f784954092f6c8c745447a76",
     "failure_rate": 0,
     "policy": {
-      "dtype": "float32",
       "do_sample": false,
       "temperature": 0.8,
       "top_p": 0.95,

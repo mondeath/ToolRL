@@ -4,7 +4,7 @@
 
 真正的 Git 仓库根是 `experiment/`。Environment v1 已由 commit `258b989` 保存；原先位于 ToolRL 根目录的必要报告、baseline JSONL、任务、KB 和其他小型诊断记录，现已复制到此仓库的根目录和 `results/`。原文件保留。
 
-只允许模型权重/模型自带 tokenizer 随规模变化。固定任务文件 `configs/env_v1_diagnostic_tasks.json` 是有序 15 题，L1/L2/L3 各 5：L1 覆盖 GPA、列表、count；L2 覆盖资格与课程组合；L3 覆盖五个奖学金。所有模型使用相同 ID 和顺序，禁止按结果换题。
+模型权重/模型自带 tokenizer 随规模变化；按照最新要求，整组诊断现在统一默认使用 CUDA/bfloat16。dtype 可通过参数修改，但所有模型必须一致。固定任务文件 `configs/env_v1_diagnostic_tasks.json` 是有序 15 题，L1/L2/L3 各 5：L1 覆盖 GPA、列表、count；L2 覆盖资格与课程组合；L3 覆盖五个奖学金。所有模型使用相同 ID 和顺序，禁止按结果换题。
 
 `configs/env_v1_model_scale.json` 固定三个模型 revision、KB/完整任务/prompt 哈希、原有行为源码哈希、生成和 rollout 配置。`run_model_scale.py` 在推理/报告前验证这些条件。新增统计只读取保存的轨迹，不修改 evaluator 或任务成功定义。
 
@@ -16,11 +16,11 @@
 
 3B/7B revision 来自 Hugging Face 官方仓库 metadata 查询；1.5B 沿用已有 baseline revision。模型下载与推理分开，不会把 1.5B 的 revision 误用于 3B/7B。
 
-统一设置：failure_rate=0、do_sample=false、float32、max_new_tokens=256、max_context_tokens=16384、max_steps=9、max_tool_calls=8、max_parse_retries=1、seed=2026。temperature=0.8、top_p=0.95 保持原配置值，但 greedy 模式不使用它们。没有新增可按模型调节的生成参数。
+统一设置：failure_rate=0、do_sample=false、CUDA 默认 bfloat16、max_new_tokens=256、max_context_tokens=16384、max_steps=9、max_tool_calls=8、max_parse_retries=1、seed=2026。temperature=0.8、top_p=0.95 保持原配置值，但 greedy 模式不使用它们。没有新增可按模型调节的生成参数。
 
 ## 云端完整运行
 
-在能以 float32 容纳 7B 推理的同一 CUDA 设备上顺序运行三种模型；不单独量化或改变某个模型精度。CUDA 不可用会报错，不会悄悄退回 CPU。
+在能以 bfloat16 运行 7B 推理的同一 CUDA 设备上顺序运行三种模型；不单独量化或改变某个模型精度。CUDA 不可用会报错，不会悄悄退回 CPU。
 
 从 clone 后的仓库根目录执行（当前本机则先 `cd experiment`）：
 
@@ -34,11 +34,13 @@ pytest -q
 python scripts/run_model_scale.py --download-only
 
 # 与已归档 CPU 结果分开，三个模型都在 CUDA 上重新执行。
-python scripts/run_model_scale.py --device cuda --output-root results/model_scale_cuda
+python scripts/run_model_scale.py --device cuda --dtype bf16 --output-root results/model_scale_cuda_bfloat16
 
 # 仅重新生成对照报告，不调用模型。
-python scripts/run_model_scale.py --report-only --output-root results/model_scale_cuda
+python scripts/run_model_scale.py --report-only --dtype bf16 --output-root results/model_scale_cuda_bfloat16
 ```
+
+`--dtype bf16` 与 `--dtype bfloat16` 等价；也可将整组显式切回 `--dtype float32`。CUDA 默认 bfloat16，CPU 默认 float32。原适配器固定 CPU=float32，因此显式 CPU+bf16 会在加载权重前报错，不会静默降级。summary 同时核对请求与实际 dtype；已有 float32 输出不能当作 bf16 跳过。
 
 统一 runner 会锁定 15-task subset 和 failure_rate=0，逐模型调用同一 `run_env_v1.py`；每次完成 rollout 即 flush。失败时 `run.log` 保留 stderr 和原始命令。若存在部分结果，脚本拒绝覆盖；保留原目录并选新的 `--output-root` 重跑。已完成且配置匹配的模型可跳过，指标会从 JSONL 重新核对。不同设备的结果不会自动跳过或混为同配置实验。
 
@@ -62,14 +64,14 @@ results.prompt.json   # 第一题真实 messages 快照
 ```bash
 python experiment/scripts/run_env_v1.py \
   --model Qwen/Qwen2.5-7B-Instruct \
-  --device cuda \
+  --device cuda --dtype bf16 \
   --task-ids-file experiment/configs/env_v1_diagnostic_tasks.json \
   --output experiment/results/manual_7b/results.jsonl
 ```
 
 也可用 `--task-ids v1-L1-00 v1-L2-00 v1-L3-00`，或 `--task-count 3` 限制前几题。显式 IDs 保持给定顺序，重复或不存在的 ID 会被拒绝。短诊断仅用于运行验证，不加入正式 15 题对照。直接 `run_env_v1.py` 的标准输出可由 shell 重定向到 `run.log`；推荐统一 runner 自动保存日志。
 
-`--model` 省略时仍用原 1.5B 和原默认输出位置；显式模型默认输出到仓库内 `results/model_scale/<模型>/results.jsonl`。直接 runner 仍保留原有覆盖输出行为，所以正式实验应使用会保护已有结果的 `run_model_scale.py`。
+不传模型/设备参数时仍用原 CPU 1.5B 和原默认输出位置；显式模型默认输出到仓库内 `results/model_scale_<device>_<dtype>/<模型>/results.jsonl`，例如 `results/model_scale_cuda_bfloat16/qwen2.5-7b/results.jsonl`。统一 runner 的新推理也默认使用带设备/精度的目录；`--prepare` 仍使用历史归档目录 `results/model_scale`。直接 runner 仍保留原有覆盖输出行为，所以正式实验应使用会保护已有结果的 `run_model_scale.py`。
 
 ## 复用与统计口径
 
@@ -80,7 +82,7 @@ python experiment/scripts/run_env_v1.py \
 python scripts/run_model_scale.py --prepare
 ```
 
-旧结果的 prompt、task、生成设置与当前冻结版本相同，但设备是 CPU；因此默认 CUDA 对照重新跑 1.5B。若选择整组 CPU，原 1.5B 可复用，3B/7B 则需以同样 CPU/float32 和依赖版本运行。不要将两种硬件的结果当成完全相同配置。
+旧结果的 prompt、task、采样和工具预算与当前冻结版本相同，但设备/精度是 CPU/float32；本轮 CUDA/bfloat16 对照需要重新跑三个模型，包括 1.5B。若选择整组 CPU，原 1.5B 可复用，3B/7B 则需以同样 CPU/float32 和依赖版本运行。不要将不同设备或不同 dtype 的结果当成完全相同配置。原 float32 JSONL 和 summary 保留，未重标为 bf16。
 
 - `success` 保持原 evaluator 的 task_success。
 - `termination_reason` 直接来自 trajectory。
