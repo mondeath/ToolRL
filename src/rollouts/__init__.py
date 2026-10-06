@@ -5,6 +5,7 @@ import hashlib
 from src.policies import AgentState
 from src.policies.schema import ACTION_SCHEMA
 from src.policies.parser import parse_action
+from src.policies.normalizer import NormalizationResult, normalize_protocol_output
 from src.policies.huggingface import ContextLimitError
 
 
@@ -48,9 +49,25 @@ def rollout(task, policy, env, config, rollout_id=0):
                 t.termination_reason = 'context_limit' if isinstance(exc, ContextLimitError) else 'policy_error'
                 t.truncated = True
                 return t
-            result = parse_action(output.raw_output)
+            strict_result = parse_action(output.raw_output)
+            result = strict_result
+            normalization = NormalizationResult(output.raw_output)
+            if not strict_result.success:
+                normalization = normalize_protocol_output(output.raw_output)
+                if normalization.normalization_applied:
+                    result = parse_action(normalization.normalized_output)
+            normalized_success = normalization.normalization_applied and result.success
+            if result.success:
+                outcome = 'repair_success' if retry > 0 else ('normalized_success' if normalized_success else 'strict_success')
+            else:
+                outcome = 'final_invalid_action' if retry == config.max_parse_retries else 'repair_pending'
             t.raw_outputs.append(output.raw_output)
-            t.parse_status.append({'step': step_index + 1, 'retry_count': retry, **asdict(result)})
+            t.parse_status.append({
+                'step': step_index + 1, 'retry_count': retry, **asdict(result),
+                **asdict(normalization), 'strict_success': strict_result.success,
+                'strict_error': strict_result.error, 'normalized_success': normalized_success,
+                'repair_success': retry > 0 and result.success, 'parse_outcome': outcome,
+            })
             # Token fields intentionally remain empty until a training-aware alignment contract exists.
             if result.success:
                 parsed = result.parsed_action
