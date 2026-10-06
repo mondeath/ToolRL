@@ -59,19 +59,28 @@ results.prompt.json   # 第一题真实 messages 快照
 
 ## 单模型或短诊断
 
-在 ToolRL 工作区根目录可以直接执行用户要求的形式：
+如果云端已经有可加载的 snapshot，推荐从仓库根目录直接传本地目录（无需 repo 名离线缓存解析）：
 
 ```bash
-python experiment/scripts/run_env_v1.py \
-  --model Qwen/Qwen2.5-7B-Instruct \
-  --device cuda --dtype bf16 \
-  --task-ids-file experiment/configs/env_v1_diagnostic_tasks.json \
-  --output experiment/results/manual_7b/results.jsonl
+MODEL_DIR=/root/shared-nvme/hf-cache/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
+
+python scripts/run_env_v1.py \
+  --model "$MODEL_DIR" \
+  --device cuda \
+  --dtype bfloat16 \
+  --task-ids v1-L1-00 v1-L2-00 v1-L3-00 \
+  --output results/manual_7b_smoke/results.jsonl
 ```
+
+`--model` 保留三个官方 repo 名白名单，同时允许存在的本地目录；不存在的路径、普通文件及其他 repo 名仍被拒绝。上述目录直接交给 Transformers 加载，`local_files_only=True` 保持不变。
+
+summary 的 `run.model_identity` 保存 `local_model_path`、`canonical_model_name`、`model_family`、`revision` 与 `identity_source`；`run.model_config.model_name` 保留真正用于加载的绝对路径。标准 `models--Qwen--.../snapshots/<40位revision>` 路径可推断模型名称和 revision；这是路径来源信息，不是对权重内容的校验。无法判断的字段记为 null，普通目录不会继承默认 1.5B 的 revision。某些 Transformers 本地加载的 `runtime.resolved_revision` 会为 null，snapshot revision 仍保存在 model_identity 和 model_config 中。
+
+这只是加载路径兼容修复，不改变环境、生成配置或实验冻结条件。上面三题是 smoke，不计入正式 15 题规模比较；需要固定子集时将 `--task-ids ...` 换成 `--task-ids-file configs/env_v1_diagnostic_tasks.json`。
 
 也可用 `--task-ids v1-L1-00 v1-L2-00 v1-L3-00`，或 `--task-count 3` 限制前几题。显式 IDs 保持给定顺序，重复或不存在的 ID 会被拒绝。短诊断仅用于运行验证，不加入正式 15 题对照。直接 `run_env_v1.py` 的标准输出可由 shell 重定向到 `run.log`；推荐统一 runner 自动保存日志。
 
-不传模型/设备参数时仍用原 CPU 1.5B 和原默认输出位置；显式模型默认输出到仓库内 `results/model_scale_<device>_<dtype>/<模型>/results.jsonl`，例如 `results/model_scale_cuda_bfloat16/qwen2.5-7b/results.jsonl`。统一 runner 的新推理也默认使用带设备/精度的目录；`--prepare` 仍使用历史归档目录 `results/model_scale`。直接 runner 仍保留原有覆盖输出行为，所以正式实验应使用会保护已有结果的 `run_model_scale.py`。
+不传模型/设备参数时仍用原 CPU 1.5B 和原默认输出位置；显式模型默认输出到仓库内 `results/model_scale_<device>_<dtype>/<模型>/results.jsonl`（本地目录使用独立的 `local-model-<路径哈希>` 子目录），例如 `results/model_scale_cuda_bfloat16/qwen2.5-7b/results.jsonl`。统一 runner 的新推理也默认使用带设备/精度的目录；`--prepare` 仍使用历史归档目录 `results/model_scale`。直接 runner 仍保留原有覆盖输出行为，所以正式实验应使用会保护已有结果的 `run_model_scale.py`。
 
 ## 复用与统计口径
 

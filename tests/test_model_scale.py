@@ -197,3 +197,72 @@ class ModelScaleTests(unittest.TestCase):
             summary['run']['model_config']['dtype']='bfloat16'
             with self.assertRaisesRegex(ValueError,'configuration/runtime mismatch'):
                 run_model_scale.validate_run(summary,contract,tasks,model)
+
+    def test_model_location_validation_and_snapshot_identity(self):
+        contract,_=run_model_scale.load_contract()
+        models=contract['models']
+        for name,spec in models.items():
+            location,directory,identity=run_env_v1.resolve_model(name,models)
+            self.assertEqual(location,name)
+            self.assertEqual(directory,spec['directory'])
+            self.assertEqual(identity['canonical_model_name'],name)
+            self.assertEqual(identity['revision'],spec['revision'])
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            revision=models['Qwen/Qwen2.5-7B-Instruct']['revision']
+            snapshot=root/'models--Qwen--Qwen2.5-7B-Instruct'/'snapshots'/revision
+            snapshot.mkdir(parents=True)
+            location,_,identity=run_env_v1.resolve_model(str(snapshot),models)
+            self.assertEqual(location,str(snapshot.resolve()))
+            self.assertEqual(identity['local_model_path'],location)
+            self.assertEqual(identity['canonical_model_name'],'Qwen/Qwen2.5-7B-Instruct')
+            self.assertEqual(identity['model_family'],'Qwen2.5')
+            self.assertEqual(identity['revision'],revision)
+            _,_,unknown=run_env_v1.resolve_model(str(root),models)
+            self.assertIsNone(unknown['revision'])
+            self.assertIsNone(unknown['canonical_model_name'])
+            file=root/'not-a-directory';file.write_text('test')
+            for bad in (str(root/'missing'),str(file),'Qwen/not-a-supported-model'):
+                with self.assertRaisesRegex(ValueError,'existing local model directory'):
+                    run_env_v1.resolve_model(bad,models)
+            with patch.object(sys,'argv',['run_env_v1','--model',str(root/'missing')]),patch.object(run_env_v1,'HuggingFacePolicy') as policy,contextlib.redirect_stderr(io.StringIO()),self.assertRaises(SystemExit):
+                run_env_v1.main()
+            policy.assert_not_called()
+
+    def test_local_snapshot_runner_preserves_settings_and_records_identity(self):
+        seen=[]
+        class StubPolicy:
+            sampling_config={}
+            def __init__(self,config):
+                seen.append(deepcopy(config));self.model_name=config['model_name']
+                self.runtime_metadata={'device':config['device'],'dtype':config['dtype'],'resolved_revision':None}
+            def new_session(self,seed): return self
+            def act(self,state):return PolicyOutput('{"action":"direct_answer","arguments":{"final_answer":null}}')
+        contract,_=run_model_scale.load_contract()
+        revision=contract['models']['Qwen/Qwen2.5-7B-Instruct']['revision']
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            snapshot=root/'models--Qwen--Qwen2.5-7B-Instruct'/'snapshots'/revision
+            snapshot.mkdir(parents=True)
+            for model in (snapshot,root):
+                output=root/('snapshot-run' if model==snapshot else 'generic-run')/'results.jsonl'
+                argv=['run_env_v1','--model',str(model),'--device','cuda','--dtype','bfloat16','--task-ids','v1-L1-00','v1-L2-00','v1-L3-00','--output',str(output)]
+                with patch.object(sys,'argv',argv),patch.object(run_env_v1,'HuggingFacePolicy',StubPolicy),contextlib.redirect_stdout(io.StringIO()):
+                    run_env_v1.main()
+                summary=json.loads(output.with_name('summary.json').read_text())
+                identity=summary['run']['model_identity']
+                self.assertEqual(identity['local_model_path'],str(model.resolve()))
+                self.assertEqual(seen[-1]['model_name'],str(model.resolve()))
+                self.assertTrue(seen[-1]['local_files_only'])
+                self.assertEqual(seen[-1]['dtype'],'bfloat16')
+                for k,v in contract['frozen']['policy'].items(): self.assertEqual(seen[-1][k],v)
+                self.assertEqual(summary['run']['rollout_config'],contract['frozen']['rollout'])
+                self.assertEqual(summary['run']['prompt_sha256'],contract['frozen']['prompt_sha256'])
+                self.assertEqual(summary['run']['selected_task_ids'],['v1-L1-00','v1-L2-00','v1-L3-00'])
+                if model==snapshot:
+                    self.assertEqual(identity['revision'],revision)
+                    self.assertEqual(seen[-1]['revision'],revision)
+                    self.assertEqual(identity['canonical_model_name'],'Qwen/Qwen2.5-7B-Instruct')
+                else:
+                    self.assertIsNone(identity['revision'])
+                    self.assertNotIn('revision',seen[-1])
