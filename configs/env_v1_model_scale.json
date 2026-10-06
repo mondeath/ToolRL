@@ -1,0 +1,58 @@
+{
+  "models": {
+    "Qwen/Qwen2.5-1.5B-Instruct": {
+      "directory": "qwen2.5-1.5b",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "directory": "qwen2.5-3b",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "directory": "qwen2.5-7b",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    }
+  },
+  "frozen": {
+    "kb_sha256": "0e23fc3c9c9ce530246d2a00d33c9e237b11ce09f1481b230195d285f72df7c8",
+    "all_tasks_sha256": "22a0733bc73dc5e2e8134d95709a5dd0590188dff092f9a0ae46f6b90c4c9327",
+    "prompt_sha256": "df165bfb8a53c50442e0a44bddda8c9ff4a5f472f784954092f6c8c745447a76",
+    "failure_rate": 0,
+    "policy": {
+      "dtype": "float32",
+      "do_sample": false,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "max_context_tokens": 16384,
+      "cpu_threads": 4
+    },
+    "rollout": {
+      "max_steps": 9,
+      "max_tool_calls": 8,
+      "max_parse_retries": 1,
+      "seed": 2026
+    },
+    "source_sha256": {
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/env_v1/__init__.py": "b5e0a99c18cd220dbf2f39703fc27feefcfc810152c043949fae765c33845ad9",
+      "src/env_v1/evaluation.py": "793cb55844f26ce2851d6dca9ca33883610c6235abaf31b7f69dab5ba928b6d4",
+      "src/env_v1/protocol.py": "61b3cdde897c3cf938af468bc269692a9f9d169da4c74ae34a7ad5a12134a033",
+      "src/env_v1/tasks.py": "655e7629d5cf4453292dcdafcd5a9c09e7a79e05798c2b7f8723f7c1164b6532",
+      "src/environment/__init__.py": "6a6f9df35d54c878c1975f483038b12e1314c6201e95ddb49eb00fec25889ba0",
+      "src/evaluation/__init__.py": "8c59fa1f858a1c463180adb77ef9d96c7745dc4118e4341f253cd93aff25a69a",
+      "src/evaluation/policy.py": "3c80ab8c3fee7325e66c126c6ade374d0d47de08b0c3678a9665b44beaf9582a",
+      "src/kb/__init__.py": "ae459ac723ff8dfb4cc519ef1f5278f4a7f7756aff3f645dc4acc870f0d5eac1",
+      "src/policies/__init__.py": "c9a0319d3bc3c52ba4998dd8bd55b3a0adae7d6dfd9461072b9222f40f8881a7",
+      "src/policies/huggingface.py": "d0b87cb9c1c94c77601170e7beb7ea6f55480221d42395c17f18844cb7ca3357",
+      "src/policies/normalizer.py": "303d3575ca76efe827abe6af2d5f0ec1e443bb01c2e9fc421a67717fdf854ae2",
+      "src/policies/parser.py": "95fec9dcb0919b4b8ff2f74ff1b563b83fdbd1cc0f52f7e258306431385781fa",
+      "src/policies/schema.py": "8fcecc250acdec6bcca20dec2155b0c0235dbf3975acd6b0f2a331676f642767",
+      "src/rewards/__init__.py": "37ecc409420eb3b5b7ef443f8ccf95aa6d73bfb030bf4238fb77a336acdd63a0",
+      "src/rollouts/__init__.py": "cff55f43d736d26dd82264cb8d8cd064b632cd217f31fca02036c94160a41823",
+      "src/tasks/__init__.py": "e47f1b80f2534c2c7c725223056e69ea86c4e26e803e97d29bced67c3079a3f4",
+      "src/tools/__init__.py": "9683f6aec567677b9c662cd1b0b57ef7609f203d875304981b5ba1bec3727dc9",
+      "src/trajectories/__init__.py": "e0847b74eaaacd142290a45a99d76cb9f62ecdcaa26aae163e2e4f4b537cc55d"
+    }
+  }
+}

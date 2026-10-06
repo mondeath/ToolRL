@@ -1,0 +1,90 @@
+{
+  "task_count": 15,
+  "overall_success": 0.06666666666666667,
+  "success_by_difficulty": {
+    "L1": 0.2,
+    "L2": 0.0,
+    "L3": 0.0
+  },
+  "average_tool_cost": 27.8,
+  "average_trajectory_length": 7.466666666666667,
+  "average_tool_calls": 6.466666666666667,
+  "deep_search_usage": 0.7333333333333333,
+  "deep_search_calls": 80,
+  "rule_violation_rate": 0.06666666666666667,
+  "rule_violation_count": 1,
+  "recovery_success": null,
+  "injected_episodes": 0,
+  "status": "completed",
+  "diagnostics": {
+    "termination_counts": {
+      "direct_answer": 1,
+      "invalid_action": 3,
+      "max_tool_calls": 11
+    },
+    "max_tool_call_rate": 0.7333333333333333,
+    "repeated_identical_action_count": 78,
+    "average_repeated_identical_action_count": 5.2,
+    "deep_search_calls": 80,
+    "answer_ready_but_continued": null,
+    "answer_ready_method": "not_inferred; consecutive identical executed tool+arguments calls used as the permitted proxy"
+  },
+  "run": {
+    "model_config": {
+      "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "device": "cpu",
+      "dtype": "float32",
+      "cpu_fallback": true,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "max_context_tokens": 16384,
+      "do_sample": false,
+      "cache_dir": "/Users/ranxu/workspace/ToolRL/.hf-cache/hub",
+      "local_files_only": true,
+      "cpu_threads": 4
+    },
+    "runtime": {
+      "device": "cpu",
+      "dtype": "float32",
+      "torch_version": "2.8.0",
+      "transformers_version": "4.57.6",
+      "resolved_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "failure_rate": 0,
+    "rollout_config": {
+      "max_steps": 9,
+      "max_tool_calls": 8,
+      "max_parse_retries": 1,
+      "seed": 2026
+    },
+    "kb_seed": 42,
+    "kb_sha256": "0e23fc3c9c9ce530246d2a00d33c9e237b11ce09f1481b230195d285f72df7c8",
+    "tasks_sha256": "c90e11e757d1c21f18db0efcac107fac7f3b88581345f2222e4840a073999ad2",
+    "prompt_sha256": "df165bfb8a53c50442e0a44bddda8c9ff4a5f472f784954092f6c8c745447a76",
+    "selected_task_ids": [
+      "v1-L1-00",
+      "v1-L1-02",
+      "v1-L1-05",
+      "v1-L1-08",
+      "v1-L1-09",
+      "v1-L2-00",
+      "v1-L2-01",
+      "v1-L2-05",
+      "v1-L2-09",
+      "v1-L2-14",
+      "v1-L3-00",
+      "v1-L3-03",
+      "v1-L3-06",
+      "v1-L3-09",
+      "v1-L3-12"
+    ]
+  },
+  "provenance": {
+    "kind": "reused_cpu_baseline_subset",
+    "source": "results/env_v1_baseline.jsonl",
+    "source_sha256": "9019ba82e5d65dd581ac85c135c8556da13b72bef7eb8695b641d845a389d4c1",
+    "source_full_run_elapsed_seconds": 3093.6019320487976
+  }
+}
