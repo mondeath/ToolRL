@@ -38,3 +38,16 @@ logs/
 # Temporary files
 *.tmp
 *.log
+
+# Never version downloaded weights or archives
+.hf-cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.tar.gz
+*.backup.json
+# Small logs retained for reproducibility
+!results/env_v1_baseline.log
+!results/env_v1_initial_protocol.log
+!results/model_scale/*/run.log

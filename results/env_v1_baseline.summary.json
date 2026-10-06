@@ -1,0 +1,54 @@
+{
+  "task_count": 40,
+  "overall_success": 0.025,
+  "success_by_difficulty": {
+    "L1": 0.1,
+    "L2": 0.0,
+    "L3": 0.0
+  },
+  "average_tool_cost": 30.175,
+  "average_trajectory_length": 7.475,
+  "average_tool_calls": 6.475,
+  "deep_search_usage": 0.775,
+  "deep_search_calls": 237,
+  "rule_violation_rate": 0.025,
+  "rule_violation_count": 1,
+  "recovery_success": null,
+  "injected_episodes": 0,
+  "run": {
+    "model_config": {
+      "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "device": "cpu",
+      "dtype": "float32",
+      "cpu_fallback": true,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "max_new_tokens": 256,
+      "max_context_tokens": 16384,
+      "do_sample": false,
+      "cache_dir": "/Users/ranxu/workspace/ToolRL/.hf-cache/hub",
+      "local_files_only": true,
+      "cpu_threads": 4
+    },
+    "runtime": {
+      "device": "cpu",
+      "dtype": "float32",
+      "torch_version": "2.8.0",
+      "transformers_version": "4.57.6",
+      "resolved_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "failure_rate": 0,
+    "rollout_config": {
+      "max_steps": 9,
+      "max_tool_calls": 8,
+      "max_parse_retries": 1,
+      "seed": 2026
+    },
+    "elapsed_seconds": 3093.6019320487976,
+    "kb_seed": 42,
+    "kb_sha256": "0e23fc3c9c9ce530246d2a00d33c9e237b11ce09f1481b230195d285f72df7c8",
+    "tasks_sha256": "22a0733bc73dc5e2e8134d95709a5dd0590188dff092f9a0ae46f6b90c4c9327",
+    "prompt_sha256": "df165bfb8a53c50442e0a44bddda8c9ff4a5f472f784954092f6c8c745447a76"
+  }
+}

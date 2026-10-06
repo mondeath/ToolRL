@@ -67,4 +67,7 @@ def build_messages(state):
     content = ('Question:\n' + state.question + '\n\nAvailable tools:\n' +
                json.dumps(state.action_schema, ensure_ascii=False) + '\n\nHistory:\n' +
                json.dumps(state.history, ensure_ascii=False) + '\n\nChoose the next action.')
-    return [{'role': 'system', 'content': SYSTEM_PROMPT}, {'role': 'user', 'content': content}]
+    prompt = SYSTEM_PROMPT
+    if state.action_schema.get('version') == 'env_v1':
+        from src.env_v1.protocol import SYSTEM_PROMPT as prompt
+    return [{'role': 'system', 'content': prompt}, {'role': 'user', 'content': content}]

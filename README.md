@@ -200,3 +200,25 @@ AI Judge 可离线读取 question/final_answer 与清洗后的 evidence，另存
 本机采用 CPU/float32 跑极小真实模型 smoke，正式 12×4 CUDA 实验仍需在 CUDA 环境运行。最初的 prompt 只在用户消息给出参数说明，8 条真实采样均因 SQL/参数层级错误而 invalid_action；这些原始输出与原始 prompt 完整保存在 `data/cpu_smoke_initial_prompt/`，报告为 `reports/base_policy_analysis_initial_prompt.md`。随后在 system prompt 中补全所有 action 的显式参数模板、query 对象嵌套与数值类型说明，再用相同任务和 seeds 跑最终 CPU smoke。两轮数据不混合统计；这也是一次 prompt 修订，不能将其变化解释成 RL 改进。
 
 最终 CPU 报告为 `reports/base_policy_analysis_cpu_smoke.md`。后续正式实验应冻结此 prompt，并报告它对工具选择的潜在影响。所有实际执行和提出但因格式无效而未执行的 action 分开统计。
+
+## Environment v1（独立兼容入口）
+
+v1 实现位于 `src/env_v1/`，保留原环境、旧数据、奖励和训练接口。
+30 students / 12 courses / 90 enrollments / 5 scholarships；40 题分布为 L1=10、L2=15、L3=15。
+L3 每题复制独立数据库，五个奖学金各搭配三种已有申请状态。完整设计和实际结果见仓库根目录 `ENV_V1_PLAN.md`、`ENV_V1_RESULTS.md`。
+
+```bash
+.venv/bin/python -m pip install -r experiment/requirements-test.txt
+.venv/bin/python -m pytest -q
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python experiment/scripts/run_env_v1.py
+# 可选：在相同真实模型上复跑失败注入，输出必须分开
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python experiment/scripts/run_env_v1.py --failure-rate 0.2 --output results/env_v1_failure02.jsonl
+```
+
+baseline 使用已有本地 Qwen2.5-1.5B-Instruct 固定 revision、CPU float32、greedy decoding、8 次工具调用/9 次决策上限；无需新模型。CPU 全集耗时较长。每条完成即写入 JSONL；同步保存 KB、任务（含状态断言）、汇总及配置/数据/prompt 哈希。重跑相同路径会覆盖已有输出。
+
+v1 search 是完整单表检索；lookup 返回完整实体；aggregate 支持 count/average/max/list；deep_search 支持奖学金资格或 year/min_gpa/course_id 关系条件；verify/submit 接受 student_ids 数组和 scholarship_id。成本分别为 1/1/1/5/1/2，direct_answer 为 0。一次批量提交成本为 2，逐项验证和拒绝错误；不自动替模型筛选待提交人选。
+
+timeout 不执行工具；partial_result 执行后移除关键字段或最后一条结果（显式 partial_result=true），因此提交响应不完整时应先查状态再重试。每 episode 按 seed/task_id 固定注入序列。`failure_profile` 当前默认为 null，实验通过 runner 的 failure-rate 配置整体概率。
+
+`task_success` 检查正确答案/完整最终状态且必须正常结束；被拒绝的重复/不合格尝试单独计入 violation，不抹去正确的最终状态。非法数据库变化强制失败。`trajectory_length` 包含最终 direct_answer，`tool_calls` 不包含；parse repair 次数见轨迹 parse_status。`recovery_success` 是有注入事件 episode 的最终成功，无注入为 null。未完成、解析错误和预算截断均计入成功率分母。当前不提供 GRPO 或训练张量。

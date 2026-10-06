@@ -1,0 +1,8 @@
+{
+  "baseline_records": 40,
+  "unique_tasks": 40,
+  "deterministic_replays_matched": 40,
+  "summary_recomputed": true,
+  "data_and_prompt_hashes_verified": true,
+  "initial_and_final_data_and_model_config_identical": true
+}

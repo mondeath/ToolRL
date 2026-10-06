@@ -1,0 +1,19 @@
+{
+  "task_count": 40,
+  "overall_success": 1.0,
+  "success_by_difficulty": {
+    "L1": 1.0,
+    "L2": 1.0,
+    "L3": 1.0
+  },
+  "average_tool_cost": 3.625,
+  "average_trajectory_length": 4.25,
+  "average_tool_calls": 3.25,
+  "deep_search_usage": 0.0,
+  "deep_search_calls": 0,
+  "rule_violation_rate": 0.0,
+  "rule_violation_count": 0,
+  "recovery_success": null,
+  "injected_episodes": 0,
+  "result_kind": "scripted_feasibility_only_not_model_baseline"
+}

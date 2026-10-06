@@ -1,0 +1,54 @@
+{
+  "num_trajectories": 192,
+  "exact_accuracy": 0.6666666666666666,
+  "normalized_accuracy": 0.6666666666666666,
+  "average_tool_cost": 6.375,
+  "average_tool_calls": 1.140625,
+  "deep_search_usage_rate": 0.390625,
+  "deep_search_call_fraction": 0.634703196347032,
+  "average_ai_reward": 0.6666666666666666,
+  "average_pure_reward": 0.6666666666666666,
+  "average_cost_penalty": 0.6374999999999998,
+  "average_cost_aware_reward": 0.029166666666666813,
+  "by_strategy": {
+    "economical": {
+      "num_trajectories": 64,
+      "exact_accuracy": 1.0,
+      "normalized_accuracy": 1.0,
+      "average_tool_cost": 3.125,
+      "average_tool_calls": 1.421875,
+      "deep_search_usage_rate": 0.171875,
+      "deep_search_call_fraction": 0.12087912087912088,
+      "average_ai_reward": 1.0,
+      "average_pure_reward": 1.0,
+      "average_cost_penalty": 0.3124999999999999,
+      "average_cost_aware_reward": 0.6874999999999994
+    },
+    "redundant_deep": {
+      "num_trajectories": 64,
+      "exact_accuracy": 1.0,
+      "normalized_accuracy": 1.0,
+      "average_tool_cost": 16.0,
+      "average_tool_calls": 2.0,
+      "deep_search_usage_rate": 1.0,
+      "deep_search_call_fraction": 1.0,
+      "average_ai_reward": 1.0,
+      "average_pure_reward": 1.0,
+      "average_cost_penalty": 1.5999999999999983,
+      "average_cost_aware_reward": -0.6000000000000008
+    },
+    "direct_abstain": {
+      "num_trajectories": 64,
+      "exact_accuracy": 0.0,
+      "normalized_accuracy": 0.0,
+      "average_tool_cost": 0.0,
+      "average_tool_calls": 0.0,
+      "deep_search_usage_rate": 0.0,
+      "deep_search_call_fraction": 0,
+      "average_ai_reward": 0.0,
+      "average_pure_reward": 0.0,
+      "average_cost_penalty": 0.0,
+      "average_cost_aware_reward": 0.0
+    }
+  }
+}

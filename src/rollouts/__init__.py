@@ -41,7 +41,7 @@ def rollout(task, policy, env, config, rollout_id=0):
         t.number_of_steps += 1
         parsed = None
         for retry in range(config.max_parse_retries + 1):
-            state = AgentState(question=task['question'], history=deepcopy(history), action_schema=deepcopy(ACTION_SCHEMA))
+            state = AgentState(question=task['question'], history=deepcopy(history), action_schema=deepcopy(getattr(env, 'action_schema', ACTION_SCHEMA)))
             try:
                 output = session.act(state)
             except (ContextLimitError, RuntimeError) as exc:
@@ -49,13 +49,14 @@ def rollout(task, policy, env, config, rollout_id=0):
                 t.termination_reason = 'context_limit' if isinstance(exc, ContextLimitError) else 'policy_error'
                 t.truncated = True
                 return t
-            strict_result = parse_action(output.raw_output)
+            action_parser = getattr(env, 'parse_action', parse_action)
+            strict_result = action_parser(output.raw_output)
             result = strict_result
             normalization = NormalizationResult(output.raw_output)
             if not strict_result.success:
                 normalization = normalize_protocol_output(output.raw_output)
                 if normalization.normalization_applied:
-                    result = parse_action(normalization.normalized_output)
+                    result = action_parser(normalization.normalized_output)
             normalized_success = normalization.normalization_applied and result.success
             if result.success:
                 outcome = 'repair_success' if retry > 0 else ('normalized_success' if normalized_success else 'strict_success')
