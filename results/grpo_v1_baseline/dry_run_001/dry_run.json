@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "training_started": false,
+  "selection_sha256": "77dd1d73f5cb17546988fe7c19be6a40788f01c5aa0d3cd47de939148fc9f1e9",
+  "attempted_groups": 240,
+  "maximum_optimizer_steps": 240,
+  "training_rollouts": 960,
+  "tasks_by_difficulty": {
+    "L1": 80,
+    "L2": 80,
+    "L3": 80
+  },
+  "tasks_by_seed": {
+    "1000": 8,
+    "1001": 8,
+    "1002": 8,
+    "1003": 8,
+    "1004": 8,
+    "1005": 8,
+    "1006": 8,
+    "1007": 8,
+    "1008": 8,
+    "1009": 8,
+    "1010": 8,
+    "1011": 8,
+    "1012": 8,
+    "1013": 8,
+    "1014": 8,
+    "1015": 8,
+    "1016": 8,
+    "1017": 8,
+    "1018": 8,
+    "1019": 8,
+    "1020": 8,
+    "1021": 8,
+    "1022": 8,
+    "1023": 8,
+    "1024": 8,
+    "1025": 8,
+    "1026": 8,
+    "1027": 8,
+    "1028": 8,
+    "1029": 8
+  },
+  "group_size": 4,
+  "passes": 1,
+  "checkpoint_attempted_groups": [
+    0,
+    60,
+    120,
+    180,
+    240
+  ],
+  "dev_tasks": 400,
+  "diagnostic_tasks": 15,
+  "evaluation_schedule": [
+    "base: dev400",
+    "25%: dev400",
+    "50%: dev400",
+    "75%: dev400",
+    "final: dev400 + diagnostic15"
+  ],
+  "evaluation_rollouts": 2015,
+  "total_rollouts": 2975,
+  "maximum_training_generation_calls": 17280,
+  "expected_optimizer_steps_if_smoke_rate_holds": 100,
+  "estimate": {
+    "kind": "uncalibrated planning assumptions, not GPU measurement",
+    "seconds_per_training_group": [
+      45,
+      180
+    ],
+    "seconds_per_greedy_episode": [
+      3,
+      12
+    ],
+    "wall_clock_hours": [
+      4.68,
+      18.72
+    ],
+    "excludes": "model loading, checkpoint disk IO and network; sequence lengths and GPU contention can exceed range"
+  },
+  "train_eval_overlap": false,
+  "frozen_contract_verified": true
+}

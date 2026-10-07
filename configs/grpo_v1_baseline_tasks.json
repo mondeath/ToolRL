@@ -1,0 +1,1687 @@
+{
+  "version": 1,
+  "selection_seed": 2026,
+  "method": "Eight tasks per each of 30 train seeds; 80 per level. Seeded selection before model runs; 8 rounds of 30 worlds, fixed order.",
+  "tasks": [
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "6cf2dfd6ea5d3e421d7e82927a05114af21c40a2261e475f1faf4a82a5d26a16"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "6f3744383b483328e25075aeebf3798457029466893f7edb81b328e30cfe45f9"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "0376a5572496776c10de9701997f753388a91b7b3470cf20cfb2fcef35e07ee9"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "5705773f0fd53b39d56bd0ce9501a4b981758165ba32fff6b9ba43dabab57426"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "0f05f59d53575e36ea618e3b15a8f896e12b2ee2e95c60057adba401ee035246"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "bbcb36e3e1bbdf7cc9fb7109aac5599281a059bb55ca4a99265d9f394cd32cf2"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "748e54b9f894cd53d3b1100409c9b9db0eefe60676fdbbe2f87ac5c19246f1dd"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "b1c9a4346d51249e7fb2b537ed4463686024a9f17f91ee6df8610371930ba46b"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "4375d8e076018045085c671bbfcee43e458f831002cb492a2de8e5b7c3586023"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "00d78f5a2444df2df01640b8dcfe62191f0697ea5182737fc5b2184b28cbecd2"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "519a64b2e846f1e4b24b4eacdbc1083356acd80c3328fac1b114373c801f23f8"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "f400c0152d337b851e07995d462c37584585611a30d6409cf9db0d7424c08a49"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "5cd33195386d6237ff2911bf512021df955a72f8a8feb6b76a0b9d59e72ca074"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "b07711c38519260a69c7bd908e7b09dd4911d593d1038dd7151946c98b26ed65"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "45f985208a0ec6f114f4ed6b01a269495496cf0af0e97f569c22ce4ff5d3f14d"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "7d2a18a8831c3b6dc5346601b41d22073d04b4314e6b6cb26d57e7a35e015e21"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "0fab6ae4b3c6af0c521af6ce4b6628602008074268a829564d4b404077990a57"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "98a0ba03afb02bad3b59433e8a13043f8506a6ee3bedf344e67a56a20f134667"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "a7611c7b2266c352021ee4aace483ddbc9ba4283fe76a9ba8a194577e6cb8fff"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L1-01",
+      "difficulty": "L1",
+      "instance_sha256": "64059b33b1e0e79b7c2ca5e58d23ff9eac555eba2874e6eade32f1a5560ed343"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "d7e2ccee60488fd4cd63aa5fe8086530ede20a6f8248cdafcc9d96cffe87f828"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "1d146120e3d5333d3c8764a1787646e39599acacaa3ba068416223ccca4a8cbc"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L1-01",
+      "difficulty": "L1",
+      "instance_sha256": "b16bd4e15c53de802554d21c55f9d67b19e1aa8ddf274d78fbb4d0e295cb359f"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "a11fb02b81d2fe2805ee4a00c58100a93d3c7f8490a3b2e0306165c447963eeb"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "3905cbe971210518281ffbad72d3cff4563d4c1dbde695140178bd3f870dc8fb"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "b61be7eb8b124d79ef7ae7515232852312a68a0e3d328cc598faf04c784e4b34"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "e613472a17bee8c8184bca985eb6b580c583afbb4fd020834fed0ac31d7a913d"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "eff26138d832faecf0ed98d910f41ccd02eaa7a6a1d1b0032761cfeb37006d33"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "71046dd66fd1c74e5a5589c9ef91e9251267d762ec52444c546ef70aa97ae426"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "d34095631c93a54f310326eddf23d326a94a8e654245253490c52b3ae1a3da24"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "9f3c391ce71c6eee110c42049249dbdb43acc66d3795f3fca5692175bac35d77"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L2-14",
+      "difficulty": "L2",
+      "instance_sha256": "313966b7c21df7db9c770cb5bd82153bedc06a66df13259b0f354cddd2374e5c"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L2-05",
+      "difficulty": "L2",
+      "instance_sha256": "088f3bb4b0bf733129622b6ab9f0e9f63ed2c384094490a34acac638f5128eb8"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L2-10",
+      "difficulty": "L2",
+      "instance_sha256": "3cf310b51d3c933dce4e1640ab3f8d6bbdf72feda74eed2f785f2225ae5de987"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L2-13",
+      "difficulty": "L2",
+      "instance_sha256": "3571ba4f4246d0db72ed6a659470ae74e661a33ea7ac638b24e42dfd5a92fc8b"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "173c9a148722cec1f919d8eb68401cfb1fe096feed75850d93b0bceb3c02ec65"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L2-05",
+      "difficulty": "L2",
+      "instance_sha256": "332d8625ab054acfe630685301b621659a34a04b9cecf8ca6711841d556f6cfa"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "e457e6c7ff1a9f0d8b4623a1f2cb0adaa1336b1eeb65c716356c3d6472e59bce"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "f82c6350f15c0ae56d7c2f5a63b4fa7722db49aae6b6bea8b8f1b2fc5605bfe8"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L2-12",
+      "difficulty": "L2",
+      "instance_sha256": "a79049a2d4377c65e448b074bb67fc3fdfb43ba1111a2ac820eaf31628bf4989"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L2-10",
+      "difficulty": "L2",
+      "instance_sha256": "703793354033d68f4eff075100de3e67ffdf90fef3e6eef3faf84a2838f0df39"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "4fcdd602bd6d1f344022755d0a3f08bacd68733d1f5ee26a6968f93671437a70"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L2-07",
+      "difficulty": "L2",
+      "instance_sha256": "1c38c73e92faccd3daaf01a01385437351edc79a77c7d95cd34764ab57b4ce2b"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L2-10",
+      "difficulty": "L2",
+      "instance_sha256": "b78a8ed7c6879d6a01c3b0b6b93abee6112f4111ca71cf4c2ed539020466d1b8"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "d276bd99874807c5e93ec4582a3d7c0f4cac20d469b48b62ecfa484312876e0a"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L2-00",
+      "difficulty": "L2",
+      "instance_sha256": "363ecc340d0eb8dc94f54497c6834959ffddeaf16ad9ffe93a4190f3bf4ffd08"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "9f43e0b33cf46215626a1c38f54068a0f6b030787b6ff56e08f5e986bd483c1b"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L2-06",
+      "difficulty": "L2",
+      "instance_sha256": "98ea28c4b7d3a1fc7c4141b885e15a271c627ba3e93dd29910683544373d32f6"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L2-12",
+      "difficulty": "L2",
+      "instance_sha256": "e41a369a442e40e4cb1c90931be8db606c253969bbc680e0f847d08a80850b23"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L2-05",
+      "difficulty": "L2",
+      "instance_sha256": "dacb01f6845cf270460b80af84dc5b1fcce6ff9a9b5ce9336b75a678dbe259eb"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "d9fcb725398008393f717c6e2f11a57ba1fc1f6aa966b85464cf7ae66ef367ba"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "69317d16874ccd50177496f3775ac376c82d68801b8ab554c97977e601b747c3"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "8ef0dc97dfbce0201519fff7bda185ec0fb44749880a5fb8a578e83cec3b45bb"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L2-07",
+      "difficulty": "L2",
+      "instance_sha256": "88a27dc7b1248b8ab1e9d9a31cd51acbb05d27f22675688d2cf7f21d03947bec"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "7cfb3eacfe26eca2d7f69f5b37dab31f444c99ff25149076909de7983b7cc22a"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "5cd9ea6424fb6950c003bf7ea3e1816790e0597e911de678c7f6d1931356dc87"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "786b6d92284083d4a19aed2b343380d7948f04154c4cd43fc2b938950337a033"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "ce73672c067015c44b90f7bc5e8e34d71b919bd747a4993fa6e0e85c201b2ddc"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L2-13",
+      "difficulty": "L2",
+      "instance_sha256": "077dfeaf1e25e04532a7f7bb5b1fe5a38d47dce1beb1209c6c55c3ece12c7480"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "cbcf938c018a94ca033603161e3b0aff826f85f5a013879c896debef94e2f40e"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L3-12",
+      "difficulty": "L3",
+      "instance_sha256": "d868ff93774678c3b04ffdd18e2dccb4aa985f76539affaa61da56402d907faf"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L3-11",
+      "difficulty": "L3",
+      "instance_sha256": "a7d8837ee3b8723c0f6f21934ee0cc64fa89ab5f75771b5c571ed746a956a28f"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "4cf68237fd4d7620d01113839dec8f57b210951a64c591d2ebb43a8d7eb0470d"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L3-11",
+      "difficulty": "L3",
+      "instance_sha256": "3d991bddd1d68c1a85a6a72be3bd089d66af47bc306055d37c495516fb858c54"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L3-12",
+      "difficulty": "L3",
+      "instance_sha256": "522759959e48a602f43303c77fd256828dd88b88f05f974d5b0464f8e2204e86"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L3-04",
+      "difficulty": "L3",
+      "instance_sha256": "9f83b8b1b71e661cb45c10d71ba9d53de6df4a06f51a1e010cf8939afb523f91"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "b8f1d268efd907fb8c6a491b79dcd582b7f77ac9dc1700b2d816da7c42fa24f4"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L3-02",
+      "difficulty": "L3",
+      "instance_sha256": "d1ea152a2631ff64eb1d9f3c640a593ce3e72bbc3e25db3535b5e1fae42b46a4"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L3-14",
+      "difficulty": "L3",
+      "instance_sha256": "324f80f8bcebfb33637f2301e4a308480ea235930498487c595641f044ffcba4"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "88173f1282b41bda1de89cbb57479d776405ee3d036853c518e7ca2553b917e6"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L3-13",
+      "difficulty": "L3",
+      "instance_sha256": "0ce7eeccad568710933536e8641c09e6202a4a96183bbae87e8bbd030a56ab34"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "0c4b918b59cfd07322951ced2c43620a12a1967843a41aee96145330441f3e16"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L3-07",
+      "difficulty": "L3",
+      "instance_sha256": "a14a3929a8c53b95d2908c239e44fb8a2bf37e556e9521860d17a33cfbcc29fa"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "aef752ee72efe820aa19247450b67e94128fc89d283258e097cf70a315fb5ea9"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "c18f25f2a1856dcfac6b26402d8dd42fa83cef4cfbd9182c466b5d5cb05fbd67"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "ce5f75fe662c08e72fc2484ccb8cd4e0cdd050eab7f02af74ebf35dac9d6905b"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L3-04",
+      "difficulty": "L3",
+      "instance_sha256": "48029f1eee705a43d536dadfc4071ab9011f0dba1a77e84506981a049e534489"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L3-04",
+      "difficulty": "L3",
+      "instance_sha256": "1192978b1888c3224219a209c4c6783512f1c7390948045389649b841b8c2bb2"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L3-10",
+      "difficulty": "L3",
+      "instance_sha256": "ea35644ef34e90dfca5a1dbbd336035ebaca84ef4d12b86b71a25adaed1254bd"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L3-14",
+      "difficulty": "L3",
+      "instance_sha256": "20b48915b0f4df0660d66440b31c9872f1947f9abc88229adc46ff6b57c3374f"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L3-08",
+      "difficulty": "L3",
+      "instance_sha256": "8c2a6dc46d5682ea3978eb8e7911eb6acd341a8f6fee36bc9791bcb1a7e0da6f"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "a515965bb5987ea6af11d6112130dfb1a9771c123eb8fc12384d78a96d98755f"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L3-02",
+      "difficulty": "L3",
+      "instance_sha256": "afcbcd47be033c0d9cb9474a8edba21e395dec8ea198278feef660816f5a9e73"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L3-06",
+      "difficulty": "L3",
+      "instance_sha256": "6e3fd7b511cbc8da14143d3764ba08a3b71b97f7bd19c7638c6e1d491c6db639"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L3-11",
+      "difficulty": "L3",
+      "instance_sha256": "0d07c013c84c90dfbeccc8f0d543fa28e3778a1ee312c0171eb1d78d40818959"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L3-02",
+      "difficulty": "L3",
+      "instance_sha256": "e1b58e0f85520705224e57808761bae6cd8272947e8b5dd5fe14513e906ce228"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L3-13",
+      "difficulty": "L3",
+      "instance_sha256": "d8ba582715d3aa927a3886fca9bf18f3349deaa03e24919af2d0794e3f86384d"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L3-06",
+      "difficulty": "L3",
+      "instance_sha256": "22c8f30417cb02b792181a000e7f895ff8dd5dc9ba13f6c14208f8bcc07a93db"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L3-14",
+      "difficulty": "L3",
+      "instance_sha256": "273d10cd494ea401ed3184a8c64220e04fcd15a17e2bd1680857fb9f89a39abc"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L3-08",
+      "difficulty": "L3",
+      "instance_sha256": "ed831d781e0d339464274e684e6233c80a038b842c9ce55e43ffbbc58c89f03c"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "e54d63de1c81c8b4a8ae59ef7cff4f5410644541a7b3c65057d716e22f93538b"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L1-01",
+      "difficulty": "L1",
+      "instance_sha256": "d1a3da3e53500e91a933ca3619bdf2da3bc0437fdff1677c3e1bc2f7348ed523"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "b1ede0998d3e45d76def6dfb894c26053af0cbc6f2f6ad8aa1baa9935c9b046f"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L1-01",
+      "difficulty": "L1",
+      "instance_sha256": "4763a444930808e22bf198198ce07c49feb37d02c2aacc213500ce21a977b34c"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L1-01",
+      "difficulty": "L1",
+      "instance_sha256": "655f21890abe266cd67be2683dbc091ddd5c94c78f0862f8d9bb6750ffd90fe4"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "f028c19d1bb44416a10ca9820491559b47e3a101f9dd4cdb6ea43eeb3eddd1bc"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "ccbd0d665058686391b5caf3a9d50d6bd48b80ceac757c28aba79e58fb160928"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "708159bfdf151ec473dd3d7e9aa3b6089333c09fcdaad53457e6083683a29f4e"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "346dd231ff09100be83fae59ea8da72b7742f7c4bd69fd5c8e99e911a22960d3"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "8404f7532fdfb208f0ddfa34508c7aa9dc720fedaceda3d661c2e374662b33fc"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "b108ef480ee72f30e34294eb924511dc231d694b5f88b50ec1b73b764eb3dba6"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "c560f2651b0bc603485d87bc5c04044f21d736d7adf1701d3cc8b3f1873b5ddd"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "c380bce699f1a0f780fe1461ff25da35ce82f7e191a72df159f51e7cd5b6c941"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "8596bf99f2ccc6be48ed4260dd382b96bff4466a1804095625b38284a2a1236f"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "0bdd9213fdb13342c93ae7bed57574eec7fcdd75830144ece2e8f424c0910f4d"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "347edbb9f156739e455f27d0b86219e5bd434fa284a06541b83233578ea1cfcf"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "49414dd1e7956d80b3c908773d34ebffcc02d8c04c1c00961b18f1f5e27a075d"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "bd1a9e54528db0308e511ad78f7f063abb1b3e03915b14ac1ceadcf7ddc1e46b"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "3ffa717697ea4a2d1ed176f13be1f4a3855609d8d285a5651c71cb48797ddce0"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "5a877a00e448bf9f02da5abcc16ad0a70fe436f09637180f4ab27915f8d2f114"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "3a51eb8ff6e8d41bd845aeeb5bc29105463415abc45764bef13869637845c33e"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "5f7f5f0f4a4cadda9c8e7748b987af58e1b939762e7ddc5357aa98ac5be23de4"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "33c1c22814b82be44f337443c941a6626e3c16b7730497dde189eae4658a18fa"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "a8fd8be6c3a51811e4f5a85bf9e8d623ba8632944d8e6c95a6428e9e677a47ca"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "209ec67be245a6f18d4efa14121e42c3a5de33886ee168c881cecdd9a753cac0"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "4bd0252409fb6365dc4e32fb175dc7e5f067b61fc735464c175e987b4790a17b"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "9a47ae4d9f08a428cb147d974b7fba813b5959c536884426801cf5a574bbb190"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "cf44428d22beb80cadfbe405bd44ca48c34e2c72eb070ed54dcd6e8c296404bb"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "375c7b4372834689ae16720df873dc3e1f682bd758a138eb973b7568d68fe998"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "e62f3e115ae540e068375c6f41c165de47418c7de5f5c543895845e6afcc1588"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "622e2ccfa449833785f7499ee84efcd43f8f5acb4a8660cf9137bd22264ee43d"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "4c4659a81c9b602ca50b7fb507f4835cb4279d6c57982c4cace9342904facde9"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L2-09",
+      "difficulty": "L2",
+      "instance_sha256": "07cbdd0da7298e487ad7ced04b90325a4ed66fb472fc2a5b5ba726bf33b43e24"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "fc4df01df611ad2b4f640368b68ec6d3d4e01a9772d60199e471b759f87db88a"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L2-06",
+      "difficulty": "L2",
+      "instance_sha256": "9178bc476d238bc59f45d27ef4c685c40e478e93ed3a7e994d4a68b116c6a628"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L2-00",
+      "difficulty": "L2",
+      "instance_sha256": "80dccc6f1acff0191ebd24a4d440f53923c13a94d6bcb16f4d904b91d04eaa12"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L2-09",
+      "difficulty": "L2",
+      "instance_sha256": "e856e3c3b8d90974b06ff599904f466a44fd3f7623655dfa126ab93212b4510b"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "5d3b8ae239cc53ff6dd3aad76bda90155ff780722a866b1576e5790f0da6981b"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L2-14",
+      "difficulty": "L2",
+      "instance_sha256": "a547ce856d5c0bc413c413440990db93221ac7591b886346579a89e390d804d7"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "25b558daa5c45911870dc8438f49bb656bbe9112ff15f757864a12ce47a7f225"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "52249652f1429747d190f084f95682785d745a3e473a582df3be670dde7937e1"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "a09dea4e59769d8c93ea7e6722b1a67b73a5d4483fe63ff45c611c844e76a74e"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "6266e72f01aba76675f5768c1b2baba05c8e8c74fed0edf5ec3c4c15cdbdd64e"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "07ccbf7839eedfe215215d4cd1fed697aabf348f23e218ddaf96d738f1aa658e"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L2-11",
+      "difficulty": "L2",
+      "instance_sha256": "4ba505d36f92de433d885b29904b5f1a6446231c43259603f77e848d85826cb8"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "b5b19a222d393bec61d520b92ba540c05267e45e061e37068eaa6bcf8810a915"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L2-10",
+      "difficulty": "L2",
+      "instance_sha256": "7806faa92a43487b2ee54c264f11bce4b681c72d87751b22c24eab132c847cf7"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L2-07",
+      "difficulty": "L2",
+      "instance_sha256": "1fe2eb6990e9c186b6229c0696fc85437d1998fac977871a352c314bbaab6dd6"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L2-09",
+      "difficulty": "L2",
+      "instance_sha256": "207af959ff8d638f76cf78dfc5bfe3a097603503442be42d468198b8cd74696d"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L2-14",
+      "difficulty": "L2",
+      "instance_sha256": "af6b181b49d62086143a47675c19ab7f5ee147ac80c922e8355d98733d358095"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L2-06",
+      "difficulty": "L2",
+      "instance_sha256": "7d7bd35c94416f4dfd3ad89ac2490cf7d37dcb9273014cbe6709d0fb0abecb9f"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L2-05",
+      "difficulty": "L2",
+      "instance_sha256": "548fb29606ff69f4556d603207f66483f64df918540dea26ffedc88ff1a6e995"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L2-00",
+      "difficulty": "L2",
+      "instance_sha256": "502856d788924c9cb841a15a7d817cf7776344273153bb3e0f87236032175241"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L2-13",
+      "difficulty": "L2",
+      "instance_sha256": "6de493613eaddf0696d5950c0cd492307c678e1de211732fa0d69c2ea3b030ee"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L2-12",
+      "difficulty": "L2",
+      "instance_sha256": "3d620bb6af73629f060a615a40e56e8730ee5bc478acd88e8cdd93d6a050732a"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L2-12",
+      "difficulty": "L2",
+      "instance_sha256": "5150eead8893dffae8d0256b5912f8625597659cc96498a1bdb690d29ee37e4c"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "6ef3925b34a9d6808c0082dce18dfee9b325ae0099d7fb1dea5ea8e39793a4e4"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "76f2729b0a0fa6904dc3f5f9c9af63c71a7eb761c122af9e75ba13455078d347"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "3e0e6f9a0e6dbbdc66a4fb90eb7e87e635b8a0fde708b22c6d50de97de038bc9"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "ce9785b4414f633ceed8c3d03db0ad3f1fa25280e35a16e4344c67ccaf109c09"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L3-01",
+      "difficulty": "L3",
+      "instance_sha256": "9feb90080f2d1f4591dc12ed76f98f1262baa0d49feae60cea1bb4db66f2f388"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L3-05",
+      "difficulty": "L3",
+      "instance_sha256": "430448f45581b975cb361b24a15537490941be1d0b2af9fe6c5202ed7372a5a6"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L3-01",
+      "difficulty": "L3",
+      "instance_sha256": "74411d91e94084903aeb2aa3064d07f4e45761ef4b7c5813e7e47c83fa944786"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L3-04",
+      "difficulty": "L3",
+      "instance_sha256": "a69046205d9e275c90e208732884b2111386bb39f94e23cb258c207b28e09846"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "ef4573c89d60e1deef3242278090b650369135405945c86749d592d2578d6e04"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L3-10",
+      "difficulty": "L3",
+      "instance_sha256": "2f0146e801ed6e3ab8be9e6077e61c61d0d4eceab31c86c27b897dcbee569898"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "44423a95c7458a475c98fc8c4e56b7f2f19cad164e359e6dd65c1ed5622c7851"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L3-10",
+      "difficulty": "L3",
+      "instance_sha256": "bad633447a5d57ad16f3de663035cbb92c269c6dd2049d7fe425eede4d23f572"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L3-10",
+      "difficulty": "L3",
+      "instance_sha256": "4e0898a9b62b9b02531fb59ae7c3911804d3c6a2305ce268fffedcb45f0f0e23"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "b9b764018061068650075829fa12a8fc2538bf34bde69e19e67ef50a94ff2424"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "21886b55e532108dedbdb91a5a92753413c51384c41ceeb3e88e2dbade8d8bc7"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L3-13",
+      "difficulty": "L3",
+      "instance_sha256": "e9f0f794174e289b7be881125ecdcef5c4ae1c5f41992bac97e85d7fd8796a18"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L3-12",
+      "difficulty": "L3",
+      "instance_sha256": "00260e4f83d0b31376caaab3b43069e5f16b2f8326726186714267931e02caf6"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L3-06",
+      "difficulty": "L3",
+      "instance_sha256": "5a8b1577d1dc746b56b83e46f548ac3b2ba858f175014520577443d14e8e2e57"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L3-04",
+      "difficulty": "L3",
+      "instance_sha256": "cf31717bfacf0379e6453bde75ed86b9cae1d5a8542db0cbc9d6d9a57d3cf327"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L3-07",
+      "difficulty": "L3",
+      "instance_sha256": "9b91114f94ac8c315611c0650cfef386b782a2ed51a59ff2946384d99f56a9cc"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L3-13",
+      "difficulty": "L3",
+      "instance_sha256": "6e8b6fd7d7e27975c037946110fd862f5fb32d1a8eed6ad9f0d0a61dabd08010"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "42f2b849355c01c627017adf0b728eaa358086e6817ad5d3d84b0a93d9226be4"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L3-14",
+      "difficulty": "L3",
+      "instance_sha256": "edd13ee9ad1bffaf311d6e790f0eb7b6e33faf5def031ea8d88870719c18cbbd"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "6e2acdb0f3fc6ba3855e6b7b74c7a1f2a0bbc8fc7ec7062ed49e108a9f865876"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L3-05",
+      "difficulty": "L3",
+      "instance_sha256": "31a805fb21efd3bdee5df701902c741ae1162bba7eceb580ef1ec7d96932cd09"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L3-13",
+      "difficulty": "L3",
+      "instance_sha256": "ecd9655442161508ed62f3599e164122d5cf2f0a572ed393f57df35d6b6f9afc"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L3-14",
+      "difficulty": "L3",
+      "instance_sha256": "1c0b53a6920d9e697e200591f4f527be2d1a41abbc2953edd8926b18786785c0"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L3-12",
+      "difficulty": "L3",
+      "instance_sha256": "1b669aa187a19388e7433fb5088392febe6143767ddc47048763c42c2560231f"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "838c6ca29eb5abf92c95752598b45581abb394d38f2fc157561d598e919711bb"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L3-05",
+      "difficulty": "L3",
+      "instance_sha256": "c34c67b67d7b7dde79f9df7fbdc30d595096093ca7e9e9129b09714a32800f10"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "60bdbe71e9b69b5f85152b20383e47f61c517f5463919f5762b4377060248d53"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L3-08",
+      "difficulty": "L3",
+      "instance_sha256": "bb9852073f52111a4a5d6fd6a21b81c27e6e5c26a4a3d31d96a6b9fb6345c87b"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L3-05",
+      "difficulty": "L3",
+      "instance_sha256": "76870d5955576f7d2f4284fd903506c6d2841bd3ffdb1516e38c155e59ab133f"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L3-11",
+      "difficulty": "L3",
+      "instance_sha256": "a408c7939369cfd960711333477dbe04fc50301d404325a4c681a96cbd41afa5"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L2-06",
+      "difficulty": "L2",
+      "instance_sha256": "101340969d9c0bb2e150333ea8d535205ac889dfedfe0e0be5236f5ef0113b0a"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "5a81344e2bef0a47073f90f9ed49bebd1420b6425be06e63ee709542fd552207"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "ad0d0bf330045be56ff4469db8de7eb5e60827bf300d44495efc1e2ae6be464a"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L2-13",
+      "difficulty": "L2",
+      "instance_sha256": "ded00367f1445fc8defeb1e1260d2d054feb65610b6dc71df38ba6b3d2342700"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "1212e050b678c8d54502878578b2dba7065b818a70a61316dd3f27cb4cdd35a7"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "7f126a29445c5cd563b7e20497ad34dec5f92c611d3433c3130b8af427597668"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "9dd4180aeaf374f1d4836a2c01e1cc9ba045cafa5cb1877ee38ce4864e66b026"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "1f87a579b2eb0db663c658e3a6a03f5fb8580dea352d4b4f8a0eab8f31bb47fa"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "6a78cc3395fbd7d0a04f5f5856a01176343fdfc5cbc37d8b716a6739ba5bad28"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "6c16a78585c444feb7945ff21cca941458ccff85d7ee1a5946d35d2026fb2cad"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "80f5b964722879dda10ecde825f688a7c2ac1fe52efabea2a24c4ade70172729"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L1-03",
+      "difficulty": "L1",
+      "instance_sha256": "1044f720ae2c52551a1e676f3c60ecbec104ec8e5163645d1eb60b66413f3104"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L2-09",
+      "difficulty": "L2",
+      "instance_sha256": "91683bfb0abc1c581be22e86b141d551a6ce13a5e303f813b4f8bbbc16628a09"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "23d1f043d2ead364f1162e4baee2c78a573f9e0126ada2c381a9fd47ac3ef17b"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "baa665b6cf8e9b08f06aac2def6631e65f48d517c1683d782bbf8793aa1b300a"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "a83047de7876bd7486da2d11beb5757e2587fa1580e9456720ab62cba3dfe2a7"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "e70ea401fe62b254bc43ae6483babde18bff01b73e624b806924377c9d3a4396"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "5b10a56056999f89858cd343450974883d7c783757d2f627178073d3c18de2a0"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "cb019b3cd697eaeb4c63d0086f275c4ba4e563bb032c6551746cf6da0ccb5d5b"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "c5d180d91dedae8333eb1cf70665549ef7d18dc29514a3d7e2ab71040ef2e74c"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "c115e2294b1e245f0c168524bc67d520a2c2db4cf9e5d77fb6bb538169aae56c"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "bd9f11a2b5658e8547266158c7003b8161ff81409c8891c2f85a0c2dcb49a603"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "04ee2c0a2dbc0b154f3decac03d2ff1ea7ec0de7c39d71762c64a8df56f74c42"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "b8d31a3f6cc3d4da7058764cc87c4a073475b6604c483b126f8f9a75faebac7d"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "2a38918d53191e6042f566c108def5b04c8f83d1e75f5f9482f39540e953f9fe"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L1-04",
+      "difficulty": "L1",
+      "instance_sha256": "039cd8053a69810dc1e69ee29f48924b7dc32228f32be3541ec30476a39b5537"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "a686d57b947d9a0e08c4bdb7072cd08d4874b32af942f5d384eb1f8fc98f772d"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L2-09",
+      "difficulty": "L2",
+      "instance_sha256": "166ff80c6a89add9615399bad0ea6edb681cffd5bcbaf70e813284ad8f511373"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "81f40eae968090bed34999dd20f4fbe7b180b74d6dba4e7b92439e5d17bf98b7"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "311845fc89749b00606df32b45be073edc216f409fed749f012d8e71f607222a"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L3-07",
+      "difficulty": "L3",
+      "instance_sha256": "3f1fe930f88034d5608ab23ad81f0487d515d2c3640b328e9c0ce87048c2f1d4"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L3-02",
+      "difficulty": "L3",
+      "instance_sha256": "1772ae6265ad6ed14d85410d5c9f880d86e9d015c49e22f9565b55eaa5d6f649"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L2-00",
+      "difficulty": "L2",
+      "instance_sha256": "73c8a5b43ca91f019bf33029cbf613ebad7ee5e2c8e442ab8d09466f59797c7b"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L3-08",
+      "difficulty": "L3",
+      "instance_sha256": "414ba5ac79ae5689ff301b4426c8e6fb4428811ed34c2a3029bda08ce934cb8a"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L3-07",
+      "difficulty": "L3",
+      "instance_sha256": "d2dd9bebf69aa91f0aefd3f46dc62561ec03ed8eeeaa8b1fad491f8ffb71b87c"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "d8d561f1fcfd5d6d09145fb4eb09b30b8e69c12d2efb7000851c71b11004b46a"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L3-13",
+      "difficulty": "L3",
+      "instance_sha256": "d5879d66a8900d17b36adc4295d767ba1cc64d0874d963e1d4ab796e33bbfab9"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L3-06",
+      "difficulty": "L3",
+      "instance_sha256": "636fc01a402bc4dc1bef502aaa0b7b01bcd6191459f3c45d7b9ea8a0df8ed98f"
+    },
+    {
+      "split": "train",
+      "seed": 1008,
+      "task_id": "train-1008-v1-L2-10",
+      "difficulty": "L2",
+      "instance_sha256": "f36857cf504d20e0520877b7f482d91888119faab035fa78c77a190cb0f0083d"
+    },
+    {
+      "split": "train",
+      "seed": 1009,
+      "task_id": "train-1009-v1-L3-08",
+      "difficulty": "L3",
+      "instance_sha256": "42ac5eeb4e7f7efbea678189d6fafc5de99f1100a162ac9e3a57f24e2bb924db"
+    },
+    {
+      "split": "train",
+      "seed": 1010,
+      "task_id": "train-1010-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "b19cb9a9006aa0c70560166497bb0baea4fe83bf12167066a4952544c67169af"
+    },
+    {
+      "split": "train",
+      "seed": 1011,
+      "task_id": "train-1011-v1-L2-06",
+      "difficulty": "L2",
+      "instance_sha256": "3ba1cd00abf5e4e2d760df63e9d9c9a3e250b8d7026eedc216c9d17e97f97c42"
+    },
+    {
+      "split": "train",
+      "seed": 1012,
+      "task_id": "train-1012-v1-L3-02",
+      "difficulty": "L3",
+      "instance_sha256": "a849286ba422f6fc76b6f84648c406fa6fc5a376b157a76265b21f4251196f44"
+    },
+    {
+      "split": "train",
+      "seed": 1013,
+      "task_id": "train-1013-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "d70ce9e04537446e882ba9fa14756275e0ca927470caa6021908b4ae168db145"
+    },
+    {
+      "split": "train",
+      "seed": 1014,
+      "task_id": "train-1014-v1-L2-08",
+      "difficulty": "L2",
+      "instance_sha256": "96b85ec491aab04363224708f2c72a7a83277775725b6131f87a46b26d0c3111"
+    },
+    {
+      "split": "train",
+      "seed": 1015,
+      "task_id": "train-1015-v1-L3-10",
+      "difficulty": "L3",
+      "instance_sha256": "7ebc31c65622157b5ff061a464f39d207109379b29593e9e6606ff8a10ae546c"
+    },
+    {
+      "split": "train",
+      "seed": 1016,
+      "task_id": "train-1016-v1-L3-11",
+      "difficulty": "L3",
+      "instance_sha256": "84cd0b8cdde94ec4b875bc2033bf1b3faf4a9f19746eabe17e30f3652b060c35"
+    },
+    {
+      "split": "train",
+      "seed": 1017,
+      "task_id": "train-1017-v1-L2-08",
+      "difficulty": "L2",
+      "instance_sha256": "75e27b315294d2f1c464461364c54e379ef178935bd9f8a58b6d10a4b2312408"
+    },
+    {
+      "split": "train",
+      "seed": 1018,
+      "task_id": "train-1018-v1-L3-06",
+      "difficulty": "L3",
+      "instance_sha256": "21def7865d243745ee92d6a2451ae4ce9ec5e5a4ee07e66c46e955b764cfa398"
+    },
+    {
+      "split": "train",
+      "seed": 1019,
+      "task_id": "train-1019-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "c4dc1e439a830d8c74334954e560d0dae500eb11e33dfe80f617430b1b66ba27"
+    },
+    {
+      "split": "train",
+      "seed": 1020,
+      "task_id": "train-1020-v1-L2-00",
+      "difficulty": "L2",
+      "instance_sha256": "647bb31cf766e9ede60824f9b7db62aa259f118c0f2c2a560daa112b033d9bc8"
+    },
+    {
+      "split": "train",
+      "seed": 1021,
+      "task_id": "train-1021-v1-L3-01",
+      "difficulty": "L3",
+      "instance_sha256": "db309c539cd1362eb546765e4c63564821d5fe477e4fbfc269dded8a78fec66c"
+    },
+    {
+      "split": "train",
+      "seed": 1022,
+      "task_id": "train-1022-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "d06c6b66fe71c64b7d3732081b144bb4699daa724e0f6df36e4b853204fe8a8f"
+    },
+    {
+      "split": "train",
+      "seed": 1023,
+      "task_id": "train-1023-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "2122e1a09a96408831d5105449ddc9e3e4b1a86ca9f70b6d26e2072f27dfc4f5"
+    },
+    {
+      "split": "train",
+      "seed": 1024,
+      "task_id": "train-1024-v1-L3-07",
+      "difficulty": "L3",
+      "instance_sha256": "cb141a5789624cc5fc20d8a486bee6a01cdbad8f631f17f6d91653ba4fab505f"
+    },
+    {
+      "split": "train",
+      "seed": 1025,
+      "task_id": "train-1025-v1-L3-08",
+      "difficulty": "L3",
+      "instance_sha256": "7d6c9ec0034dfc69085f0439077faf2435f3d460f7aa0ffd77c1d3d9eaf2e992"
+    },
+    {
+      "split": "train",
+      "seed": 1026,
+      "task_id": "train-1026-v1-L2-10",
+      "difficulty": "L2",
+      "instance_sha256": "f357cc4cfa848cfb098ab816b343a3313d0a316b5a422b318b3ca8d3e4f69df9"
+    },
+    {
+      "split": "train",
+      "seed": 1027,
+      "task_id": "train-1027-v1-L3-05",
+      "difficulty": "L3",
+      "instance_sha256": "c2db212f3123c72e16a088237b27a443044e883b18a778f3f5e6404a6227d402"
+    },
+    {
+      "split": "train",
+      "seed": 1028,
+      "task_id": "train-1028-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "5959acefbfcf1e38a0d9bc9990fad1992e86ffe945ac97cf5d06513da5bc772f"
+    },
+    {
+      "split": "train",
+      "seed": 1029,
+      "task_id": "train-1029-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "0b3e922c68258fdeb68fe911d469ec510dfe7e858be24b21f4ce061a44935e9f"
+    }
+  ]
+}

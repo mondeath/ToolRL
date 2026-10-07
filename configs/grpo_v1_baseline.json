@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "data_root": "results/grpo_v1_data",
+  "tasks_file": "configs/grpo_v1_baseline_tasks.json",
+  "tasks_sha256": "77dd1d73f5cb17546988fe7c19be6a40788f01c5aa0d3cd47de939148fc9f1e9",
+  "data_manifest_sha256": "1269f32f05156d07e7b24c786d790078b73c32de75687dfc150d670351008ca3",
+  "generator_source_sha256": "2ecb219ed3d2511f3e07ddf8e5c5c2fb7140955c64a5c3a86726bcbc559fd4e0",
+  "group_size": 4,
+  "task_count": 240,
+  "seed": 2026,
+  "rollout": {
+    "max_steps": 9,
+    "max_tool_calls": 8,
+    "max_parse_retries": 1,
+    "seed": 2026
+  },
+  "sampling": {
+    "do_sample": true,
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 0,
+    "max_new_tokens": 256,
+    "max_context_tokens": 16384
+  },
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.0,
+    "bias": "none",
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16"
+  },
+  "training": {
+    "max_updates": null,
+    "learning_rate": 1e-05,
+    "clip_epsilon": 0.2,
+    "max_grad_norm": 1.0,
+    "weight_decay": 0.0,
+    "beta": 0.0,
+    "gradient_checkpointing": true,
+    "logprob_space": "raw_model_softmax",
+    "epochs": 1
+  },
+  "diagnostic_tasks_sha256": "af9bff182704f573f076e21bf8f41c335ec168d923eaeeefc0281953a40ee47b",
+  "mode": "task_only_baseline",
+  "checkpoint_groups": [
+    0,
+    60,
+    120,
+    180,
+    240
+  ],
+  "dev_split": "all_400",
+  "selection_seed": 2026,
+  "smoke_config_sha256": "874132cd26dc8ece6d553e1e7f4f1384dffa1ef96285c8367211e84675b24394"
+}

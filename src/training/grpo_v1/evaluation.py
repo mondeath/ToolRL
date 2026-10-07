@@ -29,6 +29,9 @@ def metrics(rows):
     parses = [p for row in rows for p in row['trajectory']['parse_status']]
     summary['parsed_action_rate'] = sum(p['success'] for p in parses) / len(parses) if parses else 0.0
     summary['has_legal_tool_actions'] = any(row['tool_calls'] > 0 for row in rows)
+    successful = [row for row in rows if row['task_success']]
+    summary['average_tool_cost_successful'] = (sum(row['tool_cost'] for row in successful) / len(successful)
+                                              if successful else None)
     return summary
 
 

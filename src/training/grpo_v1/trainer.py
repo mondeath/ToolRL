@@ -1,4 +1,4 @@
-"""One on-policy update per mixed group, at most three updates in one pass."""
+"""One on-policy update per mixed group; optional smoke-only update budget."""
 import hashlib
 import json
 from pathlib import Path
@@ -47,7 +47,7 @@ class GRPOTrainer:
         if not any(advantages):
             result['skip_reason'] = 'all_equal_rewards'
             return result  # No Adam momentum/weight-decay step on zero signal.
-        if self.step >= self.config['max_updates']:
+        if self.config['max_updates'] is not None and self.step >= self.config['max_updates']:
             result['skip_reason'] = 'update_budget_exhausted'
             return result
         before = {name: p.detach().cpu().clone() for name, p in self.named_adapters}

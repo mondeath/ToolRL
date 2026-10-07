@@ -34,10 +34,10 @@ def check_snapshot(snapshot, config):
                 identity_basis='canonical HF cache path and architecture; not a full weight-content checksum')
 
 
-def preflight(root, config, snapshot=None, require_gpu=True):
+def preflight(root, config, snapshot=None, require_gpu=True, data_loader=load_data):
     report = dict(status='passed', mode='gpu_preflight' if require_gpu else 'static', errors=[], checks={})
     try:
-        train, diagnostic = load_data(root, config)
+        train, diagnostic = data_loader(root, config)
         report['checks']['data'] = dict(train_tasks=len(train), train_seeds=sorted({x['seed'] for x in train}),
             diagnostic_tasks=len(diagnostic), split_overlap=False, frozen_contract=True)
     except Exception as exc:
