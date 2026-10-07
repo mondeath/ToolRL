@@ -1,0 +1,37 @@
+{
+  "status": "blocked",
+  "mode": "gpu_preflight",
+  "errors": [
+    "bitsandbytes: No module named 'bitsandbytes'",
+    "CUDA unavailable; no CPU fallback for 7B training",
+    "snapshot: --model-dir must point to the local frozen HF snapshot"
+  ],
+  "checks": {
+    "data": {
+      "train_tasks": 24,
+      "train_seeds": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007
+      ],
+      "diagnostic_tasks": 15,
+      "split_overlap": false,
+      "frozen_contract": true
+    },
+    "versions": {
+      "torch": "2.8.0",
+      "transformers": "4.57.6",
+      "accelerate": "1.10.1",
+      "peft": "0.17.1"
+    },
+    "cuda_available": false,
+    "torch_cuda_version": null
+  },
+  "model_loaded": false,
+  "training_started": false
+}

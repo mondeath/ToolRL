@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "selection_method": "Fixed before model sampling; 8 seeds, one task per level per seed, in listed order.",
+  "tasks": [
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L1-00",
+      "difficulty": "L1",
+      "instance_sha256": "6cf2dfd6ea5d3e421d7e82927a05114af21c40a2261e475f1faf4a82a5d26a16"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L2-00",
+      "difficulty": "L2",
+      "instance_sha256": "35fc2a5a3a6923c716b9e4f211fa9147ce4076f230ff0358b31626588fe5364a"
+    },
+    {
+      "split": "train",
+      "seed": 1000,
+      "task_id": "train-1000-v1-L3-00",
+      "difficulty": "L3",
+      "instance_sha256": "9cc3d35d112b5b6d54ed967e24f8eb6ab781375e0b90a9d4770fa9f92e198cb4"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L1-02",
+      "difficulty": "L1",
+      "instance_sha256": "28d3efe8a2c1e6caa8ae62150dbb5c7960cefc2a7506167a8dafdceaa8e20265"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L2-01",
+      "difficulty": "L2",
+      "instance_sha256": "b31d1951440a6f68023d9d3d86e8ec5b0408694723f999bfb1692812bd1bfa98"
+    },
+    {
+      "split": "train",
+      "seed": 1001,
+      "task_id": "train-1001-v1-L3-03",
+      "difficulty": "L3",
+      "instance_sha256": "1d5ee97a76fdac5a2c1f1e8c0314b73894eee56533724a6167e324306af6df6c"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L1-05",
+      "difficulty": "L1",
+      "instance_sha256": "0376a5572496776c10de9701997f753388a91b7b3470cf20cfb2fcef35e07ee9"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L2-02",
+      "difficulty": "L2",
+      "instance_sha256": "9f7e5c4dc80bc359adb6ef1bc8959a89c48579333d729a2cb72713201b514fe6"
+    },
+    {
+      "split": "train",
+      "seed": 1002,
+      "task_id": "train-1002-v1-L3-06",
+      "difficulty": "L3",
+      "instance_sha256": "01bd9f9b83f5e9a303df770a871518ca4297796cb627f73e52dcedf6f7d0f323"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L1-08",
+      "difficulty": "L1",
+      "instance_sha256": "97b66dbc8a024b5ed8cc0ab9338affef668bb0fecd15db1b08b00f9911518d19"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L2-03",
+      "difficulty": "L2",
+      "instance_sha256": "0f5907a874c7f727db845ea3bb96a519667fcf04664844b324c98dff03487ac0"
+    },
+    {
+      "split": "train",
+      "seed": 1003,
+      "task_id": "train-1003-v1-L3-09",
+      "difficulty": "L3",
+      "instance_sha256": "1e5b38875571d4c12212951709411dd0c413bdb21e197e49ee68f2dd4a1158b2"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L1-09",
+      "difficulty": "L1",
+      "instance_sha256": "c58bb03eb6ff481af560ede63f7ec09a6e95042365301f05aa0c43e2c82cb0a5"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L2-04",
+      "difficulty": "L2",
+      "instance_sha256": "f11de967f81ad2805387fa03870cbed82664ac436d8e0817feff6aba84b352d1"
+    },
+    {
+      "split": "train",
+      "seed": 1004,
+      "task_id": "train-1004-v1-L3-12",
+      "difficulty": "L3",
+      "instance_sha256": "522759959e48a602f43303c77fd256828dd88b88f05f974d5b0464f8e2204e86"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L1-01",
+      "difficulty": "L1",
+      "instance_sha256": "8fcf66ed0324a16f473097c5a12a58520fc043cd10d419269e37da709205c7b8"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L2-05",
+      "difficulty": "L2",
+      "instance_sha256": "d0583d6dad315d71123463bf7d5729206445eb2a82b07852689a078c0d420a29"
+    },
+    {
+      "split": "train",
+      "seed": 1005,
+      "task_id": "train-1005-v1-L3-01",
+      "difficulty": "L3",
+      "instance_sha256": "c227379d0a366890564b14819962c94f7509d89a0d3215eed2faae8946c4dade"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L1-06",
+      "difficulty": "L1",
+      "instance_sha256": "2bb0bcf7fc75824a8153ef70de6e187116b8944df8e29ebc9011c7b1a6550df3"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L2-06",
+      "difficulty": "L2",
+      "instance_sha256": "f92146a464f85f812cce6e1ee9cb3b8a24ceb9a1e24f58b23fd50050229c5a94"
+    },
+    {
+      "split": "train",
+      "seed": 1006,
+      "task_id": "train-1006-v1-L3-04",
+      "difficulty": "L3",
+      "instance_sha256": "884abbe356f31c446c6995b69e7bf2721783a9a59df7b6572a43238e21cfadf3"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L1-07",
+      "difficulty": "L1",
+      "instance_sha256": "90f58eeeaba74129562010f4fc7b6e8f02308c2aad7d90a35b9850a821f67677"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L2-07",
+      "difficulty": "L2",
+      "instance_sha256": "96e69a6f7eef6745698a0683da471dbcc96e7832766aa46ee76295c96b66295c"
+    },
+    {
+      "split": "train",
+      "seed": 1007,
+      "task_id": "train-1007-v1-L3-07",
+      "difficulty": "L3",
+      "instance_sha256": "b9a28433d5ca6764e607a60f94ced4e0349a03a4c6c77c6fe626e15dc73af67c"
+    }
+  ]
+}

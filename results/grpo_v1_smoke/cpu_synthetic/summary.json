@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "synthetic_only": true,
+  "device": "cpu",
+  "update": {
+    "step": 1,
+    "policy_loss": 0.0,
+    "kl": null,
+    "grad_norm": 0.1701647788286209,
+    "learning_rate": 1e-05,
+    "advantages": [
+      0.9999999800000003,
+      -0.9999999800000003,
+      0.9999999800000003,
+      -0.9999999800000003
+    ],
+    "adapter_delta_l2": 0.00019588816224174686,
+    "update_applied": true
+  },
+  "base_unchanged": true,
+  "checkpoint_reload": true,
+  "total_params": 23712,
+  "trainable_params": 896,
+  "trainable_ratio": 0.037786774628879895,
+  "parameter_storage_bytes": 94848
+}

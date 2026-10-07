@@ -1,0 +1,8 @@
+# Separate training dependencies; keep the frozen inference lock unchanged.
+# CUDA wheels/drivers must already match the host; record pip freeze after preflight.
+torch>=2.7.0a0,<2.9
+transformers>=4.57.1,<4.58
+accelerate>=1.10,<2
+peft==0.17.1
+bitsandbytes==0.48.1
+safetensors>=0.5

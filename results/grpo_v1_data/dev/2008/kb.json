@@ -1,0 +1,995 @@
+{
+  "students": {
+    "s00": {
+      "id": "s00",
+      "name": "Student-00",
+      "year": 4,
+      "gpa": 3.74,
+      "department": "Robotics"
+    },
+    "s01": {
+      "id": "s01",
+      "name": "Student-01",
+      "year": 4,
+      "gpa": 3.89,
+      "department": "Robotics"
+    },
+    "s02": {
+      "id": "s02",
+      "name": "Student-02",
+      "year": 2,
+      "gpa": 3.79,
+      "department": "Logic"
+    },
+    "s03": {
+      "id": "s03",
+      "name": "Student-03",
+      "year": 4,
+      "gpa": 3.77,
+      "department": "Robotics"
+    },
+    "s04": {
+      "id": "s04",
+      "name": "Student-04",
+      "year": 4,
+      "gpa": 3.63,
+      "department": "Robotics"
+    },
+    "s05": {
+      "id": "s05",
+      "name": "Student-05",
+      "year": 4,
+      "gpa": 3.1,
+      "department": "Robotics"
+    },
+    "s06": {
+      "id": "s06",
+      "name": "Student-06",
+      "year": 2,
+      "gpa": 3.92,
+      "department": "Ecology"
+    },
+    "s07": {
+      "id": "s07",
+      "name": "Student-07",
+      "year": 3,
+      "gpa": 3.76,
+      "department": "Robotics"
+    },
+    "s08": {
+      "id": "s08",
+      "name": "Student-08",
+      "year": 2,
+      "gpa": 3.32,
+      "department": "Logic"
+    },
+    "s09": {
+      "id": "s09",
+      "name": "Student-09",
+      "year": 2,
+      "gpa": 3.56,
+      "department": "Robotics"
+    },
+    "s10": {
+      "id": "s10",
+      "name": "Student-10",
+      "year": 2,
+      "gpa": 3.81,
+      "department": "Logic"
+    },
+    "s11": {
+      "id": "s11",
+      "name": "Student-11",
+      "year": 2,
+      "gpa": 3.97,
+      "department": "Robotics"
+    },
+    "s12": {
+      "id": "s12",
+      "name": "Student-12",
+      "year": 1,
+      "gpa": 3.79,
+      "department": "Ecology"
+    },
+    "s13": {
+      "id": "s13",
+      "name": "Student-13",
+      "year": 3,
+      "gpa": 3.91,
+      "department": "Ecology"
+    },
+    "s14": {
+      "id": "s14",
+      "name": "Student-14",
+      "year": 1,
+      "gpa": 3.92,
+      "department": "Logic"
+    },
+    "s15": {
+      "id": "s15",
+      "name": "Student-15",
+      "year": 1,
+      "gpa": 3.18,
+      "department": "Logic"
+    },
+    "s16": {
+      "id": "s16",
+      "name": "Student-16",
+      "year": 1,
+      "gpa": 3.84,
+      "department": "Robotics"
+    },
+    "s17": {
+      "id": "s17",
+      "name": "Student-17",
+      "year": 1,
+      "gpa": 3.58,
+      "department": "Ecology"
+    },
+    "s18": {
+      "id": "s18",
+      "name": "Student-18",
+      "year": 3,
+      "gpa": 3.73,
+      "department": "Ecology"
+    },
+    "s19": {
+      "id": "s19",
+      "name": "Student-19",
+      "year": 2,
+      "gpa": 3.86,
+      "department": "Ecology"
+    },
+    "s20": {
+      "id": "s20",
+      "name": "Student-20",
+      "year": 3,
+      "gpa": 3.6,
+      "department": "Ecology"
+    },
+    "s21": {
+      "id": "s21",
+      "name": "Student-21",
+      "year": 3,
+      "gpa": 3.7,
+      "department": "Ecology"
+    },
+    "s22": {
+      "id": "s22",
+      "name": "Student-22",
+      "year": 3,
+      "gpa": 3.8,
+      "department": "Robotics"
+    },
+    "s23": {
+      "id": "s23",
+      "name": "Student-23",
+      "year": 3,
+      "gpa": 3.27,
+      "department": "Ecology"
+    },
+    "s24": {
+      "id": "s24",
+      "name": "Student-24",
+      "year": 4,
+      "gpa": 3.97,
+      "department": "Logic"
+    },
+    "s25": {
+      "id": "s25",
+      "name": "Student-25",
+      "year": 4,
+      "gpa": 3.54,
+      "department": "Robotics"
+    },
+    "s26": {
+      "id": "s26",
+      "name": "Student-26",
+      "year": 4,
+      "gpa": 3.83,
+      "department": "Robotics"
+    },
+    "s27": {
+      "id": "s27",
+      "name": "Student-27",
+      "year": 4,
+      "gpa": 4.0,
+      "department": "Logic"
+    },
+    "s28": {
+      "id": "s28",
+      "name": "Student-28",
+      "year": 4,
+      "gpa": 3.48,
+      "department": "Logic"
+    },
+    "s29": {
+      "id": "s29",
+      "name": "Student-29",
+      "year": 1,
+      "gpa": 3.73,
+      "department": "Robotics"
+    }
+  },
+  "courses": {
+    "c00": {
+      "id": "c00",
+      "name": "Course-00",
+      "department": "Robotics",
+      "credits": 2
+    },
+    "c01": {
+      "id": "c01",
+      "name": "Course-01",
+      "department": "Logic",
+      "credits": 4
+    },
+    "c02": {
+      "id": "c02",
+      "name": "Course-02",
+      "department": "Ecology",
+      "credits": 4
+    },
+    "c03": {
+      "id": "c03",
+      "name": "Course-03",
+      "department": "Robotics",
+      "credits": 4
+    },
+    "c04": {
+      "id": "c04",
+      "name": "Course-04",
+      "department": "Ecology",
+      "credits": 2
+    },
+    "c05": {
+      "id": "c05",
+      "name": "Course-05",
+      "department": "Robotics",
+      "credits": 2
+    },
+    "c06": {
+      "id": "c06",
+      "name": "Course-06",
+      "department": "Robotics",
+      "credits": 2
+    },
+    "c07": {
+      "id": "c07",
+      "name": "Course-07",
+      "department": "Ecology",
+      "credits": 4
+    },
+    "c08": {
+      "id": "c08",
+      "name": "Course-08",
+      "department": "Ecology",
+      "credits": 4
+    },
+    "c09": {
+      "id": "c09",
+      "name": "Course-09",
+      "department": "Ecology",
+      "credits": 4
+    },
+    "c10": {
+      "id": "c10",
+      "name": "Course-10",
+      "department": "Ecology",
+      "credits": 2
+    },
+    "c11": {
+      "id": "c11",
+      "name": "Course-11",
+      "department": "Ecology",
+      "credits": 3
+    }
+  },
+  "enrollments": {
+    "e01-0": {
+      "id": "e01-0",
+      "student_id": "s01",
+      "course_id": "c02",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e01-1": {
+      "id": "e01-1",
+      "student_id": "s01",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e01-2": {
+      "id": "e01-2",
+      "student_id": "s01",
+      "course_id": "c03",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e00-0": {
+      "id": "e00-0",
+      "student_id": "s00",
+      "course_id": "c02",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e00-1": {
+      "id": "e00-1",
+      "student_id": "s00",
+      "course_id": "c11",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e00-2": {
+      "id": "e00-2",
+      "student_id": "s00",
+      "course_id": "c03",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e04-0": {
+      "id": "e04-0",
+      "student_id": "s04",
+      "course_id": "c02",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e04-1": {
+      "id": "e04-1",
+      "student_id": "s04",
+      "course_id": "c09",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e04-2": {
+      "id": "e04-2",
+      "student_id": "s04",
+      "course_id": "c05",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e05-0": {
+      "id": "e05-0",
+      "student_id": "s05",
+      "course_id": "c02",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e05-1": {
+      "id": "e05-1",
+      "student_id": "s05",
+      "course_id": "c03",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e05-2": {
+      "id": "e05-2",
+      "student_id": "s05",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e03-0": {
+      "id": "e03-0",
+      "student_id": "s03",
+      "course_id": "c02",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e03-1": {
+      "id": "e03-1",
+      "student_id": "s03",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e03-2": {
+      "id": "e03-2",
+      "student_id": "s03",
+      "course_id": "c03",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e02-0": {
+      "id": "e02-0",
+      "student_id": "s02",
+      "course_id": "c02",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e02-1": {
+      "id": "e02-1",
+      "student_id": "s02",
+      "course_id": "c10",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e02-2": {
+      "id": "e02-2",
+      "student_id": "s02",
+      "course_id": "c05",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e11-0": {
+      "id": "e11-0",
+      "student_id": "s11",
+      "course_id": "c08",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e11-1": {
+      "id": "e11-1",
+      "student_id": "s11",
+      "course_id": "c03",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e11-2": {
+      "id": "e11-2",
+      "student_id": "s11",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e10-0": {
+      "id": "e10-0",
+      "student_id": "s10",
+      "course_id": "c08",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e10-1": {
+      "id": "e10-1",
+      "student_id": "s10",
+      "course_id": "c04",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e10-2": {
+      "id": "e10-2",
+      "student_id": "s10",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e09-0": {
+      "id": "e09-0",
+      "student_id": "s09",
+      "course_id": "c08",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e09-1": {
+      "id": "e09-1",
+      "student_id": "s09",
+      "course_id": "c11",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e09-2": {
+      "id": "e09-2",
+      "student_id": "s09",
+      "course_id": "c07",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e08-0": {
+      "id": "e08-0",
+      "student_id": "s08",
+      "course_id": "c08",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e08-1": {
+      "id": "e08-1",
+      "student_id": "s08",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e08-2": {
+      "id": "e08-2",
+      "student_id": "s08",
+      "course_id": "c10",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e06-0": {
+      "id": "e06-0",
+      "student_id": "s06",
+      "course_id": "c08",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e06-1": {
+      "id": "e06-1",
+      "student_id": "s06",
+      "course_id": "c03",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e06-2": {
+      "id": "e06-2",
+      "student_id": "s06",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e07-0": {
+      "id": "e07-0",
+      "student_id": "s07",
+      "course_id": "c08",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e07-1": {
+      "id": "e07-1",
+      "student_id": "s07",
+      "course_id": "c04",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e07-2": {
+      "id": "e07-2",
+      "student_id": "s07",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e12-0": {
+      "id": "e12-0",
+      "student_id": "s12",
+      "course_id": "c06",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e12-1": {
+      "id": "e12-1",
+      "student_id": "s12",
+      "course_id": "c03",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e12-2": {
+      "id": "e12-2",
+      "student_id": "s12",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e14-0": {
+      "id": "e14-0",
+      "student_id": "s14",
+      "course_id": "c06",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e14-1": {
+      "id": "e14-1",
+      "student_id": "s14",
+      "course_id": "c09",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e14-2": {
+      "id": "e14-2",
+      "student_id": "s14",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e17-0": {
+      "id": "e17-0",
+      "student_id": "s17",
+      "course_id": "c06",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e17-1": {
+      "id": "e17-1",
+      "student_id": "s17",
+      "course_id": "c09",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e17-2": {
+      "id": "e17-2",
+      "student_id": "s17",
+      "course_id": "c04",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e15-0": {
+      "id": "e15-0",
+      "student_id": "s15",
+      "course_id": "c06",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e15-1": {
+      "id": "e15-1",
+      "student_id": "s15",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e15-2": {
+      "id": "e15-2",
+      "student_id": "s15",
+      "course_id": "c09",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e16-0": {
+      "id": "e16-0",
+      "student_id": "s16",
+      "course_id": "c06",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e16-1": {
+      "id": "e16-1",
+      "student_id": "s16",
+      "course_id": "c09",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e16-2": {
+      "id": "e16-2",
+      "student_id": "s16",
+      "course_id": "c05",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e13-0": {
+      "id": "e13-0",
+      "student_id": "s13",
+      "course_id": "c06",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e13-1": {
+      "id": "e13-1",
+      "student_id": "s13",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e13-2": {
+      "id": "e13-2",
+      "student_id": "s13",
+      "course_id": "c10",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e18-0": {
+      "id": "e18-0",
+      "student_id": "s18",
+      "course_id": "c01",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e18-1": {
+      "id": "e18-1",
+      "student_id": "s18",
+      "course_id": "c07",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e18-2": {
+      "id": "e18-2",
+      "student_id": "s18",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e22-0": {
+      "id": "e22-0",
+      "student_id": "s22",
+      "course_id": "c01",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e22-1": {
+      "id": "e22-1",
+      "student_id": "s22",
+      "course_id": "c10",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e22-2": {
+      "id": "e22-2",
+      "student_id": "s22",
+      "course_id": "c04",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e20-0": {
+      "id": "e20-0",
+      "student_id": "s20",
+      "course_id": "c01",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e20-1": {
+      "id": "e20-1",
+      "student_id": "s20",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e20-2": {
+      "id": "e20-2",
+      "student_id": "s20",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e23-0": {
+      "id": "e23-0",
+      "student_id": "s23",
+      "course_id": "c01",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e23-1": {
+      "id": "e23-1",
+      "student_id": "s23",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e23-2": {
+      "id": "e23-2",
+      "student_id": "s23",
+      "course_id": "c07",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e21-0": {
+      "id": "e21-0",
+      "student_id": "s21",
+      "course_id": "c01",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e21-1": {
+      "id": "e21-1",
+      "student_id": "s21",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e21-2": {
+      "id": "e21-2",
+      "student_id": "s21",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e19-0": {
+      "id": "e19-0",
+      "student_id": "s19",
+      "course_id": "c01",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e19-1": {
+      "id": "e19-1",
+      "student_id": "s19",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e19-2": {
+      "id": "e19-2",
+      "student_id": "s19",
+      "course_id": "c10",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e24-0": {
+      "id": "e24-0",
+      "student_id": "s24",
+      "course_id": "c00",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e24-1": {
+      "id": "e24-1",
+      "student_id": "s24",
+      "course_id": "c05",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e24-2": {
+      "id": "e24-2",
+      "student_id": "s24",
+      "course_id": "c11",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e26-0": {
+      "id": "e26-0",
+      "student_id": "s26",
+      "course_id": "c00",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e26-1": {
+      "id": "e26-1",
+      "student_id": "s26",
+      "course_id": "c03",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e26-2": {
+      "id": "e26-2",
+      "student_id": "s26",
+      "course_id": "c11",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e25-0": {
+      "id": "e25-0",
+      "student_id": "s25",
+      "course_id": "c00",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e25-1": {
+      "id": "e25-1",
+      "student_id": "s25",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e25-2": {
+      "id": "e25-2",
+      "student_id": "s25",
+      "course_id": "c03",
+      "status": "completed",
+      "grade": "B"
+    },
+    "e28-0": {
+      "id": "e28-0",
+      "student_id": "s28",
+      "course_id": "c00",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e28-1": {
+      "id": "e28-1",
+      "student_id": "s28",
+      "course_id": "c05",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e28-2": {
+      "id": "e28-2",
+      "student_id": "s28",
+      "course_id": "c11",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e27-0": {
+      "id": "e27-0",
+      "student_id": "s27",
+      "course_id": "c00",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e27-1": {
+      "id": "e27-1",
+      "student_id": "s27",
+      "course_id": "c11",
+      "status": "completed",
+      "grade": "C"
+    },
+    "e27-2": {
+      "id": "e27-2",
+      "student_id": "s27",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    },
+    "e29-0": {
+      "id": "e29-0",
+      "student_id": "s29",
+      "course_id": "c00",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e29-1": {
+      "id": "e29-1",
+      "student_id": "s29",
+      "course_id": "c04",
+      "status": "completed",
+      "grade": "A"
+    },
+    "e29-2": {
+      "id": "e29-2",
+      "student_id": "s29",
+      "course_id": "c07",
+      "status": "enrolled",
+      "grade": null
+    }
+  },
+  "scholarships": {
+    "sc00": {
+      "id": "sc00",
+      "name": "Scholarship-00",
+      "min_gpa": 3.6,
+      "eligible_year": 4,
+      "required_course": "c02"
+    },
+    "sc01": {
+      "id": "sc01",
+      "name": "Scholarship-01",
+      "min_gpa": 3.39,
+      "eligible_year": 2,
+      "required_course": "c08"
+    },
+    "sc02": {
+      "id": "sc02",
+      "name": "Scholarship-02",
+      "min_gpa": 3.57,
+      "eligible_year": 1,
+      "required_course": "c06"
+    },
+    "sc03": {
+      "id": "sc03",
+      "name": "Scholarship-03",
+      "min_gpa": 3.39,
+      "eligible_year": 3,
+      "required_course": "c01"
+    },
+    "sc04": {
+      "id": "sc04",
+      "name": "Scholarship-04",
+      "min_gpa": 3.52,
+      "eligible_year": 4,
+      "required_course": "c00"
+    }
+  },
+  "applications": {
+    "s01:sc00": {
+      "id": "s01:sc00",
+      "student_id": "s01",
+      "scholarship_id": "sc00",
+      "status": "submitted"
+    },
+    "s10:sc01": {
+      "id": "s10:sc01",
+      "student_id": "s10",
+      "scholarship_id": "sc01",
+      "status": "submitted"
+    },
+    "s14:sc02": {
+      "id": "s14:sc02",
+      "student_id": "s14",
+      "scholarship_id": "sc02",
+      "status": "submitted"
+    },
+    "s22:sc03": {
+      "id": "s22:sc03",
+      "student_id": "s22",
+      "scholarship_id": "sc03",
+      "status": "submitted"
+    },
+    "s26:sc04": {
+      "id": "s26:sc04",
+      "student_id": "s26",
+      "scholarship_id": "sc04",
+      "status": "submitted"
+    },
+    "s24:sc04": {
+      "id": "s24:sc04",
+      "student_id": "s24",
+      "scholarship_id": "sc04",
+      "status": "submitted"
+    }
+  }
+}

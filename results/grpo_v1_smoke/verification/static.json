@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "mode": "static",
+  "errors": [],
+  "checks": {
+    "data": {
+      "train_tasks": 24,
+      "train_seeds": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007
+      ],
+      "diagnostic_tasks": 15,
+      "split_overlap": false,
+      "frozen_contract": true
+    }
+  },
+  "model_loaded": false,
+  "training_started": false
+}

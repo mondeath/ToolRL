@@ -1,0 +1,2498 @@
+[
+  {
+    "task_id": "train-1018-v1-L1-00",
+    "difficulty": "L1",
+    "question": "What is the GPA of student s00? Return a number.",
+    "prompt": "What is the GPA of student s00? Return a number.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "s00",
+      "field": "gpa"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-01",
+    "difficulty": "L1",
+    "question": "What is the GPA of student s01? Return a number.",
+    "prompt": "What is the GPA of student s01? Return a number.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "s01",
+      "field": "gpa"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-02",
+    "difficulty": "L1",
+    "question": "What is the GPA of student s02? Return a number.",
+    "prompt": "What is the GPA of student s02? Return a number.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "s02",
+      "field": "gpa"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-03",
+    "difficulty": "L1",
+    "question": "What is the GPA of student s03? Return a number.",
+    "prompt": "What is the GPA of student s03? Return a number.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "s03",
+      "field": "gpa"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-04",
+    "difficulty": "L1",
+    "question": "What is the GPA of student s04? Return a number.",
+    "prompt": "What is the GPA of student s04? Return a number.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "s04",
+      "field": "gpa"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-05",
+    "difficulty": "L1",
+    "question": "List all student IDs in year 1.",
+    "prompt": "List all student IDs in year 1.",
+    "evaluation": {
+      "kind": "search",
+      "query": {
+        "table": "students",
+        "where": [
+          {
+            "field": "year",
+            "value": 1
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-06",
+    "difficulty": "L1",
+    "question": "List all student IDs in year 2.",
+    "prompt": "List all student IDs in year 2.",
+    "evaluation": {
+      "kind": "search",
+      "query": {
+        "table": "students",
+        "where": [
+          {
+            "field": "year",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-07",
+    "difficulty": "L1",
+    "question": "List all student IDs in year 3.",
+    "prompt": "List all student IDs in year 3.",
+    "evaluation": {
+      "kind": "search",
+      "query": {
+        "table": "students",
+        "where": [
+          {
+            "field": "year",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-08",
+    "difficulty": "L1",
+    "question": "List all student IDs in year 4.",
+    "prompt": "List all student IDs in year 4.",
+    "evaluation": {
+      "kind": "search",
+      "query": {
+        "table": "students",
+        "where": [
+          {
+            "field": "year",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L1-09",
+    "difficulty": "L1",
+    "question": "How many courses have 3 credits? Return a number.",
+    "prompt": "How many courses have 3 credits? Return a number.",
+    "evaluation": {
+      "kind": "count",
+      "query": {
+        "table": "courses",
+        "where": [
+          {
+            "field": "credits",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-00",
+    "difficulty": "L2",
+    "question": "List all student IDs eligible for scholarship sc00, including those already applied. Check year, GPA and completed required course.",
+    "prompt": "List all student IDs eligible for scholarship sc00, including those already applied. Check year, GPA and completed required course.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "scholarship_id": "sc00"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-01",
+    "difficulty": "L2",
+    "question": "List all year 1 student IDs with GPA at least 3.5 who completed course c06.",
+    "prompt": "List all year 1 student IDs with GPA at least 3.5 who completed course c06.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 1,
+        "min_gpa": 3.5,
+        "course_id": "c06"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-02",
+    "difficulty": "L2",
+    "question": "List all year 1 student IDs with GPA at least 3.65 who completed course c06.",
+    "prompt": "List all year 1 student IDs with GPA at least 3.65 who completed course c06.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 1,
+        "min_gpa": 3.65,
+        "course_id": "c06"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-03",
+    "difficulty": "L2",
+    "question": "List all student IDs eligible for scholarship sc01, including those already applied. Check year, GPA and completed required course.",
+    "prompt": "List all student IDs eligible for scholarship sc01, including those already applied. Check year, GPA and completed required course.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "scholarship_id": "sc01"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-04",
+    "difficulty": "L2",
+    "question": "List all year 4 student IDs with GPA at least 3.5 who completed course c10.",
+    "prompt": "List all year 4 student IDs with GPA at least 3.5 who completed course c10.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 4,
+        "min_gpa": 3.5,
+        "course_id": "c10"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-05",
+    "difficulty": "L2",
+    "question": "List all year 4 student IDs with GPA at least 3.65 who completed course c10.",
+    "prompt": "List all year 4 student IDs with GPA at least 3.65 who completed course c10.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 4,
+        "min_gpa": 3.65,
+        "course_id": "c10"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-06",
+    "difficulty": "L2",
+    "question": "List all student IDs eligible for scholarship sc02, including those already applied. Check year, GPA and completed required course.",
+    "prompt": "List all student IDs eligible for scholarship sc02, including those already applied. Check year, GPA and completed required course.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "scholarship_id": "sc02"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-07",
+    "difficulty": "L2",
+    "question": "List all year 3 student IDs with GPA at least 3.5 who completed course c11.",
+    "prompt": "List all year 3 student IDs with GPA at least 3.5 who completed course c11.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 3,
+        "min_gpa": 3.5,
+        "course_id": "c11"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-08",
+    "difficulty": "L2",
+    "question": "List all year 3 student IDs with GPA at least 3.65 who completed course c11.",
+    "prompt": "List all year 3 student IDs with GPA at least 3.65 who completed course c11.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 3,
+        "min_gpa": 3.65,
+        "course_id": "c11"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-09",
+    "difficulty": "L2",
+    "question": "List all student IDs eligible for scholarship sc03, including those already applied. Check year, GPA and completed required course.",
+    "prompt": "List all student IDs eligible for scholarship sc03, including those already applied. Check year, GPA and completed required course.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "scholarship_id": "sc03"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-10",
+    "difficulty": "L2",
+    "question": "List all year 3 student IDs with GPA at least 3.5 who completed course c01.",
+    "prompt": "List all year 3 student IDs with GPA at least 3.5 who completed course c01.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 3,
+        "min_gpa": 3.5,
+        "course_id": "c01"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-11",
+    "difficulty": "L2",
+    "question": "List all year 3 student IDs with GPA at least 3.65 who completed course c01.",
+    "prompt": "List all year 3 student IDs with GPA at least 3.65 who completed course c01.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 3,
+        "min_gpa": 3.65,
+        "course_id": "c01"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-12",
+    "difficulty": "L2",
+    "question": "List all student IDs eligible for scholarship sc04, including those already applied. Check year, GPA and completed required course.",
+    "prompt": "List all student IDs eligible for scholarship sc04, including those already applied. Check year, GPA and completed required course.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "scholarship_id": "sc04"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-13",
+    "difficulty": "L2",
+    "question": "List all year 2 student IDs with GPA at least 3.5 who completed course c03.",
+    "prompt": "List all year 2 student IDs with GPA at least 3.5 who completed course c03.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 2,
+        "min_gpa": 3.5,
+        "course_id": "c03"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L2-14",
+    "difficulty": "L2",
+    "question": "List all year 2 student IDs with GPA at least 3.65 who completed course c03.",
+    "prompt": "List all year 2 student IDs with GPA at least 3.65 who completed course c03.",
+    "evaluation": {
+      "kind": "relational",
+      "query": {
+        "year": 2,
+        "min_gpa": 3.65,
+        "course_id": "c03"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "train-1018-v1-L3-00",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc00 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc00 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc00"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s00:sc00": {
+            "id": "s00:sc00",
+            "student_id": "s00",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s00:sc00": {
+        "id": "s00:sc00",
+        "student_id": "s00",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-01",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc00 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc00 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc00"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s00:sc00": {
+            "id": "s00:sc00",
+            "student_id": "s00",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-02",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc00 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc00 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc00"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s00:sc00": {
+            "id": "s00:sc00",
+            "student_id": "s00",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-03",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc01 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc01 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc01"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s09:sc01": {
+            "id": "s09:sc01",
+            "student_id": "s09",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-04",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc01 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc01 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc01"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s09:sc01": {
+            "id": "s09:sc01",
+            "student_id": "s09",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-05",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc01 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc01 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc01"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s09:sc01": {
+            "id": "s09:sc01",
+            "student_id": "s09",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s09:sc01": {
+        "id": "s09:sc01",
+        "student_id": "s09",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-06",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc02 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc02 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc02"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s16:sc02": {
+            "id": "s16:sc02",
+            "student_id": "s16",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-07",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc02 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc02 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc02"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s16:sc02": {
+            "id": "s16:sc02",
+            "student_id": "s16",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s16:sc02": {
+        "id": "s16:sc02",
+        "student_id": "s16",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-08",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc02 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc02 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc02"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s16:sc02": {
+            "id": "s16:sc02",
+            "student_id": "s16",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-09",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc03 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc03 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc03"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s20:sc03": {
+            "id": "s20:sc03",
+            "student_id": "s20",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s22:sc03": {
+            "id": "s22:sc03",
+            "student_id": "s22",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s20:sc03": {
+        "id": "s20:sc03",
+        "student_id": "s20",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-10",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc03 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc03 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc03"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s20:sc03": {
+            "id": "s20:sc03",
+            "student_id": "s20",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s22:sc03": {
+            "id": "s22:sc03",
+            "student_id": "s22",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-11",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc03 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc03 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc03"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s22:sc03": {
+            "id": "s22:sc03",
+            "student_id": "s22",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s20:sc03": {
+            "id": "s20:sc03",
+            "student_id": "s20",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      },
+      "s22:sc03": {
+        "id": "s22:sc03",
+        "student_id": "s22",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-12",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc04 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc04 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc04"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s25:sc04": {
+            "id": "s25:sc04",
+            "student_id": "s25",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s24:sc04": {
+        "id": "s24:sc04",
+        "student_id": "s24",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-13",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc04 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc04 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc04"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s25:sc04": {
+            "id": "s25:sc04",
+            "student_id": "s25",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s25:sc04": {
+        "id": "s25:sc04",
+        "student_id": "s25",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "train-1018-v1-L3-14",
+    "difficulty": "L3",
+    "question": "Submit scholarship sc04 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "prompt": "Submit scholarship sc04 applications for every eligible student who has not already applied. Do not submit duplicates or ineligible students. Preserve all existing records. Then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state",
+      "scholarship_id": "sc04"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "s05:sc00": {
+            "id": "s05:sc00",
+            "student_id": "s05",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s01:sc00": {
+            "id": "s01:sc00",
+            "student_id": "s01",
+            "scholarship_id": "sc00",
+            "status": "submitted"
+          },
+          "s06:sc01": {
+            "id": "s06:sc01",
+            "student_id": "s06",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s07:sc01": {
+            "id": "s07:sc01",
+            "student_id": "s07",
+            "scholarship_id": "sc01",
+            "status": "submitted"
+          },
+          "s17:sc02": {
+            "id": "s17:sc02",
+            "student_id": "s17",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s14:sc02": {
+            "id": "s14:sc02",
+            "student_id": "s14",
+            "scholarship_id": "sc02",
+            "status": "submitted"
+          },
+          "s21:sc03": {
+            "id": "s21:sc03",
+            "student_id": "s21",
+            "scholarship_id": "sc03",
+            "status": "submitted"
+          },
+          "s28:sc04": {
+            "id": "s28:sc04",
+            "student_id": "s28",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s24:sc04": {
+            "id": "s24:sc04",
+            "student_id": "s24",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          },
+          "s25:sc04": {
+            "id": "s25:sc04",
+            "student_id": "s25",
+            "scholarship_id": "sc04",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "s05:sc00": {
+        "id": "s05:sc00",
+        "student_id": "s05",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s01:sc00": {
+        "id": "s01:sc00",
+        "student_id": "s01",
+        "scholarship_id": "sc00",
+        "status": "submitted"
+      },
+      "s06:sc01": {
+        "id": "s06:sc01",
+        "student_id": "s06",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s07:sc01": {
+        "id": "s07:sc01",
+        "student_id": "s07",
+        "scholarship_id": "sc01",
+        "status": "submitted"
+      },
+      "s17:sc02": {
+        "id": "s17:sc02",
+        "student_id": "s17",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s14:sc02": {
+        "id": "s14:sc02",
+        "student_id": "s14",
+        "scholarship_id": "sc02",
+        "status": "submitted"
+      },
+      "s21:sc03": {
+        "id": "s21:sc03",
+        "student_id": "s21",
+        "scholarship_id": "sc03",
+        "status": "submitted"
+      },
+      "s28:sc04": {
+        "id": "s28:sc04",
+        "student_id": "s28",
+        "scholarship_id": "sc04",
+        "status": "submitted"
+      }
+    }
+  }
+]
