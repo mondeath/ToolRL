@@ -1,0 +1,26 @@
+{
+  "device": "cuda:0",
+  "dtype": "torch.bfloat16",
+  "quantization": "NF4",
+  "compute_dtype": "bfloat16",
+  "logprob_space": "raw_model_softmax",
+  "beta": 0.0,
+  "total_params": 7655986688,
+  "trainable_params": 40370176,
+  "trainable_ratio": 0.005273020662807088,
+  "parameter_storage_bytes": 5605447680,
+  "target_module_counts": {
+    "q_proj": 28,
+    "k_proj": 28,
+    "v_proj": 28,
+    "o_proj": 28,
+    "gate_proj": 28,
+    "up_proj": 28,
+    "down_proj": 28
+  },
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "gradient_checkpointing": false,
+  "torch_version": "2.7.0a0+7c8ec84dab.nv25.03",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "snapshot_config_sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+}

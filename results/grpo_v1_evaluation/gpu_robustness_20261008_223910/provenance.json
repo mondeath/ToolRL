@@ -1,0 +1,15 @@
+{
+  "mode": "robustness",
+  "subset": "pilot",
+  "selection_sha256": "65a7b2da05fd954418affc83120c5cb3ccc2c7dbc9da728c7b4a90c12d4b7aa6",
+  "model_name": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "config_sha256": "d77989cf05f95e857e52a3e71eb1e402ac8a7f47df2c65286f6247ab084b5fc2",
+  "source_run": "/root/shared-nvme/experiment/results/grpo_v1_baseline/run_20261007_160206",
+  "retrospective_dev_holdout": true,
+  "completed": true,
+  "adapter_sha256": "daab0e1edca6c3ce598aa36da62d83f8031aea3b7eb9348e93bf721c0e44b8bb",
+  "peak_vram_bytes": 8829834752,
+  "independently_restored": true,
+  "wall_seconds": 1124.9410149082541
+}
