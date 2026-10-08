@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "training_started": true,
+  "attempted_groups": 240,
+  "optimizer_steps": 21,
+  "checkpoints": [
+    0,
+    60,
+    120,
+    180,
+    240
+  ],
+  "base_unchanged": true,
+  "adapter_changed": true,
+  "checkpoint_reload": true,
+  "no_effective_update": false,
+  "wall_clock_seconds": 27546.16613644734,
+  "gpu_allocated": 6065637888,
+  "gpu_reserved": 11827937280,
+  "gpu_peak_memory": 8829834752,
+  "gpu_peak_reserved": 11827937280
+}
