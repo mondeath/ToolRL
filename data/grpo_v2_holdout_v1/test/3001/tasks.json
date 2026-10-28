@@ -1,0 +1,583 @@
+[
+  {
+    "task_id": "test-3001-v2-L1-00",
+    "difficulty": "L1",
+    "template_id": "student_department_lookup",
+    "question": "Return the department of student hs05.",
+    "prompt": "Return the department of student hs05.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "hs05",
+      "field": "department"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L1-01",
+    "difficulty": "L1",
+    "template_id": "course_credits_lookup",
+    "question": "How many credits is course hc01 worth? Return a number.",
+    "prompt": "How many credits is course hc01 worth? Return a number.",
+    "evaluation": {
+      "kind": "lookup",
+      "entity": "hc01",
+      "field": "credits"
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L1-02",
+    "difficulty": "L1",
+    "template_id": "department_gpa_count",
+    "question": "How many students are in Ecology with GPA at least 3.2? Return a number.",
+    "prompt": "How many students are in Ecology with GPA at least 3.2? Return a number.",
+    "evaluation": {
+      "kind": "count",
+      "query": {
+        "table": "students",
+        "where": [
+          {
+            "field": "department",
+            "value": "Ecology"
+          },
+          {
+            "field": "gpa",
+            "op": "gte",
+            "value": 3.2
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L1-03",
+    "difficulty": "L1",
+    "template_id": "department_credit_course_list",
+    "question": "List course IDs in Robotics that carry 4 credits.",
+    "prompt": "List course IDs in Robotics that carry 4 credits.",
+    "evaluation": {
+      "kind": "query",
+      "query": {
+        "table": "courses",
+        "where": [
+          {
+            "field": "department",
+            "value": "Robotics"
+          },
+          {
+            "field": "credits",
+            "value": 4
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L2-00",
+    "difficulty": "L2",
+    "template_id": "department_year_gpa_intersection",
+    "question": "List student IDs in Logic, year 3, with GPA at least 3.75.",
+    "prompt": "List student IDs in Logic, year 3, with GPA at least 3.75.",
+    "evaluation": {
+      "kind": "query",
+      "query": {
+        "table": "students",
+        "where": [
+          {
+            "field": "department",
+            "value": "Logic"
+          },
+          {
+            "field": "year",
+            "value": 3
+          },
+          {
+            "field": "gpa",
+            "op": "gte",
+            "value": 3.75
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L2-01",
+    "difficulty": "L2",
+    "template_id": "course_completion_grade_intersection",
+    "question": "List student IDs who completed course hc05 with grade A.",
+    "prompt": "List student IDs who completed course hc05 with grade A.",
+    "evaluation": {
+      "kind": "query",
+      "query": {
+        "table": "enrollments",
+        "where": [
+          {
+            "field": "course_id",
+            "value": "hc05"
+          },
+          {
+            "field": "status",
+            "value": "completed"
+          },
+          {
+            "field": "grade",
+            "value": "A"
+          }
+        ],
+        "select": "student_id"
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L2-02",
+    "difficulty": "L2",
+    "template_id": "scholarship_year_threshold_intersection",
+    "question": "List scholarship IDs for year 4 whose minimum GPA is at least 3.3.",
+    "prompt": "List scholarship IDs for year 4 whose minimum GPA is at least 3.3.",
+    "evaluation": {
+      "kind": "query",
+      "query": {
+        "table": "scholarships",
+        "where": [
+          {
+            "field": "eligible_year",
+            "value": 4
+          },
+          {
+            "field": "min_gpa",
+            "op": "gte",
+            "value": 3.3
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L2-03",
+    "difficulty": "L2",
+    "template_id": "course_department_minimum_credits",
+    "question": "List course IDs in Ecology with at least 3 credits.",
+    "prompt": "List course IDs in Ecology with at least 3 credits.",
+    "evaluation": {
+      "kind": "query",
+      "query": {
+        "table": "courses",
+        "where": [
+          {
+            "field": "department",
+            "value": "Ecology"
+          },
+          {
+            "field": "credits",
+            "op": "gte",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "final_assertions": [],
+    "forbidden_assertions": [],
+    "failure_profile": null
+  },
+  {
+    "task_id": "test-3001-v2-L3-00",
+    "difficulty": "L3",
+    "template_id": "candidate_limited_submission",
+    "question": "For scholarship hsc00, consider only candidate IDs ['hs00', 'hs03', 'hs01']. Verify them and submit only candidates who are eligible and not already applied. Preserve every existing record, then finish with direct_answer.",
+    "prompt": "For scholarship hsc00, consider only candidate IDs ['hs00', 'hs03', 'hs01']. Verify them and submit only candidates who are eligible and not already applied. Preserve every existing record, then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "hs00:hsc00": {
+            "id": "hs00:hsc00",
+            "student_id": "hs00",
+            "scholarship_id": "hsc00",
+            "status": "submitted"
+          },
+          "hs11:hsc01": {
+            "id": "hs11:hsc01",
+            "student_id": "hs11",
+            "scholarship_id": "hsc01",
+            "status": "submitted"
+          },
+          "hs17:hsc02": {
+            "id": "hs17:hsc02",
+            "student_id": "hs17",
+            "scholarship_id": "hsc02",
+            "status": "submitted"
+          },
+          "hs19:hsc03": {
+            "id": "hs19:hsc03",
+            "student_id": "hs19",
+            "scholarship_id": "hsc03",
+            "status": "submitted"
+          },
+          "hs28:hsc04": {
+            "id": "hs28:hsc04",
+            "student_id": "hs28",
+            "scholarship_id": "hsc04",
+            "status": "submitted"
+          },
+          "hs03:hsc00": {
+            "id": "hs03:hsc00",
+            "student_id": "hs03",
+            "scholarship_id": "hsc00",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "hs00:hsc00": {
+        "id": "hs00:hsc00",
+        "student_id": "hs00",
+        "scholarship_id": "hsc00",
+        "status": "submitted"
+      },
+      "hs11:hsc01": {
+        "id": "hs11:hsc01",
+        "student_id": "hs11",
+        "scholarship_id": "hsc01",
+        "status": "submitted"
+      },
+      "hs17:hsc02": {
+        "id": "hs17:hsc02",
+        "student_id": "hs17",
+        "scholarship_id": "hsc02",
+        "status": "submitted"
+      },
+      "hs19:hsc03": {
+        "id": "hs19:hsc03",
+        "student_id": "hs19",
+        "scholarship_id": "hsc03",
+        "status": "submitted"
+      },
+      "hs28:hsc04": {
+        "id": "hs28:hsc04",
+        "student_id": "hs28",
+        "scholarship_id": "hsc04",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "test-3001-v2-L3-01",
+    "difficulty": "L3",
+    "template_id": "two_scholarship_candidate_batches",
+    "question": "Process two independent candidate batches: scholarship hsc01 candidates ['hs11', 'hs06', 'hs00']; scholarship hsc02 candidates ['hs17', 'hs14', 'hs00']. For each batch submit only eligible candidates not already applied. Preserve existing records, then finish with direct_answer.",
+    "prompt": "Process two independent candidate batches: scholarship hsc01 candidates ['hs11', 'hs06', 'hs00']; scholarship hsc02 candidates ['hs17', 'hs14', 'hs00']. For each batch submit only eligible candidates not already applied. Preserve existing records, then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "hs00:hsc00": {
+            "id": "hs00:hsc00",
+            "student_id": "hs00",
+            "scholarship_id": "hsc00",
+            "status": "submitted"
+          },
+          "hs11:hsc01": {
+            "id": "hs11:hsc01",
+            "student_id": "hs11",
+            "scholarship_id": "hsc01",
+            "status": "submitted"
+          },
+          "hs17:hsc02": {
+            "id": "hs17:hsc02",
+            "student_id": "hs17",
+            "scholarship_id": "hsc02",
+            "status": "submitted"
+          },
+          "hs19:hsc03": {
+            "id": "hs19:hsc03",
+            "student_id": "hs19",
+            "scholarship_id": "hsc03",
+            "status": "submitted"
+          },
+          "hs28:hsc04": {
+            "id": "hs28:hsc04",
+            "student_id": "hs28",
+            "scholarship_id": "hsc04",
+            "status": "submitted"
+          },
+          "hs06:hsc01": {
+            "id": "hs06:hsc01",
+            "student_id": "hs06",
+            "scholarship_id": "hsc01",
+            "status": "submitted"
+          },
+          "hs14:hsc02": {
+            "id": "hs14:hsc02",
+            "student_id": "hs14",
+            "scholarship_id": "hsc02",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "hs00:hsc00": {
+        "id": "hs00:hsc00",
+        "student_id": "hs00",
+        "scholarship_id": "hsc00",
+        "status": "submitted"
+      },
+      "hs11:hsc01": {
+        "id": "hs11:hsc01",
+        "student_id": "hs11",
+        "scholarship_id": "hsc01",
+        "status": "submitted"
+      },
+      "hs17:hsc02": {
+        "id": "hs17:hsc02",
+        "student_id": "hs17",
+        "scholarship_id": "hsc02",
+        "status": "submitted"
+      },
+      "hs19:hsc03": {
+        "id": "hs19:hsc03",
+        "student_id": "hs19",
+        "scholarship_id": "hsc03",
+        "status": "submitted"
+      },
+      "hs28:hsc04": {
+        "id": "hs28:hsc04",
+        "student_id": "hs28",
+        "scholarship_id": "hsc04",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "test-3001-v2-L3-02",
+    "difficulty": "L3",
+    "template_id": "verified_noop_submission",
+    "question": "Check scholarship hsc03 candidates ['hs19', 'hs00', 'hs01']. Make no duplicate or ineligible submission; if none is pending, leave applications unchanged. Preserve existing records, then finish with direct_answer.",
+    "prompt": "Check scholarship hsc03 candidates ['hs19', 'hs00', 'hs01']. Make no duplicate or ineligible submission; if none is pending, leave applications unchanged. Preserve existing records, then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "hs00:hsc00": {
+            "id": "hs00:hsc00",
+            "student_id": "hs00",
+            "scholarship_id": "hsc00",
+            "status": "submitted"
+          },
+          "hs11:hsc01": {
+            "id": "hs11:hsc01",
+            "student_id": "hs11",
+            "scholarship_id": "hsc01",
+            "status": "submitted"
+          },
+          "hs17:hsc02": {
+            "id": "hs17:hsc02",
+            "student_id": "hs17",
+            "scholarship_id": "hsc02",
+            "status": "submitted"
+          },
+          "hs19:hsc03": {
+            "id": "hs19:hsc03",
+            "student_id": "hs19",
+            "scholarship_id": "hsc03",
+            "status": "submitted"
+          },
+          "hs28:hsc04": {
+            "id": "hs28:hsc04",
+            "student_id": "hs28",
+            "scholarship_id": "hsc04",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "hs00:hsc00": {
+        "id": "hs00:hsc00",
+        "student_id": "hs00",
+        "scholarship_id": "hsc00",
+        "status": "submitted"
+      },
+      "hs11:hsc01": {
+        "id": "hs11:hsc01",
+        "student_id": "hs11",
+        "scholarship_id": "hsc01",
+        "status": "submitted"
+      },
+      "hs17:hsc02": {
+        "id": "hs17:hsc02",
+        "student_id": "hs17",
+        "scholarship_id": "hsc02",
+        "status": "submitted"
+      },
+      "hs19:hsc03": {
+        "id": "hs19:hsc03",
+        "student_id": "hs19",
+        "scholarship_id": "hsc03",
+        "status": "submitted"
+      },
+      "hs28:hsc04": {
+        "id": "hs28:hsc04",
+        "student_id": "hs28",
+        "scholarship_id": "hsc04",
+        "status": "submitted"
+      }
+    }
+  },
+  {
+    "task_id": "test-3001-v2-L3-03",
+    "difficulty": "L3",
+    "template_id": "explicit_pending_pair_submission",
+    "question": "For scholarship hsc04, verify exactly the candidate pair ['hs25', 'hs27'] and submit each one only if eligible and not already applied. Do not process anyone else. Preserve existing records, then finish with direct_answer.",
+    "prompt": "For scholarship hsc04, verify exactly the candidate pair ['hs25', 'hs27'] and submit each one only if eligible and not already applied. Do not process anyone else. Preserve existing records, then finish with direct_answer.",
+    "evaluation": {
+      "kind": "state"
+    },
+    "final_assertions": [
+      {
+        "type": "applications_equal",
+        "expected": {
+          "hs00:hsc00": {
+            "id": "hs00:hsc00",
+            "student_id": "hs00",
+            "scholarship_id": "hsc00",
+            "status": "submitted"
+          },
+          "hs11:hsc01": {
+            "id": "hs11:hsc01",
+            "student_id": "hs11",
+            "scholarship_id": "hsc01",
+            "status": "submitted"
+          },
+          "hs17:hsc02": {
+            "id": "hs17:hsc02",
+            "student_id": "hs17",
+            "scholarship_id": "hsc02",
+            "status": "submitted"
+          },
+          "hs19:hsc03": {
+            "id": "hs19:hsc03",
+            "student_id": "hs19",
+            "scholarship_id": "hsc03",
+            "status": "submitted"
+          },
+          "hs28:hsc04": {
+            "id": "hs28:hsc04",
+            "student_id": "hs28",
+            "scholarship_id": "hsc04",
+            "status": "submitted"
+          },
+          "hs25:hsc04": {
+            "id": "hs25:hsc04",
+            "student_id": "hs25",
+            "scholarship_id": "hsc04",
+            "status": "submitted"
+          },
+          "hs27:hsc04": {
+            "id": "hs27:hsc04",
+            "student_id": "hs27",
+            "scholarship_id": "hsc04",
+            "status": "submitted"
+          }
+        }
+      }
+    ],
+    "forbidden_assertions": [
+      {
+        "type": "non_application_mutation"
+      },
+      {
+        "type": "existing_application_mutation"
+      }
+    ],
+    "failure_profile": null,
+    "initial_applications": {
+      "hs00:hsc00": {
+        "id": "hs00:hsc00",
+        "student_id": "hs00",
+        "scholarship_id": "hsc00",
+        "status": "submitted"
+      },
+      "hs11:hsc01": {
+        "id": "hs11:hsc01",
+        "student_id": "hs11",
+        "scholarship_id": "hsc01",
+        "status": "submitted"
+      },
+      "hs17:hsc02": {
+        "id": "hs17:hsc02",
+        "student_id": "hs17",
+        "scholarship_id": "hsc02",
+        "status": "submitted"
+      },
+      "hs19:hsc03": {
+        "id": "hs19:hsc03",
+        "student_id": "hs19",
+        "scholarship_id": "hsc03",
+        "status": "submitted"
+      },
+      "hs28:hsc04": {
+        "id": "hs28:hsc04",
+        "student_id": "hs28",
+        "scholarship_id": "hsc04",
+        "status": "submitted"
+      }
+    }
+  }
+]

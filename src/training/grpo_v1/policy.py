@@ -40,6 +40,9 @@ class TrainingPolicy(HuggingFacePolicy):
         self.device = next(model.parameters()).device
         self.sampling_config = {key: self.config[key] for key in
             ('do_sample', 'temperature', 'top_p', 'top_k', 'max_new_tokens')}
+        if config.get('enforce_sampling_logprob_alignment'):
+            from src.training.grpo_v2.alignment import validate_sampling_logprob_alignment
+            validate_sampling_logprob_alignment(self.config, config['training']['logprob_space'])
         self.runtime_metadata = dict(device=str(self.device), dtype=str(next(model.parameters()).dtype),
             quantization='NF4' if getattr(model, 'is_loaded_in_4bit', False) else 'synthetic_or_unquantized',
             compute_dtype='bfloat16' if self.device.type == 'cuda' else 'float32',

@@ -44,11 +44,20 @@ def training_summary(groups):
         selected = [reward for row in groups if row['difficulty'] == level for reward in row['rewards']]
         levels[level] = dict(trajectories=len(selected), successes=sum(selected),
                              success_rate=sum(selected) / len(selected) if selected else None)
+    ratio_tokens = sum(row.get('ratio_token_count', 0) for row in groups)
+    measured = [row for row in groups if row.get('ratio_token_count', 0)]
+    weighted = lambda key: (sum(row[key] * row['ratio_token_count'] for row in measured) / ratio_tokens
+                            if ratio_tokens else None)
     return dict(attempted_groups=count, mixed_group_count=mixed,
         mixed_reward_group_rate=mixed / count if count else None,
         all_success_group_count=all_success, all_success_group_rate=all_success / count if count else None,
         all_failure_group_count=all_failure, all_failure_group_rate=all_failure / count if count else None,
         optimizer_steps=sum(row['optimizer_step_performed'] for row in groups),
+        zero_variance_groups=sum(row.get('zero_variance_group', not row['mixed_reward_group']) for row in groups),
+        mean_reward_variance=(sum(row.get('reward_variance', 0.0) for row in groups) / count if count else None),
+        ratio_mean=weighted('ratio_mean'),
+        clip_fraction=weighted('clip_fraction'), approx_kl=weighted('approx_kl'),
+        ratio_token_count=ratio_tokens,
         trajectories=len(rewards), cumulative_success_count=sum(rewards),
         cumulative_task_success=sum(rewards) / len(rewards) if rewards else None,
         success_by_difficulty=levels, reward_distribution=dict(Counter(str(int(r)) for r in rewards)),

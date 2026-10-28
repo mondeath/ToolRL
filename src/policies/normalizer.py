@@ -24,7 +24,7 @@ def normalize_protocol_output(raw_output):
     if not isinstance(raw_output, str):
         return unchanged
     match = re.fullmatch(
-        r'\s*(lookup|search|deep_search|direct_answer)(?:\s*:\s*|\s+)(\{.*\})\s*',
+        r'\s*(lookup|search|aggregate|deep_search|verify|submit|direct_answer)(?:\s*:\s*|\s+)(\{.*\})\s*',
         raw_output, flags=re.DOTALL)
     if not match:
         return unchanged

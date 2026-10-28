@@ -35,6 +35,19 @@ class NormalizerTests(unittest.TestCase):
                         self.assertEqual(parsed.parsed_action, json.loads(envelope))
                         self.assertEqual(normalize_protocol_output(raw), result)
 
+    def test_env_v1_action_prefixes_cover_all_protocol_actions(self):
+        from src.env_v1.protocol import parse_action as parse_env_v1_action
+        cases = {
+            'aggregate': '{"query":{"table":"students","select":"gpa"},"operation":"average"}',
+            'verify': '{"student_ids":["s00"],"scholarship_id":"sc00"}',
+            'submit': '{"student_ids":["s00"],"scholarship_id":"sc00"}',
+        }
+        for action_name, arguments in cases.items():
+            raw = action_name + ': ' + arguments
+            result = normalize_protocol_output(raw)
+            self.assertTrue(result.normalization_applied)
+            self.assertTrue(parse_env_v1_action(result.normalized_output).success)
+
     def test_reject_ambiguous_or_non_protocol_text(self):
         envelope = action('lookup', entity='s00', field='advisor')
         cases = [

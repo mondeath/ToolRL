@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import torch
 
-from .loss import generated_logprobs, group_advantages, clipped_segment_loss
+from .loss import generated_logprobs, group_advantages, clipped_segment_loss, ratio_diagnostics
 from .policy import assert_adapter_only
 
 
@@ -40,8 +40,16 @@ class GRPOTrainer:
         assert_adapter_only(self.model)
         if len(group) != 4 or len({r['task_id'] for r in group}) != 1:
             raise ValueError('One update requires four trajectories of the same task')
-        advantages = group_advantages([row['reward'] for row in group])
-        result = dict(step=self.step, policy_loss=0.0, kl=None, grad_norm=0.0,
+        rewards = [row['reward'] for row in group]
+        advantages = group_advantages(rewards)
+        reward_mean = sum(rewards) / len(rewards)
+        reward_variance = sum((reward - reward_mean) ** 2 for reward in rewards) / len(rewards)
+        result = dict(step=self.step, optimizer_steps=self.step, policy_loss=0.0,
+                      ratio_mean=None, ratio_min=None, ratio_max=None,
+                      clip_fraction=0.0, approx_kl=0.0, ratio_token_count=0,
+                      reward_mean=reward_mean, reward_variance=reward_variance,
+                      zero_variance_group=reward_variance == 0,
+                      kl=None, grad_norm=0.0,
                       learning_rate=self.optimizer.param_groups[0]['lr'], advantages=advantages,
                       adapter_delta_l2=0.0, update_applied=False)
         if not any(advantages):
@@ -54,12 +62,22 @@ class GRPOTrainer:
         self.optimizer.zero_grad(set_to_none=True)
         self.model.train()  # checkpointing on, dropout disabled at load time
         loss_value = 0.0
+        ratio_count = clipped_count = 0
+        ratio_sum = approx_kl_sum = 0.0
+        ratio_min = ratio_max = None
         for row, advantage in zip(group, advantages):
             total = sum(len(s['generated_token_ids']) for s in row['segments'])
             if total == 0:
                 raise ValueError('Empty trajectory')
             for segment in row['segments']:
                 current = generated_logprobs(self.model, segment)
+                diagnostic = ratio_diagnostics(current, segment['old_logprobs'], self.config['clip_epsilon'])
+                ratio_count += diagnostic['token_count']
+                clipped_count += diagnostic['clipped_token_count']
+                ratio_sum += diagnostic['ratio_sum']
+                approx_kl_sum += diagnostic['approx_kl_sum']
+                ratio_min = diagnostic['ratio_min'] if ratio_min is None else min(ratio_min, diagnostic['ratio_min'])
+                ratio_max = diagnostic['ratio_max'] if ratio_max is None else max(ratio_max, diagnostic['ratio_max'])
                 loss = clipped_segment_loss(current, segment['old_logprobs'], advantage,
                     total, len(group), self.config['clip_epsilon'])
                 loss.backward()
@@ -72,7 +90,10 @@ class GRPOTrainer:
         self.step += 1
         delta = sum((p.detach().cpu() - before[name]).float().square().sum().item() for name, p in self.named_adapters) ** 0.5
         self.model.eval()
-        result.update(step=self.step, policy_loss=loss_value, grad_norm=float(norm),
+        result.update(step=self.step, optimizer_steps=self.step, policy_loss=loss_value, grad_norm=float(norm),
+                      ratio_mean=ratio_sum / ratio_count, ratio_min=ratio_min, ratio_max=ratio_max,
+                      clip_fraction=clipped_count / ratio_count,
+                      approx_kl=approx_kl_sum / ratio_count, ratio_token_count=ratio_count,
                       adapter_delta_l2=delta, update_applied=True)
         return result
 

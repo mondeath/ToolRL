@@ -14,6 +14,9 @@ def task_reward(evaluation):
 
 
 def collect_group(item, policy, config, group_id):
+    if config.get('enforce_sampling_logprob_alignment'):
+        from src.training.grpo_v2.alignment import validate_sampling_logprob_alignment
+        validate_sampling_logprob_alignment(policy.config, config['training']['logprob_space'])
     if config['group_size'] != 4 or not policy.config['do_sample']:
         raise ValueError('Training collector requires G=4 and sampling')
     task, kb = item['task'], item['kb']

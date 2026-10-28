@@ -62,7 +62,9 @@ def import_base_diagnostic(smoke_dir, config, diagnostic):
         note='Existing smoke adapter-off NF4 artifact; not rerun or used for checkpoint selection'))
 
 
-def train_baseline(root, config, snapshot, directory, checks, base_smoke_dir=None):
+def train_baseline(root, config, snapshot, directory, checks, base_smoke_dir=None,
+                   data_loader=load_baseline_data, dry_run_loader=dry_run,
+                   report_renderer=render_report):
     import torch
     from .policy import load_policy, parameter_counts
     from .collector import collect_group
@@ -73,10 +75,10 @@ def train_baseline(root, config, snapshot, directory, checks, base_smoke_dir=Non
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
-    train, dev, diagnostic = load_baseline_data(root, config)
+    train, dev, diagnostic = data_loader(root, config)
     write_json(directory / 'config.json', config)
     write_json(directory / 'tasks.json', read_json(Path(root) / config['tasks_file']))
-    write_json(directory / 'dry_run.json', dry_run(root, config))
+    write_json(directory / 'dry_run.json', dry_run_loader(root, config))
     write_json(directory / 'preflight.json', checks)
     (directory / 'runtime_requirements.txt').write_text('\n'.join(sorted(
         f'{d.metadata["Name"]}=={d.version}' for d in importlib.metadata.distributions())) + '\n')
@@ -129,7 +131,7 @@ def train_baseline(root, config, snapshot, directory, checks, base_smoke_dir=Non
             result.update(attempted_groups=attempted, optimizer_steps=trainer.step,
                           wall_clock_seconds=time.monotonic() - started)
             write_json(directory / ('base_dev/summary.json' if attempted == 0 else f'eval_group_{attempted:03}/{split}/summary.json'), result)
-            render_report(directory)
+            report_renderer(directory)
         def log(group, result, attempted):
             metric = group_metrics(group, result, attempted, time.monotonic() - started, memory_stats())
             if bool(metric['mixed_reward_group']) != bool(metric['optimizer_step_performed']):
@@ -160,7 +162,7 @@ def train_baseline(root, config, snapshot, directory, checks, base_smoke_dir=Non
             attempted_groups=len(groups), wall_clock_seconds=time.monotonic() - started,
             settings_automatically_changed=False, **memory_stats())
         write_json(directory / 'status.json', status)
-        render_report(directory)
+        report_renderer(directory)
         raise
-    render_report(directory)
+    report_renderer(directory)
     return status

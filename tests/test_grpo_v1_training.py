@@ -59,6 +59,15 @@ def test_group_update_changes_only_adapters_and_ratio_initially_one(model):
     trainer = GRPOTrainer(model, CONFIG['training'])
     result = trainer.update(group)
     assert result['update_applied'] and result['adapter_delta_l2'] > 0 and result['grad_norm'] > 0
+    assert result['reward_mean'] == pytest.approx(0.5)
+    assert result['reward_variance'] == pytest.approx(0.25)
+    assert not result['zero_variance_group']
+    assert result['ratio_mean'] == pytest.approx(1.0, abs=1e-6)
+    assert result['ratio_min'] == pytest.approx(1.0, abs=1e-6)
+    assert result['ratio_max'] == pytest.approx(1.0, abs=1e-6)
+    assert result['clip_fraction'] == 0.0
+    assert result['approx_kl'] == pytest.approx(0.0, abs=1e-8)
+    assert result['optimizer_steps'] == result['step'] == 1
     assert before_base == base_digest(model)
     changed = []
     for name, parameter in model.named_parameters():
@@ -84,6 +93,7 @@ def test_all_equal_group_does_not_apply_adam_momentum(model):
         result = trainer.update(group)
         assert result['step'] == 1 and result['advantages'] == [0.0] * 4
         assert not result['update_applied'] and result['skip_reason'] == 'all_equal_rewards'
+        assert result['zero_variance_group'] and result['reward_variance'] == 0.0
     assert all(torch.equal(p, before[n]) for n, p in model.named_parameters())
 
 

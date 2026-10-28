@@ -76,3 +76,28 @@ def clipped_segment_loss(current, old, advantage, total_trajectory_tokens, group
     if not torch.isfinite(loss):
         raise FloatingPointError('Non-finite GRPO loss')
     return loss
+
+
+def ratio_diagnostics(current, old, epsilon):
+    """Return detached PPO/GRPO diagnostics in the raw-token log-prob space.
+
+    ``approx_kl`` uses the non-negative k3 estimator
+    ``(ratio - 1) - log(ratio)``.  Callers aggregate these token-level sums
+    before dividing, so trajectories with multiple assistant turns retain the
+    same whole-trajectory accounting as the loss.
+    """
+    if not 0 < epsilon < 1:
+        raise ValueError('clip epsilon must be in (0, 1)')
+    old = torch.as_tensor(old, dtype=current.dtype, device=current.device).detach()
+    if old.shape != current.shape or not torch.isfinite(old).all() or not torch.isfinite(current).all():
+        raise ValueError('Old/current logprob alignment/values invalid')
+    with torch.no_grad():
+        log_ratio = current.detach() - old
+        ratio = log_ratio.exp()
+        if not torch.isfinite(ratio).all():
+            raise FloatingPointError('Non-finite importance ratio')
+        clipped = (ratio < 1 - epsilon) | (ratio > 1 + epsilon)
+        approx_kl = (ratio - 1) - log_ratio
+        return dict(token_count=ratio.numel(), ratio_sum=float(ratio.sum()),
+                    ratio_min=float(ratio.min()), ratio_max=float(ratio.max()),
+                    clipped_token_count=int(clipped.sum()), approx_kl_sum=float(approx_kl.sum()))

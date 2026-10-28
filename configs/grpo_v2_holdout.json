@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "split": "test",
+  "generator_version": "grpo-v2-holdout-1",
+  "data_root": "data/grpo_v2_holdout_v1",
+  "seeds": [3000, 3001, 3002, 3003, 3004, 3005],
+  "task_count": 72,
+  "tasks_by_difficulty": {"L1": 24, "L2": 24, "L3": 24},
+  "generator_source_sha256": "9de4fb5d873f24cdd368b88cb9cfcac00d710afb3e3eb60451865234f5128a9a",
+  "manifest_sha256": "bea74ef23c4a2135e7927b0bae801eeacde5292aa2c8fb245328dbb829127b71",
+  "task_list_sha256": "e1a57522a9d4099be93fd0c37f915669e027ca51f984abf25672b8d1db96ac92",
+  "usage_policy": "report_only_never_select"
+}

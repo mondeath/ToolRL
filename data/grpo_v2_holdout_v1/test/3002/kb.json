@@ -1,0 +1,989 @@
+{
+  "students": {
+    "hs00": {
+      "id": "hs00",
+      "name": "Holdout-s00",
+      "year": 4,
+      "gpa": 2.68,
+      "department": "Robotics"
+    },
+    "hs01": {
+      "id": "hs01",
+      "name": "Holdout-s01",
+      "year": 4,
+      "gpa": 2.77,
+      "department": "Ecology"
+    },
+    "hs02": {
+      "id": "hs02",
+      "name": "Holdout-s02",
+      "year": 4,
+      "gpa": 3.97,
+      "department": "Logic"
+    },
+    "hs03": {
+      "id": "hs03",
+      "name": "Holdout-s03",
+      "year": 1,
+      "gpa": 3.24,
+      "department": "Logic"
+    },
+    "hs04": {
+      "id": "hs04",
+      "name": "Holdout-s04",
+      "year": 4,
+      "gpa": 3.96,
+      "department": "Robotics"
+    },
+    "hs05": {
+      "id": "hs05",
+      "name": "Holdout-s05",
+      "year": 4,
+      "gpa": 3.58,
+      "department": "Ecology"
+    },
+    "hs06": {
+      "id": "hs06",
+      "name": "Holdout-s06",
+      "year": 4,
+      "gpa": 2.96,
+      "department": "Robotics"
+    },
+    "hs07": {
+      "id": "hs07",
+      "name": "Holdout-s07",
+      "year": 3,
+      "gpa": 3.81,
+      "department": "Logic"
+    },
+    "hs08": {
+      "id": "hs08",
+      "name": "Holdout-s08",
+      "year": 3,
+      "gpa": 3.1,
+      "department": "Logic"
+    },
+    "hs09": {
+      "id": "hs09",
+      "name": "Holdout-s09",
+      "year": 3,
+      "gpa": 3.71,
+      "department": "Robotics"
+    },
+    "hs10": {
+      "id": "hs10",
+      "name": "Holdout-s10",
+      "year": 3,
+      "gpa": 3.01,
+      "department": "Logic"
+    },
+    "hs11": {
+      "id": "hs11",
+      "name": "Holdout-s11",
+      "year": 3,
+      "gpa": 3.9,
+      "department": "Logic"
+    },
+    "hs12": {
+      "id": "hs12",
+      "name": "Holdout-s12",
+      "year": 3,
+      "gpa": 3.64,
+      "department": "Robotics"
+    },
+    "hs13": {
+      "id": "hs13",
+      "name": "Holdout-s13",
+      "year": 2,
+      "gpa": 3.08,
+      "department": "Ecology"
+    },
+    "hs14": {
+      "id": "hs14",
+      "name": "Holdout-s14",
+      "year": 2,
+      "gpa": 3.09,
+      "department": "Ecology"
+    },
+    "hs15": {
+      "id": "hs15",
+      "name": "Holdout-s15",
+      "year": 2,
+      "gpa": 3.93,
+      "department": "Ecology"
+    },
+    "hs16": {
+      "id": "hs16",
+      "name": "Holdout-s16",
+      "year": 2,
+      "gpa": 3.96,
+      "department": "Logic"
+    },
+    "hs17": {
+      "id": "hs17",
+      "name": "Holdout-s17",
+      "year": 2,
+      "gpa": 4.0,
+      "department": "Robotics"
+    },
+    "hs18": {
+      "id": "hs18",
+      "name": "Holdout-s18",
+      "year": 1,
+      "gpa": 3.78,
+      "department": "Logic"
+    },
+    "hs19": {
+      "id": "hs19",
+      "name": "Holdout-s19",
+      "year": 1,
+      "gpa": 3.96,
+      "department": "Logic"
+    },
+    "hs20": {
+      "id": "hs20",
+      "name": "Holdout-s20",
+      "year": 1,
+      "gpa": 3.2,
+      "department": "Robotics"
+    },
+    "hs21": {
+      "id": "hs21",
+      "name": "Holdout-s21",
+      "year": 2,
+      "gpa": 3.65,
+      "department": "Logic"
+    },
+    "hs22": {
+      "id": "hs22",
+      "name": "Holdout-s22",
+      "year": 1,
+      "gpa": 3.95,
+      "department": "Robotics"
+    },
+    "hs23": {
+      "id": "hs23",
+      "name": "Holdout-s23",
+      "year": 1,
+      "gpa": 3.37,
+      "department": "Ecology"
+    },
+    "hs24": {
+      "id": "hs24",
+      "name": "Holdout-s24",
+      "year": 2,
+      "gpa": 2.85,
+      "department": "Robotics"
+    },
+    "hs25": {
+      "id": "hs25",
+      "name": "Holdout-s25",
+      "year": 1,
+      "gpa": 3.38,
+      "department": "Robotics"
+    },
+    "hs26": {
+      "id": "hs26",
+      "name": "Holdout-s26",
+      "year": 1,
+      "gpa": 3.79,
+      "department": "Robotics"
+    },
+    "hs27": {
+      "id": "hs27",
+      "name": "Holdout-s27",
+      "year": 1,
+      "gpa": 3.88,
+      "department": "Ecology"
+    },
+    "hs28": {
+      "id": "hs28",
+      "name": "Holdout-s28",
+      "year": 1,
+      "gpa": 2.63,
+      "department": "Logic"
+    },
+    "hs29": {
+      "id": "hs29",
+      "name": "Holdout-s29",
+      "year": 1,
+      "gpa": 3.98,
+      "department": "Robotics"
+    }
+  },
+  "courses": {
+    "hc00": {
+      "id": "hc00",
+      "name": "Course-00",
+      "department": "Logic",
+      "credits": 3
+    },
+    "hc01": {
+      "id": "hc01",
+      "name": "Course-01",
+      "department": "Logic",
+      "credits": 4
+    },
+    "hc02": {
+      "id": "hc02",
+      "name": "Course-02",
+      "department": "Robotics",
+      "credits": 3
+    },
+    "hc03": {
+      "id": "hc03",
+      "name": "Course-03",
+      "department": "Logic",
+      "credits": 4
+    },
+    "hc04": {
+      "id": "hc04",
+      "name": "Course-04",
+      "department": "Robotics",
+      "credits": 3
+    },
+    "hc05": {
+      "id": "hc05",
+      "name": "Course-05",
+      "department": "Ecology",
+      "credits": 2
+    },
+    "hc06": {
+      "id": "hc06",
+      "name": "Course-06",
+      "department": "Logic",
+      "credits": 2
+    },
+    "hc07": {
+      "id": "hc07",
+      "name": "Course-07",
+      "department": "Robotics",
+      "credits": 3
+    },
+    "hc08": {
+      "id": "hc08",
+      "name": "Course-08",
+      "department": "Robotics",
+      "credits": 3
+    },
+    "hc09": {
+      "id": "hc09",
+      "name": "Course-09",
+      "department": "Robotics",
+      "credits": 4
+    },
+    "hc10": {
+      "id": "hc10",
+      "name": "Course-10",
+      "department": "Ecology",
+      "credits": 2
+    },
+    "hc11": {
+      "id": "hc11",
+      "name": "Course-11",
+      "department": "Logic",
+      "credits": 3
+    }
+  },
+  "enrollments": {
+    "he02-0": {
+      "id": "he02-0",
+      "student_id": "hs02",
+      "course_id": "hc03",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he02-1": {
+      "id": "he02-1",
+      "student_id": "hs02",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he02-2": {
+      "id": "he02-2",
+      "student_id": "hs02",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he05-0": {
+      "id": "he05-0",
+      "student_id": "hs05",
+      "course_id": "hc03",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he05-1": {
+      "id": "he05-1",
+      "student_id": "hs05",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he05-2": {
+      "id": "he05-2",
+      "student_id": "hs05",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he04-0": {
+      "id": "he04-0",
+      "student_id": "hs04",
+      "course_id": "hc03",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he04-1": {
+      "id": "he04-1",
+      "student_id": "hs04",
+      "course_id": "hc02",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he04-2": {
+      "id": "he04-2",
+      "student_id": "hs04",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he00-0": {
+      "id": "he00-0",
+      "student_id": "hs00",
+      "course_id": "hc03",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he00-1": {
+      "id": "he00-1",
+      "student_id": "hs00",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he00-2": {
+      "id": "he00-2",
+      "student_id": "hs00",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he01-0": {
+      "id": "he01-0",
+      "student_id": "hs01",
+      "course_id": "hc03",
+      "status": "enrolled",
+      "grade": null
+    },
+    "he01-1": {
+      "id": "he01-1",
+      "student_id": "hs01",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he01-2": {
+      "id": "he01-2",
+      "student_id": "hs01",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he03-0": {
+      "id": "he03-0",
+      "student_id": "hs03",
+      "course_id": "hc03",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he03-1": {
+      "id": "he03-1",
+      "student_id": "hs03",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he03-2": {
+      "id": "he03-2",
+      "student_id": "hs03",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he11-0": {
+      "id": "he11-0",
+      "student_id": "hs11",
+      "course_id": "hc10",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he11-1": {
+      "id": "he11-1",
+      "student_id": "hs11",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he11-2": {
+      "id": "he11-2",
+      "student_id": "hs11",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he07-0": {
+      "id": "he07-0",
+      "student_id": "hs07",
+      "course_id": "hc10",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he07-1": {
+      "id": "he07-1",
+      "student_id": "hs07",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he07-2": {
+      "id": "he07-2",
+      "student_id": "hs07",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he09-0": {
+      "id": "he09-0",
+      "student_id": "hs09",
+      "course_id": "hc10",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he09-1": {
+      "id": "he09-1",
+      "student_id": "hs09",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he09-2": {
+      "id": "he09-2",
+      "student_id": "hs09",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he08-0": {
+      "id": "he08-0",
+      "student_id": "hs08",
+      "course_id": "hc10",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he08-1": {
+      "id": "he08-1",
+      "student_id": "hs08",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he08-2": {
+      "id": "he08-2",
+      "student_id": "hs08",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he10-0": {
+      "id": "he10-0",
+      "student_id": "hs10",
+      "course_id": "hc10",
+      "status": "enrolled",
+      "grade": null
+    },
+    "he10-1": {
+      "id": "he10-1",
+      "student_id": "hs10",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he10-2": {
+      "id": "he10-2",
+      "student_id": "hs10",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he06-0": {
+      "id": "he06-0",
+      "student_id": "hs06",
+      "course_id": "hc10",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he06-1": {
+      "id": "he06-1",
+      "student_id": "hs06",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he06-2": {
+      "id": "he06-2",
+      "student_id": "hs06",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he15-0": {
+      "id": "he15-0",
+      "student_id": "hs15",
+      "course_id": "hc06",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he15-1": {
+      "id": "he15-1",
+      "student_id": "hs15",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he15-2": {
+      "id": "he15-2",
+      "student_id": "hs15",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he17-0": {
+      "id": "he17-0",
+      "student_id": "hs17",
+      "course_id": "hc06",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he17-1": {
+      "id": "he17-1",
+      "student_id": "hs17",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he17-2": {
+      "id": "he17-2",
+      "student_id": "hs17",
+      "course_id": "hc02",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he16-0": {
+      "id": "he16-0",
+      "student_id": "hs16",
+      "course_id": "hc06",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he16-1": {
+      "id": "he16-1",
+      "student_id": "hs16",
+      "course_id": "hc02",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he16-2": {
+      "id": "he16-2",
+      "student_id": "hs16",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he13-0": {
+      "id": "he13-0",
+      "student_id": "hs13",
+      "course_id": "hc06",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he13-1": {
+      "id": "he13-1",
+      "student_id": "hs13",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he13-2": {
+      "id": "he13-2",
+      "student_id": "hs13",
+      "course_id": "hc09",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he14-0": {
+      "id": "he14-0",
+      "student_id": "hs14",
+      "course_id": "hc06",
+      "status": "enrolled",
+      "grade": null
+    },
+    "he14-1": {
+      "id": "he14-1",
+      "student_id": "hs14",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he14-2": {
+      "id": "he14-2",
+      "student_id": "hs14",
+      "course_id": "hc02",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he12-0": {
+      "id": "he12-0",
+      "student_id": "hs12",
+      "course_id": "hc06",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he12-1": {
+      "id": "he12-1",
+      "student_id": "hs12",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he12-2": {
+      "id": "he12-2",
+      "student_id": "hs12",
+      "course_id": "hc02",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he22-0": {
+      "id": "he22-0",
+      "student_id": "hs22",
+      "course_id": "hc00",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he22-1": {
+      "id": "he22-1",
+      "student_id": "hs22",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he22-2": {
+      "id": "he22-2",
+      "student_id": "hs22",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he18-0": {
+      "id": "he18-0",
+      "student_id": "hs18",
+      "course_id": "hc00",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he18-1": {
+      "id": "he18-1",
+      "student_id": "hs18",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he18-2": {
+      "id": "he18-2",
+      "student_id": "hs18",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he19-0": {
+      "id": "he19-0",
+      "student_id": "hs19",
+      "course_id": "hc00",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he19-1": {
+      "id": "he19-1",
+      "student_id": "hs19",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he19-2": {
+      "id": "he19-2",
+      "student_id": "hs19",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he20-0": {
+      "id": "he20-0",
+      "student_id": "hs20",
+      "course_id": "hc00",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he20-1": {
+      "id": "he20-1",
+      "student_id": "hs20",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he20-2": {
+      "id": "he20-2",
+      "student_id": "hs20",
+      "course_id": "hc11",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he23-0": {
+      "id": "he23-0",
+      "student_id": "hs23",
+      "course_id": "hc00",
+      "status": "enrolled",
+      "grade": null
+    },
+    "he23-1": {
+      "id": "he23-1",
+      "student_id": "hs23",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he23-2": {
+      "id": "he23-2",
+      "student_id": "hs23",
+      "course_id": "hc02",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he21-0": {
+      "id": "he21-0",
+      "student_id": "hs21",
+      "course_id": "hc00",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he21-1": {
+      "id": "he21-1",
+      "student_id": "hs21",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he21-2": {
+      "id": "he21-2",
+      "student_id": "hs21",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he29-0": {
+      "id": "he29-0",
+      "student_id": "hs29",
+      "course_id": "hc08",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he29-1": {
+      "id": "he29-1",
+      "student_id": "hs29",
+      "course_id": "hc09",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he29-2": {
+      "id": "he29-2",
+      "student_id": "hs29",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he27-0": {
+      "id": "he27-0",
+      "student_id": "hs27",
+      "course_id": "hc08",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he27-1": {
+      "id": "he27-1",
+      "student_id": "hs27",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he27-2": {
+      "id": "he27-2",
+      "student_id": "hs27",
+      "course_id": "hc04",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he26-0": {
+      "id": "he26-0",
+      "student_id": "hs26",
+      "course_id": "hc08",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he26-1": {
+      "id": "he26-1",
+      "student_id": "hs26",
+      "course_id": "hc09",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he26-2": {
+      "id": "he26-2",
+      "student_id": "hs26",
+      "course_id": "hc07",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he25-0": {
+      "id": "he25-0",
+      "student_id": "hs25",
+      "course_id": "hc08",
+      "status": "completed",
+      "grade": "C"
+    },
+    "he25-1": {
+      "id": "he25-1",
+      "student_id": "hs25",
+      "course_id": "hc09",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he25-2": {
+      "id": "he25-2",
+      "student_id": "hs25",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he28-0": {
+      "id": "he28-0",
+      "student_id": "hs28",
+      "course_id": "hc08",
+      "status": "enrolled",
+      "grade": null
+    },
+    "he28-1": {
+      "id": "he28-1",
+      "student_id": "hs28",
+      "course_id": "hc05",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he28-2": {
+      "id": "he28-2",
+      "student_id": "hs28",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he24-0": {
+      "id": "he24-0",
+      "student_id": "hs24",
+      "course_id": "hc08",
+      "status": "completed",
+      "grade": "B"
+    },
+    "he24-1": {
+      "id": "he24-1",
+      "student_id": "hs24",
+      "course_id": "hc09",
+      "status": "completed",
+      "grade": "A"
+    },
+    "he24-2": {
+      "id": "he24-2",
+      "student_id": "hs24",
+      "course_id": "hc01",
+      "status": "completed",
+      "grade": "B"
+    }
+  },
+  "scholarships": {
+    "hsc00": {
+      "id": "hsc00",
+      "name": "Scholarship-00",
+      "min_gpa": 3.4,
+      "eligible_year": 4,
+      "required_course": "hc03"
+    },
+    "hsc01": {
+      "id": "hsc01",
+      "name": "Scholarship-01",
+      "min_gpa": 3.25,
+      "eligible_year": 3,
+      "required_course": "hc10"
+    },
+    "hsc02": {
+      "id": "hsc02",
+      "name": "Scholarship-02",
+      "min_gpa": 3.7,
+      "eligible_year": 2,
+      "required_course": "hc06"
+    },
+    "hsc03": {
+      "id": "hsc03",
+      "name": "Scholarship-03",
+      "min_gpa": 3.7,
+      "eligible_year": 1,
+      "required_course": "hc00"
+    },
+    "hsc04": {
+      "id": "hsc04",
+      "name": "Scholarship-04",
+      "min_gpa": 3.7,
+      "eligible_year": 1,
+      "required_course": "hc08"
+    }
+  },
+  "applications": {
+    "hs02:hsc00": {
+      "id": "hs02:hsc00",
+      "student_id": "hs02",
+      "scholarship_id": "hsc00",
+      "status": "submitted"
+    },
+    "hs11:hsc01": {
+      "id": "hs11:hsc01",
+      "student_id": "hs11",
+      "scholarship_id": "hsc01",
+      "status": "submitted"
+    },
+    "hs15:hsc02": {
+      "id": "hs15:hsc02",
+      "student_id": "hs15",
+      "scholarship_id": "hsc02",
+      "status": "submitted"
+    },
+    "hs22:hsc03": {
+      "id": "hs22:hsc03",
+      "student_id": "hs22",
+      "scholarship_id": "hsc03",
+      "status": "submitted"
+    },
+    "hs29:hsc04": {
+      "id": "hs29:hsc04",
+      "student_id": "hs29",
+      "scholarship_id": "hsc04",
+      "status": "submitted"
+    }
+  }
+}

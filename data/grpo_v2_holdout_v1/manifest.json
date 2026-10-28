@@ -1,0 +1,804 @@
+{
+  "version": 1,
+  "generator_version": "grpo-v2-holdout-1",
+  "generator_source_sha256": "9de4fb5d873f24cdd368b88cb9cfcac00d710afb3e3eb60451865234f5128a9a",
+  "status": "frozen",
+  "split": "test",
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005
+  ],
+  "task_count": 72,
+  "tasks_by_difficulty": {
+    "L1": 24,
+    "L2": 24,
+    "L3": 24
+  },
+  "task_list_sha256": "e1a57522a9d4099be93fd0c37f915669e027ca51f984abf25672b8d1db96ac92",
+  "seeds_manifest": [
+    {
+      "seed": 3000,
+      "kb_sha256": "a5f8241f237a15808731c9b111b1045b16599f199785ff44012ef780422e5555",
+      "tasks_sha256": "39086ab13cdbed7a8610946fd8ea36a03b90e7021b1cad29b04a44c7b3a9d5ae",
+      "tasks": [
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L1-00",
+          "difficulty": "L1",
+          "template_id": "student_department_lookup",
+          "instance_sha256": "a2d0f927905d0f057a7921bc8a422e254e237670ab1629cd51acafe63328e4ae",
+          "question_sha256": "4660b6ada04be1dd850248ae7bc5adefc8e5f4d9c2ec04d58af627ab90f58888",
+          "template_sha256": "5c5adc0348130f1a4cb9cc65b8246d544c937889b63485e06899df112b49e8d9",
+          "answer_sha256": "f09e353344a7872f7f42a445c1dc5e8b193780fe7e7b099653fb740673e5abba"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L1-01",
+          "difficulty": "L1",
+          "template_id": "course_credits_lookup",
+          "instance_sha256": "552fbb99146d085d324d9004ed1f83a8fb5a170ff5c71c9706d6437912d2d9ca",
+          "question_sha256": "c61e97e32e91de9e33ddaf075e40ec40b2c55845383e0849fd2289f714d5c936",
+          "template_sha256": "6e837f5e86e5a389c95189a314d2d7d939351c89ceec809e46c62640b16bcc3a",
+          "answer_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L1-02",
+          "difficulty": "L1",
+          "template_id": "department_gpa_count",
+          "instance_sha256": "a22a738392f6c637bf5552be87fd4c31869e637726c7c3e10feddfb1ccfd24d3",
+          "question_sha256": "36f3a6540f19da2a6df5861ec074cda344e7f2fa05719978221e587fdbfc176a",
+          "template_sha256": "1ae7961154a428c69cbb89aa5ae2e8860bde3f9b9a1c817bd6ac4f6785748d63",
+          "answer_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L1-03",
+          "difficulty": "L1",
+          "template_id": "department_credit_course_list",
+          "instance_sha256": "492bd999766bdbc64b15f0136fd7863f0f9f938210bc80c0fd788a8ab979d3e9",
+          "question_sha256": "193f6f10cbd7b8c2043871f9ecadae524f48cabb58c7b20e6c2312f3771884f2",
+          "template_sha256": "a12c1faad8734e2d514d822c7ab2ca71f9926f032c02d41f5df0e64e85a2732d",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L2-00",
+          "difficulty": "L2",
+          "template_id": "department_year_gpa_intersection",
+          "instance_sha256": "13d45d619e00c82ede357d45d4dd45ce250e25f0091a108d2ca2b96b306572a2",
+          "question_sha256": "20beded514604611e87636b7cfc5c03587d2ba03ea29825558121fa861e243d4",
+          "template_sha256": "e913405affa7b12a3af168cd8c64c29f29e64897606440c51f21f3aaa2566fb1",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L2-01",
+          "difficulty": "L2",
+          "template_id": "course_completion_grade_intersection",
+          "instance_sha256": "92fbde769621bd03d0d864dc22ea58903628929deeda763121289b9c81cdca9b",
+          "question_sha256": "6753557695786ed08ca127fb66f149ef0a67154d721b71f096d116db856e7490",
+          "template_sha256": "ba03d0333f797f3558cea90003162aa3e3c7d4e11bdf32ea2a5179e26b6a71cf",
+          "answer_sha256": "56714d0117024e5070021c503d27dbd0deab0da2f06db660bf4b2700b220e155"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L2-02",
+          "difficulty": "L2",
+          "template_id": "scholarship_year_threshold_intersection",
+          "instance_sha256": "16c06da3ba6e54de1088ff48072e4e8cacfe24b7b3f1580bd0da3e2370d08d06",
+          "question_sha256": "32a7300584b1d550540b6ccf38fc19296d28a2681edc4e00726fe84649b73e52",
+          "template_sha256": "9f3155b62d8df1eeaf17091049265f815de7bf51f34374318e746d6a1459c29c",
+          "answer_sha256": "6341bd4a7c5b5a89e03620e49248b677533035d8468b69916dc67553d1578623"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L2-03",
+          "difficulty": "L2",
+          "template_id": "course_department_minimum_credits",
+          "instance_sha256": "8b84b4db3068a154b48743fd5cb9f00545c523741d12c33ed8a8dd212cd35555",
+          "question_sha256": "b50956d5fa968fc75f3105e2dbc80759e98dc50b649304ee3b751af31ef85564",
+          "template_sha256": "9e7eeaf6520ac002019b4bd6be5178972e4a437f92d9b83395f5ef3726af0cd9",
+          "answer_sha256": "450421e7665c00b0c30a1c45871f597674725bf52182c739d7b7ff940fab742d"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L3-00",
+          "difficulty": "L3",
+          "template_id": "candidate_limited_submission",
+          "instance_sha256": "a818583c797a3e15dafb4560f1f514e16b7664041c06b45bb254af320ae94deb",
+          "question_sha256": "864f037178ce3986376125b7507e721e386d4ab8b0c9fc852ffc668fc77be5b9",
+          "template_sha256": "19d5cce8ea0f4bfe886e39af36793e8a8a553a47fe53274828c2c1692575f45e",
+          "answer_sha256": "bcf4fe4b2959902a1c725b2f6aaa00f83294d2338b67dc16aa3aa84ddfa81c32"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L3-01",
+          "difficulty": "L3",
+          "template_id": "two_scholarship_candidate_batches",
+          "instance_sha256": "a2914e4db3e5ce893d0f4e91ae03db5630d11f3f59c4b5a07b6438ec0e017936",
+          "question_sha256": "836ade2735f334cee32bbcff8ccaa9fdd9c93ec6f19f0fb006752af79674b8d2",
+          "template_sha256": "9cc6f081ff79f5fbf9867bc9ae16f127563c6f0d69e7fa9f9dc4c640f1d3c2d2",
+          "answer_sha256": "b18dcf88522fe64f36fe67b2f73e4d197280c553fae0be80c739f6d6ca389b6b"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L3-02",
+          "difficulty": "L3",
+          "template_id": "verified_noop_submission",
+          "instance_sha256": "8d6a8061b5a47e6d6ffe59b94892e340bf82bdf5e44d815f7f08b80b3827c7f1",
+          "question_sha256": "b277b912261e1d70c9c38e7918d0db50683c394e29b3407731f532c9ed16756b",
+          "template_sha256": "2611166737509cf89ef2d7455577b734600494faac8d3acc23157c4f75a1c659",
+          "answer_sha256": "4d3a09684f8768a4309b13469296cee682278a42ea8f93b701a01a942d40156f"
+        },
+        {
+          "seed": 3000,
+          "task_id": "test-3000-v2-L3-03",
+          "difficulty": "L3",
+          "template_id": "explicit_pending_pair_submission",
+          "instance_sha256": "1420fabbc9f9b2abbf31ea22aff4cdd2892f0eed322462755d5db6632e42a4f4",
+          "question_sha256": "82d77bda28471c194453e2942325a79132b93dba4740fdd9d7a9bc0d85d60e10",
+          "template_sha256": "db1a2ff5991f4972a1ff685c21a26a9ee5479876b999b92a72046aa095db9888",
+          "answer_sha256": "5ec6d4a101c9d2ecd73c670170239eafba1dd1ca3e6515bc2ef0db01b5ec9281"
+        }
+      ]
+    },
+    {
+      "seed": 3001,
+      "kb_sha256": "97a76a696a215fe66955c48422d96c61b8d643560a7a0683d731998b09ad889f",
+      "tasks_sha256": "430c99ce008d29be3f16c9903769c1d994661f089f774a8f4b931ca1b62579ba",
+      "tasks": [
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L1-00",
+          "difficulty": "L1",
+          "template_id": "student_department_lookup",
+          "instance_sha256": "d20135b84040ff075676c4a3ef957bcd0edc82a0f70525cdd9727788ec5dd3ee",
+          "question_sha256": "e2341160df54b28ef82a088d3b6d4a903e057fc99a15a60076b123750e66f91c",
+          "template_sha256": "5c5adc0348130f1a4cb9cc65b8246d544c937889b63485e06899df112b49e8d9",
+          "answer_sha256": "f09e353344a7872f7f42a445c1dc5e8b193780fe7e7b099653fb740673e5abba"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L1-01",
+          "difficulty": "L1",
+          "template_id": "course_credits_lookup",
+          "instance_sha256": "ead168d66870e9cc546688b9010c27dbc0b423b445d65e2e2f4979040d8ca013",
+          "question_sha256": "92708194576280c373846541ab3ed70e583745bed7b620847a2e820dad5a6328",
+          "template_sha256": "6e837f5e86e5a389c95189a314d2d7d939351c89ceec809e46c62640b16bcc3a",
+          "answer_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L1-02",
+          "difficulty": "L1",
+          "template_id": "department_gpa_count",
+          "instance_sha256": "75972349e13ffcbe3f4d9725710dc538f1ab6c7f55bc8d7b97d29919463ad013",
+          "question_sha256": "e66107e21ec583ef7ffb740c9c2417c6fb4fbb1468957c876c470f191798b32c",
+          "template_sha256": "bc1aa7119218e8534c8cae398696b3cdf0857ba087a790b238e7a2f3b4197bda",
+          "answer_sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L1-03",
+          "difficulty": "L1",
+          "template_id": "department_credit_course_list",
+          "instance_sha256": "30fd4f5480c103a5fe386652a89c79dbd9b1439e49832ee9cda75b2d99521ae3",
+          "question_sha256": "02db35ed024f8f040a98354f8cbec7e8d9eaad5786df8d508f8ac897e0d8e9b8",
+          "template_sha256": "a12c1faad8734e2d514d822c7ab2ca71f9926f032c02d41f5df0e64e85a2732d",
+          "answer_sha256": "87f5f1a511b321e7ac8f9110046cd0620ea29cbfc891be3fb51a02c068aaab47"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L2-00",
+          "difficulty": "L2",
+          "template_id": "department_year_gpa_intersection",
+          "instance_sha256": "7674cb0f85b8b855631761ae06bcfafcd292ef8ec27631b87c8d708cf8a87b47",
+          "question_sha256": "86c21351653235a74ca6ff6fd70b4caf6f870f5fb21f3556a9ac486857c6d1c3",
+          "template_sha256": "e913405affa7b12a3af168cd8c64c29f29e64897606440c51f21f3aaa2566fb1",
+          "answer_sha256": "06d1a3aefa118077a2c949edcdf66654bccd0cc62158f866cd5d280fc0db636d"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L2-01",
+          "difficulty": "L2",
+          "template_id": "course_completion_grade_intersection",
+          "instance_sha256": "e9cc3c1ffdda1fa5f8b151f828a599871a1794c2621b29daa3cfc75df4443d62",
+          "question_sha256": "e2f516d83d90b39641d7358788c1b5740311a03d3fda4931eb0e8288e1cff91f",
+          "template_sha256": "ba03d0333f797f3558cea90003162aa3e3c7d4e11bdf32ea2a5179e26b6a71cf",
+          "answer_sha256": "f71442983e4dcaac0522ed79e434b0475585545d8988e3afaf80dbc6e4f785c8"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L2-02",
+          "difficulty": "L2",
+          "template_id": "scholarship_year_threshold_intersection",
+          "instance_sha256": "f4b6298f05518d1799db5400bbf40327129fdb080718d94ad139dff977216557",
+          "question_sha256": "fdf3af77af83836af91573fe26abaee3307cc589aebba1575a63edb64257cd02",
+          "template_sha256": "9f3155b62d8df1eeaf17091049265f815de7bf51f34374318e746d6a1459c29c",
+          "answer_sha256": "6341bd4a7c5b5a89e03620e49248b677533035d8468b69916dc67553d1578623"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L2-03",
+          "difficulty": "L2",
+          "template_id": "course_department_minimum_credits",
+          "instance_sha256": "a486a8bfa372e80114f5c810017093f3f3df9ecb48bec48004342ad2fec21293",
+          "question_sha256": "b50956d5fa968fc75f3105e2dbc80759e98dc50b649304ee3b751af31ef85564",
+          "template_sha256": "9e7eeaf6520ac002019b4bd6be5178972e4a437f92d9b83395f5ef3726af0cd9",
+          "answer_sha256": "071bde07606753f3a47164b85388ebdd2f48d410ed267dd7e5c835aa6bb07dba"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L3-00",
+          "difficulty": "L3",
+          "template_id": "candidate_limited_submission",
+          "instance_sha256": "49e3d3595a18c0dbaba4ba3d6f91c11bf17172ddbbaa5d3fc4783bd5da2c62f9",
+          "question_sha256": "b2410473a6ee2a184244968d3ea11605c786f5ab75cf85477bf70e6b02f77144",
+          "template_sha256": "19d5cce8ea0f4bfe886e39af36793e8a8a553a47fe53274828c2c1692575f45e",
+          "answer_sha256": "b885ecd44e090d432da8869755d56f9f44b05a66e1b15e4858214b3c76decc10"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L3-01",
+          "difficulty": "L3",
+          "template_id": "two_scholarship_candidate_batches",
+          "instance_sha256": "4c70c02370e3c0e1bf3908b73899327f81a0efb96f0d67aa328c0c9ddc150eeb",
+          "question_sha256": "21f84807ce98e9cc7033f322229e8ba31c67998c88269559d9be273e236663e6",
+          "template_sha256": "9cc6f081ff79f5fbf9867bc9ae16f127563c6f0d69e7fa9f9dc4c640f1d3c2d2",
+          "answer_sha256": "62041ed06c63bc4e07fe5333c55216aa9cbbd3d96b45b2eeb2592eef38e023c9"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L3-02",
+          "difficulty": "L3",
+          "template_id": "verified_noop_submission",
+          "instance_sha256": "7ef54438dd3323120fe2503f1108913fac04689d23693ff618591e287eb49c2e",
+          "question_sha256": "a04808472fcc3ac016479fe8bf61303486b214bd090328511d9733f5eeea5c5d",
+          "template_sha256": "2611166737509cf89ef2d7455577b734600494faac8d3acc23157c4f75a1c659",
+          "answer_sha256": "0525596acdd981f58c774153d24966dd7fbe483d0e2520203751cca82a25012d"
+        },
+        {
+          "seed": 3001,
+          "task_id": "test-3001-v2-L3-03",
+          "difficulty": "L3",
+          "template_id": "explicit_pending_pair_submission",
+          "instance_sha256": "21b9a12c8695572ad795eab141d8e677f07f7ae79c25e4ff00314295c085eb5a",
+          "question_sha256": "fc06d8549b7ff3ab915a5b16187d797440aefd028000165ea01d1a9eb3f85a68",
+          "template_sha256": "db1a2ff5991f4972a1ff685c21a26a9ee5479876b999b92a72046aa095db9888",
+          "answer_sha256": "5d54caf74f717253019e5927f15761fb3c5563da3919b5613212919d8d9dab9c"
+        }
+      ]
+    },
+    {
+      "seed": 3002,
+      "kb_sha256": "597fb6d24780636081bf5cb4c08435cf639e9d4c59872a3bc081a3ee3526e65a",
+      "tasks_sha256": "15995c27ef10bb9de6da86025dfc203fa18fae72742614886b69aae572eb4fb6",
+      "tasks": [
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L1-00",
+          "difficulty": "L1",
+          "template_id": "student_department_lookup",
+          "instance_sha256": "8787d3ebdf672ca21ebe8728032f4e3a19a27b5e7d935c3e1c7381c40226c725",
+          "question_sha256": "4660b6ada04be1dd850248ae7bc5adefc8e5f4d9c2ec04d58af627ab90f58888",
+          "template_sha256": "5c5adc0348130f1a4cb9cc65b8246d544c937889b63485e06899df112b49e8d9",
+          "answer_sha256": "534bd7dadf406d51190808523003d02752dabea3967b8938a2c95b0bfc2326a7"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L1-01",
+          "difficulty": "L1",
+          "template_id": "course_credits_lookup",
+          "instance_sha256": "38dce6111284b298723fd0b73a5664431234602598fdeb022601be531a7537cc",
+          "question_sha256": "92708194576280c373846541ab3ed70e583745bed7b620847a2e820dad5a6328",
+          "template_sha256": "6e837f5e86e5a389c95189a314d2d7d939351c89ceec809e46c62640b16bcc3a",
+          "answer_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L1-02",
+          "difficulty": "L1",
+          "template_id": "department_gpa_count",
+          "instance_sha256": "9a51e4399e70a3fc019ec740d8ec5b62c50074dca67c8db692ef5f9219e6c1a8",
+          "question_sha256": "4d478e4e2513c627c9ab4ded52a821dc34c7a7cc3439c1c32384b5a81ffe9016",
+          "template_sha256": "bc1aa7119218e8534c8cae398696b3cdf0857ba087a790b238e7a2f3b4197bda",
+          "answer_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L1-03",
+          "difficulty": "L1",
+          "template_id": "department_credit_course_list",
+          "instance_sha256": "8f920fe81014ab11359dd9ec775726ab987a3e9750dc0049c5e4be806c723098",
+          "question_sha256": "cb43b1ee878d6ec161f53880760d16e5ee87bdb954a146343c7440286a3a9abf",
+          "template_sha256": "91236703bd4ee17579887ce6b2d21c2ea9c9c1eaeb295eddd33cc896c041409d",
+          "answer_sha256": "eeeb7cc3bb0c8e429d9bcc57eabcdb6f543da468b98b7f628427f547ee937e83"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L2-00",
+          "difficulty": "L2",
+          "template_id": "department_year_gpa_intersection",
+          "instance_sha256": "7bbcc7bc1dca3cca279cd27b23fafd615913f6da50a25b2df0cecfcba1490594",
+          "question_sha256": "49251f2d97b7ebdc6595ed7b6603a458a1cd205888e7b9d25e1d92bb91045f49",
+          "template_sha256": "760d811a496f22e84bcaabe8e75ce1736beba5f5090eebfa3d67696d08526434",
+          "answer_sha256": "7eba9f7c16d7957c462bed23a00f5fa3859e57bc59e932565c79125799ff4a17"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L2-01",
+          "difficulty": "L2",
+          "template_id": "course_completion_grade_intersection",
+          "instance_sha256": "ea91d84cae7d31c93e7ac2b688f24972c3224faaf8c234a112a598550e89abaa",
+          "question_sha256": "8ff530dd3996f15ebf391fb5d6044a591271171b9008086c73e326ff3dcbdd1b",
+          "template_sha256": "ba03d0333f797f3558cea90003162aa3e3c7d4e11bdf32ea2a5179e26b6a71cf",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L2-02",
+          "difficulty": "L2",
+          "template_id": "scholarship_year_threshold_intersection",
+          "instance_sha256": "ceb8103dbbe29d4939bf3309e2e8408c84f63323df886b2af1301e6e3a116888",
+          "question_sha256": "5a4eab4659cbed3b710d68e8a95b394b86508d2d8eefb816d4e3b17e1d22a6d2",
+          "template_sha256": "9f3155b62d8df1eeaf17091049265f815de7bf51f34374318e746d6a1459c29c",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L2-03",
+          "difficulty": "L2",
+          "template_id": "course_department_minimum_credits",
+          "instance_sha256": "761e05ac4ed1a07036def47ce1f07772c0e553dd70ceb8c61e2231cee4004a1a",
+          "question_sha256": "a85038b71cc40da9e2b1076abe17a8064074f921570545435d11cc4e3807ea00",
+          "template_sha256": "2cf35c313beba5b4d14c9424b4b2d6896fd74e8b7e86947305a1c32c32523f6d",
+          "answer_sha256": "0793b92e81e3447aeadeccce2efd5e67a50cccf37c6fd6eacf8326ad2f9a0a58"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L3-00",
+          "difficulty": "L3",
+          "template_id": "candidate_limited_submission",
+          "instance_sha256": "a08631d98595f4d7c77a9d41e75f00ea736e4eb75872587279a00b4498c1bd50",
+          "question_sha256": "f985e37992eb85bcf46014d5405aebb1391d7506837d4cbd246c63e268f13290",
+          "template_sha256": "19d5cce8ea0f4bfe886e39af36793e8a8a553a47fe53274828c2c1692575f45e",
+          "answer_sha256": "9ee050e73ae770e6889524e22e0b507186ec674172af4130c78f7dad794f913a"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L3-01",
+          "difficulty": "L3",
+          "template_id": "two_scholarship_candidate_batches",
+          "instance_sha256": "0a10844398e79191f94a3b1c3114631b13145bebdbc73bd266c63469192773bc",
+          "question_sha256": "9b7ad15ad85ff51823fc4f31e31b87161ec63ae202c01fa5b6470fc741046108",
+          "template_sha256": "9cc6f081ff79f5fbf9867bc9ae16f127563c6f0d69e7fa9f9dc4c640f1d3c2d2",
+          "answer_sha256": "4a9ff7892ade813c4b6acf9e532a81ed2e1d8038bddbc91544b1989dadf56a71"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L3-02",
+          "difficulty": "L3",
+          "template_id": "verified_noop_submission",
+          "instance_sha256": "674d36dfbec80d7ad61c177892fea5da78e9f14a5db983c125fe95c1e0aae62f",
+          "question_sha256": "677b6f93905967deebeff945bb5442f9937172787fbbdfe3af6038bcdcba5ed7",
+          "template_sha256": "2611166737509cf89ef2d7455577b734600494faac8d3acc23157c4f75a1c659",
+          "answer_sha256": "6c2edde6cf10b37c214dbdbf03ddb20d72fb854c384d4f10ce29db4bb6c47053"
+        },
+        {
+          "seed": 3002,
+          "task_id": "test-3002-v2-L3-03",
+          "difficulty": "L3",
+          "template_id": "explicit_pending_pair_submission",
+          "instance_sha256": "840efb5674da144609454ce11d6e6a33bc5fa07dbadca36612d80c87e1f5bf34",
+          "question_sha256": "c20aaf277523d4541f9e1fb4d608f9349f30a6e2ac9acfb12b0a41c04c81fce5",
+          "template_sha256": "db1a2ff5991f4972a1ff685c21a26a9ee5479876b999b92a72046aa095db9888",
+          "answer_sha256": "028690373355b6e6b9687457004ea34dbbadcb5b2863c9de4e75996181730a7b"
+        }
+      ]
+    },
+    {
+      "seed": 3003,
+      "kb_sha256": "8e28a8a8b658c2953cd0e623f30889f191098db7cf95f3e84919fae5581618b0",
+      "tasks_sha256": "ec9d0b13af7b5557d6b5c03d8f4557c61141b508550ccf27bebe2d4e633af797",
+      "tasks": [
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L1-00",
+          "difficulty": "L1",
+          "template_id": "student_department_lookup",
+          "instance_sha256": "1a049bed8e22b79d7483f9bd8b3bc09e3a2b20c3e2904d96e7f613068dddec48",
+          "question_sha256": "2c3a2f6430853e09b84f0b0158e53065d2289e29bfbe9ac8374cc2f88d73b5e1",
+          "template_sha256": "5c5adc0348130f1a4cb9cc65b8246d544c937889b63485e06899df112b49e8d9",
+          "answer_sha256": "bbb1d3854b0f571c5927b0fc2f6e15cca3ec9ba9f996df0f1b56da00f852e816"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L1-01",
+          "difficulty": "L1",
+          "template_id": "course_credits_lookup",
+          "instance_sha256": "9764344e747a38f1ee78e51946137af57d9c8711691b4cee6b19a7b536b23c8a",
+          "question_sha256": "da9d6309b0ae67f81003a4e2208fde2239d06fd51fe3fd26df001c9943902214",
+          "template_sha256": "6e837f5e86e5a389c95189a314d2d7d939351c89ceec809e46c62640b16bcc3a",
+          "answer_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L1-02",
+          "difficulty": "L1",
+          "template_id": "department_gpa_count",
+          "instance_sha256": "e7443068376d46ee55a9271385d3ff4117961a6f76238523b1e5e233fb6fd180",
+          "question_sha256": "4b147ee7c66393814d95839305e1df89889922d9ffe123bec0853ab4bb2e206b",
+          "template_sha256": "1ae7961154a428c69cbb89aa5ae2e8860bde3f9b9a1c817bd6ac4f6785748d63",
+          "answer_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L1-03",
+          "difficulty": "L1",
+          "template_id": "department_credit_course_list",
+          "instance_sha256": "b268d6ea4434d01cf8df58f6e08a947a7c9fed552c0c17978687d2ad6870c10c",
+          "question_sha256": "ce7c08c20d0ee81b08b6e92845568ed7a7b881534adf50d60ff36dcf0b301df3",
+          "template_sha256": "3e63f0ba0bcbcc14294e76ecc5c512976b3ccab5e6bfa5c624197339b496651d",
+          "answer_sha256": "071bde07606753f3a47164b85388ebdd2f48d410ed267dd7e5c835aa6bb07dba"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L2-00",
+          "difficulty": "L2",
+          "template_id": "department_year_gpa_intersection",
+          "instance_sha256": "e9c6f1d4191675f9e2e838e426cc4c329d208473363c39adde6f6df94ebc005c",
+          "question_sha256": "69a1490a11737409635122464c25a23a714f9f0f7610d452ac9844b7addd9c9a",
+          "template_sha256": "dbc2c14bce97ec885cca9e249a06c04107f27602364f67ac5cc2b569fa12d46c",
+          "answer_sha256": "06d1a3aefa118077a2c949edcdf66654bccd0cc62158f866cd5d280fc0db636d"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L2-01",
+          "difficulty": "L2",
+          "template_id": "course_completion_grade_intersection",
+          "instance_sha256": "d2d88e29fc337cbe6486b02a31da3c0915a62838cf93c7c78d98d3c7eff9d6f1",
+          "question_sha256": "8ff530dd3996f15ebf391fb5d6044a591271171b9008086c73e326ff3dcbdd1b",
+          "template_sha256": "ba03d0333f797f3558cea90003162aa3e3c7d4e11bdf32ea2a5179e26b6a71cf",
+          "answer_sha256": "062c61d57052f7d15783eece752b25f11aeb730a0fcb8209661eefb61e3f9d11"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L2-02",
+          "difficulty": "L2",
+          "template_id": "scholarship_year_threshold_intersection",
+          "instance_sha256": "a714d7ad51271160fb0e6f020f4513606cd7e3ef8305097267b418c6f0349534",
+          "question_sha256": "3326b147f997059125f0f109b132ae9021429f29f0a635a2de64866c427c0895",
+          "template_sha256": "9f3155b62d8df1eeaf17091049265f815de7bf51f34374318e746d6a1459c29c",
+          "answer_sha256": "67d50e01bef5b5ff9f632afd6a5afb6fdbc315f6289efa44db9bb4971adb8034"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L2-03",
+          "difficulty": "L2",
+          "template_id": "course_department_minimum_credits",
+          "instance_sha256": "55f5399afdc12da3bbc718f1bfe935365d1d7db4de1672eb01219df17fa4820b",
+          "question_sha256": "40567611e55be6b7a4c2317800a72c75be661514376026d5db2e6cce733b457d",
+          "template_sha256": "9e7eeaf6520ac002019b4bd6be5178972e4a437f92d9b83395f5ef3726af0cd9",
+          "answer_sha256": "fc7493b3b2af39902a6a6fe0425967adf5f221a9f6fc4b6aa8ee07f241ca5a8a"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L3-00",
+          "difficulty": "L3",
+          "template_id": "candidate_limited_submission",
+          "instance_sha256": "fd69568882d815f3399bd10956f1adae397bcdd8bebc316ab6839739a137d6b8",
+          "question_sha256": "ee18232bb387f1e36614c80c1e9207aeef7cb909d0fa3cf3124fe7a1a3619f12",
+          "template_sha256": "19d5cce8ea0f4bfe886e39af36793e8a8a553a47fe53274828c2c1692575f45e",
+          "answer_sha256": "7be25b680dc156235ee9abef6c020e69a4941c6cf8cc96dd8debafed6ee64fa1"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L3-01",
+          "difficulty": "L3",
+          "template_id": "two_scholarship_candidate_batches",
+          "instance_sha256": "ee4bc94c5e267b852cd54e855ac7baeb9d3fc0fd9cbad8304a3217e15ba81aac",
+          "question_sha256": "84f5ba054913a31cb1664cd32d899cb757792a807c7e4c0cc8c06b73b9802d87",
+          "template_sha256": "9cc6f081ff79f5fbf9867bc9ae16f127563c6f0d69e7fa9f9dc4c640f1d3c2d2",
+          "answer_sha256": "7fb85c1dbbe0b7f4c3ea058783d04507d6a5081a4958bbea7bc6dde3420360cc"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L3-02",
+          "difficulty": "L3",
+          "template_id": "verified_noop_submission",
+          "instance_sha256": "414097487e5b09b2f422fc1e5308f6f607b8b985ef91f3795dc3c58ada4a2f99",
+          "question_sha256": "9d511d7802c8908f285ebe58191591ae9ba08f5623e9831fd13c3f3abc79fb09",
+          "template_sha256": "2611166737509cf89ef2d7455577b734600494faac8d3acc23157c4f75a1c659",
+          "answer_sha256": "a80d076067e91703323d9ffd8556cc719492c4610dbc581724a89fcbea213b0c"
+        },
+        {
+          "seed": 3003,
+          "task_id": "test-3003-v2-L3-03",
+          "difficulty": "L3",
+          "template_id": "explicit_pending_pair_submission",
+          "instance_sha256": "db784e0b22508992c39a03158f516336f76019b0285bcaa5fd7e653f614c1f67",
+          "question_sha256": "c602af8553ccb06edd9c042f5e1e228bbb8ae72394b960b8a2f39ffcc06e415c",
+          "template_sha256": "db1a2ff5991f4972a1ff685c21a26a9ee5479876b999b92a72046aa095db9888",
+          "answer_sha256": "4a932cd39470e8a65d8baef770f75e78b00d3c5c4ed304090fa6f8c880569ab5"
+        }
+      ]
+    },
+    {
+      "seed": 3004,
+      "kb_sha256": "a6623b683f933dfdbe52c6224f8dce146e4c2666310a8efaa6075631dcdbb0d4",
+      "tasks_sha256": "9e4445897f553470f82b3a0db06c30ff17eaf8cbb58f74840d9c981d8f27a4e9",
+      "tasks": [
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L1-00",
+          "difficulty": "L1",
+          "template_id": "student_department_lookup",
+          "instance_sha256": "2e4153978daa754960c261941d4f9c74abdc39f8d25ad5c4298bdd03d847afcc",
+          "question_sha256": "523b0d97265639004161644453b97ffded5f5355ed97fa0ec3edde4dabf21234",
+          "template_sha256": "5c5adc0348130f1a4cb9cc65b8246d544c937889b63485e06899df112b49e8d9",
+          "answer_sha256": "534bd7dadf406d51190808523003d02752dabea3967b8938a2c95b0bfc2326a7"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L1-01",
+          "difficulty": "L1",
+          "template_id": "course_credits_lookup",
+          "instance_sha256": "f2cc627a502fc0d8f5f1634827fb7aca9f1f3a0ac2bd161a7397b039b2f523c4",
+          "question_sha256": "19990ee1e19e88d556afec8f8108fc94116a2638e5f3b67363fcc3ed4b1a9d04",
+          "template_sha256": "6e837f5e86e5a389c95189a314d2d7d939351c89ceec809e46c62640b16bcc3a",
+          "answer_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L1-02",
+          "difficulty": "L1",
+          "template_id": "department_gpa_count",
+          "instance_sha256": "e96e39a15a09acd9503e1f4de9fa30437ef70cbeb2d19d638f1225b28ac3d73f",
+          "question_sha256": "416477b7a1d250288be2a389f2596be7e454e270b1c09f2a57fb6d77d85eff7b",
+          "template_sha256": "bc1aa7119218e8534c8cae398696b3cdf0857ba087a790b238e7a2f3b4197bda",
+          "answer_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L1-03",
+          "difficulty": "L1",
+          "template_id": "department_credit_course_list",
+          "instance_sha256": "97f72f6c4bf3b0c5687424187f097cc1ac5b0f34f4d464a120d617d0c16cbb99",
+          "question_sha256": "cb43b1ee878d6ec161f53880760d16e5ee87bdb954a146343c7440286a3a9abf",
+          "template_sha256": "91236703bd4ee17579887ce6b2d21c2ea9c9c1eaeb295eddd33cc896c041409d",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L2-00",
+          "difficulty": "L2",
+          "template_id": "department_year_gpa_intersection",
+          "instance_sha256": "3c6d47ae2fd4d47269fc7e35a06a511cdf171686adb7d60a5c0455c7c5b967b2",
+          "question_sha256": "20beded514604611e87636b7cfc5c03587d2ba03ea29825558121fa861e243d4",
+          "template_sha256": "e913405affa7b12a3af168cd8c64c29f29e64897606440c51f21f3aaa2566fb1",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L2-01",
+          "difficulty": "L2",
+          "template_id": "course_completion_grade_intersection",
+          "instance_sha256": "378ebde14b1d8e0e8ac47543867c845e5ea8a16056c5447508afdefb8e66b308",
+          "question_sha256": "6753557695786ed08ca127fb66f149ef0a67154d721b71f096d116db856e7490",
+          "template_sha256": "ba03d0333f797f3558cea90003162aa3e3c7d4e11bdf32ea2a5179e26b6a71cf",
+          "answer_sha256": "266f8ecdcde892751b3dff9b0f296c69eed32b91a50379039af846ffee84078f"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L2-02",
+          "difficulty": "L2",
+          "template_id": "scholarship_year_threshold_intersection",
+          "instance_sha256": "d9378e3079ec6f53b41c77d823981d4f8fabd0272ea7fbba914860a7cf19dc31",
+          "question_sha256": "f56ab34b5a4640ba748710dad28389f532ce565c738ab553ec6a34f9bd6aecb7",
+          "template_sha256": "9f3155b62d8df1eeaf17091049265f815de7bf51f34374318e746d6a1459c29c",
+          "answer_sha256": "d92e95ae13cb85b1522aa213879f8db3c79d19c8532fd5127b3eb63a7c1bcd50"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L2-03",
+          "difficulty": "L2",
+          "template_id": "course_department_minimum_credits",
+          "instance_sha256": "d60430012ec2aa685e94edc1240188cac41e7f16261f27775a34b7dc7d140aa7",
+          "question_sha256": "98fa48d1176f07357219d9dda92be66ea15d4b898e3053e445790cfc634b1717",
+          "template_sha256": "25051def5a83cb8371e28464e230ddb09e2146210351c9b488040dd030f10052",
+          "answer_sha256": "8474225b739764bc9c0ca2792f861852afc6e8549bcdf14d3d17416daad374d3"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L3-00",
+          "difficulty": "L3",
+          "template_id": "candidate_limited_submission",
+          "instance_sha256": "0eaa0a443eb56e47cce37abb56295c926cd6093144042e81c8f5bc8f03dda3e8",
+          "question_sha256": "42c027800e0c20cf7bdfbadb9076ef7ce463f6282ad451f9356ef8e4f5194ec1",
+          "template_sha256": "19d5cce8ea0f4bfe886e39af36793e8a8a553a47fe53274828c2c1692575f45e",
+          "answer_sha256": "dff2814f0bd0b586592f0f9baa4463fc50f2abdb5226b392f48bdc8330a1d70d"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L3-01",
+          "difficulty": "L3",
+          "template_id": "two_scholarship_candidate_batches",
+          "instance_sha256": "89633a6f759eb7aab17ba657463c329656321299311285274df9ffdb2efe2a5c",
+          "question_sha256": "77ab1f544ad30d84219717d3ffae15b3942ee04437980d8a15fd99d065eea01f",
+          "template_sha256": "9cc6f081ff79f5fbf9867bc9ae16f127563c6f0d69e7fa9f9dc4c640f1d3c2d2",
+          "answer_sha256": "a559fe4d2fea694e1d83919f9252bbfce66e7ca3a0dbede4e0898ef0ea38a960"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L3-02",
+          "difficulty": "L3",
+          "template_id": "verified_noop_submission",
+          "instance_sha256": "b409f1b2064c1b01fe1ac778fe0025739bad566ee0be2bb40e74f8cdb8631968",
+          "question_sha256": "2869f200a2fd9acc95e2a8991dc9b63bcbc4219826f7396ea8a20c57fcd71be8",
+          "template_sha256": "2611166737509cf89ef2d7455577b734600494faac8d3acc23157c4f75a1c659",
+          "answer_sha256": "7b768fb5970f891238d0bbf0b22b8109fc7faaf3f339eb6f964c2881d5946a0c"
+        },
+        {
+          "seed": 3004,
+          "task_id": "test-3004-v2-L3-03",
+          "difficulty": "L3",
+          "template_id": "explicit_pending_pair_submission",
+          "instance_sha256": "6bab6dac9e9d9f989e0e9df17c79ff2e6c00f99b8810f38c60aa3e8f7b075127",
+          "question_sha256": "c20aaf277523d4541f9e1fb4d608f9349f30a6e2ac9acfb12b0a41c04c81fce5",
+          "template_sha256": "db1a2ff5991f4972a1ff685c21a26a9ee5479876b999b92a72046aa095db9888",
+          "answer_sha256": "9d404b426b2c8b2755f801ced524dc920286171bdcb3bbce210284e5c8f33dd1"
+        }
+      ]
+    },
+    {
+      "seed": 3005,
+      "kb_sha256": "771e6b02c8878d671ca780fb2813d22917625d1b88a3b139345baf5147e2d5cd",
+      "tasks_sha256": "73ea5835fc913d6920d38cd34ba7330ccf61b247d734b798f1bf9089b3c326b7",
+      "tasks": [
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L1-00",
+          "difficulty": "L1",
+          "template_id": "student_department_lookup",
+          "instance_sha256": "9f4b9044946263fe0c5378c473ab46953d26bd5d882df0eb60f5fcc301c72a9e",
+          "question_sha256": "f05d926ce0f1a480b3a932d02de48d799a6dbca7613b3f898b1f0f1126077289",
+          "template_sha256": "5c5adc0348130f1a4cb9cc65b8246d544c937889b63485e06899df112b49e8d9",
+          "answer_sha256": "bbb1d3854b0f571c5927b0fc2f6e15cca3ec9ba9f996df0f1b56da00f852e816"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L1-01",
+          "difficulty": "L1",
+          "template_id": "course_credits_lookup",
+          "instance_sha256": "76966d8842f61df375686574d5ec07c902cdeae5846f66178cb09f950192f4db",
+          "question_sha256": "d7000f956e72492600c2015c998360daffccfde5d22a1e4f42e34e59874b01cc",
+          "template_sha256": "6e837f5e86e5a389c95189a314d2d7d939351c89ceec809e46c62640b16bcc3a",
+          "answer_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L1-02",
+          "difficulty": "L1",
+          "template_id": "department_gpa_count",
+          "instance_sha256": "77528968effa08afc51abb5fb2d095afdd6f9ac4131fbfbe3084d70ff3103594",
+          "question_sha256": "4b147ee7c66393814d95839305e1df89889922d9ffe123bec0853ab4bb2e206b",
+          "template_sha256": "1ae7961154a428c69cbb89aa5ae2e8860bde3f9b9a1c817bd6ac4f6785748d63",
+          "answer_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L1-03",
+          "difficulty": "L1",
+          "template_id": "department_credit_course_list",
+          "instance_sha256": "07768e0ac745d7a416ba70e68f5df5899372daded942b0c10f28abea87270b86",
+          "question_sha256": "0a9ba00ee8b7795c1e8c690da5dda133aee4e0dc2f404914819d28144e1f9565",
+          "template_sha256": "3e63f0ba0bcbcc14294e76ecc5c512976b3ccab5e6bfa5c624197339b496651d",
+          "answer_sha256": "6f6e2c5a0f7a11f4b90638c50ee1a13ab4847bdbf3d603d0bd7590c7b7acef68"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L2-00",
+          "difficulty": "L2",
+          "template_id": "department_year_gpa_intersection",
+          "instance_sha256": "123f2c5741578335d59c9235040bf83ff2eac2321bead47d3de83ebe3a66b286",
+          "question_sha256": "064b22091210c91308c0366b22d73f0fdac239b73c7b87f0bb50debf6d10de0e",
+          "template_sha256": "dbc2c14bce97ec885cca9e249a06c04107f27602364f67ac5cc2b569fa12d46c",
+          "answer_sha256": "e8a4a94a89eba1d57d776f3ec994c1b70dda5d11cca1e9d182c7266782423996"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L2-01",
+          "difficulty": "L2",
+          "template_id": "course_completion_grade_intersection",
+          "instance_sha256": "816f7031e8be30b3488072ba1e81613f0e7d1e2278d0614f32c8916f2dc8b180",
+          "question_sha256": "3d11b72739b57efcf0fda3437c3c3061d3edd97291eddedeb34a6e3c4d68896d",
+          "template_sha256": "ba03d0333f797f3558cea90003162aa3e3c7d4e11bdf32ea2a5179e26b6a71cf",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L2-02",
+          "difficulty": "L2",
+          "template_id": "scholarship_year_threshold_intersection",
+          "instance_sha256": "b8028b95f9902519a6071501613ed0e96ca7440a0d5ec62bc035d115440e619c",
+          "question_sha256": "5851f16edfb3ea1387b9a23bce7206c9a119a0bb667a6afb80c9bf7efe3f9d61",
+          "template_sha256": "9f3155b62d8df1eeaf17091049265f815de7bf51f34374318e746d6a1459c29c",
+          "answer_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L2-03",
+          "difficulty": "L2",
+          "template_id": "course_department_minimum_credits",
+          "instance_sha256": "8dfe06094cc3f17e6ec9d63b5e98afb485996069d0ad41b1f9333c87839c73c3",
+          "question_sha256": "4aef82aa278a9bc7c14263c27b180a35ab75feb112eadd37a405d5db10a366c4",
+          "template_sha256": "9e7eeaf6520ac002019b4bd6be5178972e4a437f92d9b83395f5ef3726af0cd9",
+          "answer_sha256": "b5010d0bb48876ec5ea4762007b7697116c27d6ba75da4a95b275f66a70ad157"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L3-00",
+          "difficulty": "L3",
+          "template_id": "candidate_limited_submission",
+          "instance_sha256": "a90dbcce71bc3b0e67a24b9dff725b3aeb2209146b07e325b53ae16203e52280",
+          "question_sha256": "4fe01351e03a60186247b57c0cbee36a9c0eaffa0a246eac29dae2a737a6e4d3",
+          "template_sha256": "19d5cce8ea0f4bfe886e39af36793e8a8a553a47fe53274828c2c1692575f45e",
+          "answer_sha256": "5d342cdd796de59a153d623b2039fa7c56a8ca929b6635c45fe1c9407919fef7"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L3-01",
+          "difficulty": "L3",
+          "template_id": "two_scholarship_candidate_batches",
+          "instance_sha256": "872c29aea5b09de36536662feb7fcdbdb0be90c298a00e6c20e2e3ce9cd6fd9b",
+          "question_sha256": "a6b7c272ae473292608eef703ab2b50d12bfed25da9a999c8fb114f8e70e8fc4",
+          "template_sha256": "9cc6f081ff79f5fbf9867bc9ae16f127563c6f0d69e7fa9f9dc4c640f1d3c2d2",
+          "answer_sha256": "3c85e3c3613bccdef6ba42fdb9c1f4c1d4e72243a30e622f9a2739f31ccb50b5"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L3-02",
+          "difficulty": "L3",
+          "template_id": "verified_noop_submission",
+          "instance_sha256": "29299e0f7682e3506c44519b9a867aef1638911103f43af0b1736727b993aae4",
+          "question_sha256": "9d511d7802c8908f285ebe58191591ae9ba08f5623e9831fd13c3f3abc79fb09",
+          "template_sha256": "2611166737509cf89ef2d7455577b734600494faac8d3acc23157c4f75a1c659",
+          "answer_sha256": "230cc560a593d09f0323cd4c31309e521a9f2c122bc8ea6db760ae025f0c6287"
+        },
+        {
+          "seed": 3005,
+          "task_id": "test-3005-v2-L3-03",
+          "difficulty": "L3",
+          "template_id": "explicit_pending_pair_submission",
+          "instance_sha256": "b6e2eb2af06c158c0e3edecf6bcc83335ed25143c33a0b2b9772d101a7e4adb0",
+          "question_sha256": "c1155f025cee92800718e5003bd6e688d45457cdbcc3a62d19d69b21b020a43c",
+          "template_sha256": "db1a2ff5991f4972a1ff685c21a26a9ee5479876b999b92a72046aa095db9888",
+          "answer_sha256": "ea2c25cc63dee76b9e47a677e196dd0df2c2a9205ed2678637f8151d91f3bef7"
+        }
+      ]
+    }
+  ],
+  "overlap_audit": {
+    "exact_instance_overlap": 0,
+    "question_overlap": 0,
+    "template_overlap": 0,
+    "answer_overlap": 12,
+    "entity_overlap": 0,
+    "holdout_tasks": 72,
+    "holdout_entities": 158,
+    "reference_entities": 167,
+    "definitions": {
+      "exact_instance": "SHA-256 of initial state plus task excluding task_id",
+      "question": "exact question string",
+      "template": "case-folded question with entity IDs and numbers replaced",
+      "entity": "exact ID appearing in any world table",
+      "answer": "SHA-256 of canonical expected outcome"
+    }
+  },
+  "usage_policy": "Hold-out is report-only. Never use it for hyperparameter, prompt, checkpoint, or run selection."
+}
