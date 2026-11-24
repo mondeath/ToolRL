@@ -1,21 +1,35 @@
-# Cost-Aware RLAIF 最小实验环境
+# ToolRL：工具调用 Agent 能否答对，而且少花成本？
 
-基础环境和原 smoke test 仅使用 Python 3.9+ 标准库。新增的真实 LLM policy 可选安装 torch/transformers，并按配置下载或读取本地权重。项目不包含训练、GRPO、AI Judge 或收费 API 调用。
+同一道题，Agent 可以直接查到答案，也可能重复检索后才答对。用 GRPO 训练 Qwen2.5-7B-Instruct 时，**在成功奖励中扣除工具成本，能否让模型在新题上用更便宜的路径答对？**
+
+| 模型 | 固定开发集：成功 / 400 | 新模板盲测：成功 / 72 |
+|---|---:|---:|
+| Base（未训练） | 246（61.50%） | 22（30.56%） |
+| Success-only（只奖励成功） | 399（99.75%） | 35（48.61%） |
+| Cost-aware（成功时再扣成本） | 400（100%） | 35（48.61%） |
+
+**开发集上的节省没有在盲测复现。** 两种训练模型在盲测中答对的是**同样的 35 题**。在共同答对题上，Cost-aware 相比 Success-only 在开发集平均少花 **0.343** 个工具成本单位，在盲测却平均**多花 0.457**（119 对 103，合计多花 16）。盲测全题均值略低，是因为它在两者都失败的 37 题上花得更少，不是因为它更省地完成了任务。
+
+**如何对照：** 项目把早期只读查询环境扩展为含状态修改、违规检查和最终状态判分的工具环境；这是独立的环境工程。上述两种训练均使用同一冻结环境、底座、题目、提示、工具价格与预算，**实验变量是训练奖励，不是判分器**。每种方法用 240 题 × 4 条采样，固定取第 240 组 checkpoint；仅一个训练种子，72 道盲测题共享六个测试世界。
+
+[查看配对报告：分母、成本总数与复算方法](reports/toolrl-paired-results.md) · [环境设计与任务示例](ENV_V1_PLAN.md)
+
+以下是早期原型的运行方法和实现记录，不是上述正式对照的复现命令。
 
 ## 运行
 
 从仓库根目录运行：
 
 ```bash
-python3 experiment/scripts/run_smoke_test.py
-python3 -m unittest discover -s experiment/tests -v
+python3 scripts/run_smoke_test.py
+python3 -m unittest discover -s tests -v
 ```
 
 也可分步生成数据：
 
 ```bash
-python3 experiment/scripts/generate_kb.py
-python3 experiment/scripts/generate_tasks.py
+python3 scripts/generate_kb.py
+python3 scripts/generate_tasks.py
 ```
 
 配置位于 `configs/default.json`：seed=42、search top_k=5、每轮最多 12 次工具调用、cost_lambda=0.1。输出路径始终相对于 experiment，不依赖当前工作目录。再次运行会覆盖生成文件。
@@ -91,7 +105,7 @@ exact_accuracy 使用 JSON 值的严格比较，列表保留顺序；normalized_
 
 完整示例见 `data/example_trajectory.json`；所有轨迹见 `data/trajectories.jsonl`；汇总及逐条 reward breakdown 见 `data/evaluation_summary.json`。
 
-## 后续接入真实 policy / GRPO
+## 原型阶段的设计记录（历史）
 
 - policy 只接收 public task 和 observation，不能访问 evaluation 文件或 smoke 驱动器的 query_plan；当前隔离是 Python 接口约束，并非进程安全沙箱。
 - 将模型输出解析成明确 action schema；补充 token/action mask、logprob、终止原因与截断状态。当前 Trajectory 只存结构化行为，不保存训练张量。
@@ -125,13 +139,13 @@ tests/test_policy_rollouts.py        # parser、修复、截断、隔离、统�
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r experiment/requirements-inference.txt
+.venv/bin/python -m pip install -r requirements-inference.txt
 # 首次运行会下载配置的模型；正式采样面向 CUDA。
-.venv/bin/python experiment/scripts/run_policy_rollouts.py
+.venv/bin/python scripts/run_policy_rollouts.py
 # 本地已有缓存后，CPU smoke 不需要联网：
-.venv/bin/python experiment/scripts/run_policy_rollouts.py --config experiment/configs/policy_cpu_smoke.json
+.venv/bin/python scripts/run_policy_rollouts.py --config configs/policy_cpu_smoke.json
 # 保持测试无需 torch/transformers：
-python3 -m unittest discover -s experiment/tests -v
+python3 -m unittest discover -s tests -v
 ```
 
 正式输出为 `data/policy_rollouts.jsonl`、`data/policy_rollout_summary.json` 和 `reports/base_policy_analysis.md`；`data/policy_prompt_example.json` 保存实际首轮 messages。
@@ -208,11 +222,11 @@ v1 实现位于 `src/env_v1/`，保留原环境、旧数据、奖励和训练接
 L3 每题复制独立数据库，五个奖学金各搭配三种已有申请状态。完整设计和实际结果见仓库根目录 `ENV_V1_PLAN.md`、`ENV_V1_RESULTS.md`。
 
 ```bash
-.venv/bin/python -m pip install -r experiment/requirements-test.txt
+.venv/bin/python -m pip install -r requirements-test.txt
 .venv/bin/python -m pytest -q
-HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python experiment/scripts/run_env_v1.py
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/run_env_v1.py
 # 可选：在相同真实模型上复跑失败注入，输出必须分开
-HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python experiment/scripts/run_env_v1.py --failure-rate 0.2 --output results/env_v1_failure02.jsonl
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python scripts/run_env_v1.py --failure-rate 0.2 --output results/env_v1_failure02.jsonl
 ```
 
 baseline 使用已有本地 Qwen2.5-1.5B-Instruct 固定 revision、CPU float32、greedy decoding、8 次工具调用/9 次决策上限；无需新模型。CPU 全集耗时较长。每条完成即写入 JSONL；同步保存 KB、任务（含状态断言）、汇总及配置/数据/prompt 哈希。重跑相同路径会覆盖已有输出。
@@ -221,4 +235,4 @@ v1 search 是完整单表检索；lookup 返回完整实体；aggregate 支持 c
 
 timeout 不执行工具；partial_result 执行后移除关键字段或最后一条结果（显式 partial_result=true），因此提交响应不完整时应先查状态再重试。每 episode 按 seed/task_id 固定注入序列。`failure_profile` 当前默认为 null，实验通过 runner 的 failure-rate 配置整体概率。
 
-`task_success` 检查正确答案/完整最终状态且必须正常结束；被拒绝的重复/不合格尝试单独计入 violation，不抹去正确的最终状态。非法数据库变化强制失败。`trajectory_length` 包含最终 direct_answer，`tool_calls` 不包含；parse repair 次数见轨迹 parse_status。`recovery_success` 是有注入事件 episode 的最终成功，无注入为 null。未完成、解析错误和预算截断均计入成功率分母。当前不提供 GRPO 或训练张量。
+`task_success` 检查正确答案/完整最终状态且必须正常结束；被拒绝的重复/不合格尝试单独计入 violation，不抹去正确的最终状态。非法数据库变化强制失败。`trajectory_length` 包含最终 direct_answer，`tool_calls` 不包含；parse repair 次数见轨迹 parse_status。`recovery_success` 是有注入事件 episode 的最终成功，无注入为 null。未完成、解析错误和预算截断均计入成功率分母。该环境接口不返回训练张量；GRPO 由独立训练模块实现。
