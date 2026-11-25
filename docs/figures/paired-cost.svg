@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="178" viewBox="0 0 680 178" role="img" aria-labelledby="title desc">
+  <title id="title">共同成功题上的平均工具成本差</title>
+  <desc id="desc">Cost-aware 减 Success-only。开发集每题少花 0.343 个单位，盲测每题多花 0.457 个单位。</desc>
+  <rect width="680" height="178" rx="10" fill="#f7f9fc"/>
+  <g font-family="sans-serif" fill="#172635">
+    <text x="20" y="31" font-size="18" font-weight="bold">共同成功题：Cost-aware − Success-only</text>
+    <path d="M347 46V140" stroke="#556575"/>
+    <text x="18" y="78">开发集 · 399 题</text><rect x="230.4" y="60" width="116.6" height="24" fill="#23786d"/><text x="224" y="78" text-anchor="end">−0.343</text>
+    <text x="18" y="122">盲测 · 35 题</text><rect x="347" y="104" width="155.4" height="24" fill="#b45724"/><text x="512" y="122">+0.457</text>
+    <text x="347" y="160" text-anchor="middle">更省 ←　0　→ 更贵（工具成本单位 / 题）</text>
+  </g>
+</svg>

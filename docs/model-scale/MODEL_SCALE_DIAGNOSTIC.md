@@ -49,9 +49,9 @@
 
 ## 数据来源与可比性
 
-- 1.5B：[归档 diagnostic JSONL](results/model_scale/qwen2.5-1.5b/results.jsonl)，与 [40-task baseline](results/env_v1_baseline.jsonl) 按固定 ID 抽取的原记录逐字段核对一致。完整 40 题成功率是 2.5%，本表使用同题 15-task subset 的 6.7%，没有混用分母。
-- 3B：[正式 CUDA/bf16 JSONL](results/model_scale_cuda_bf16/qwen2.5-3b/results.jsonl) 与 [summary](results/model_scale_cuda_bf16/qwen2.5-3b/summary.json)。
-- 7B：[正式 CUDA/bf16 JSONL](results/model_scale_cuda_bf16/qwen2.5-7b/results.jsonl) 与 [summary](results/model_scale_cuda_bf16/qwen2.5-7b/summary.json)。
+- 1.5B：[归档 diagnostic JSONL](../../results/model_scale/qwen2.5-1.5b/results.jsonl)，与 [40-task baseline](../../results/env_v1_baseline.jsonl) 按固定 ID 抽取的原记录逐字段核对一致。完整 40 题成功率是 2.5%，本表使用同题 15-task subset 的 6.7%，没有混用分母。
+- 3B：[正式 CUDA/bf16 JSONL](../../results/model_scale_cuda_bf16/qwen2.5-3b/results.jsonl) 与 [summary](../../results/model_scale_cuda_bf16/qwen2.5-3b/summary.json)。
+- 7B：[正式 CUDA/bf16 JSONL](../../results/model_scale_cuda_bf16/qwen2.5-7b/results.jsonl) 与 [summary](../../results/model_scale_cuda_bf16/qwen2.5-7b/summary.json)。
 - 3B/7B 来自已拉取的正式结果提交 `00d5e65`；本报告没有改写输入结果。
 
 | Model | Device / dtype | torch | transformers | Revision |
@@ -60,7 +60,7 @@
 | 3B | cuda / bfloat16 | 2.7.0a0+7c8ec84dab.nv25.03 | 4.57.1 | `aa8e72537993ba99e69dfaafa59ed015b17504d1` |
 | 7B | cuda / bfloat16 | 2.7.0a0+7c8ec84dab.nv25.03 | 4.57.1 | `a09a35458c702b33eeacc393d103063234e8bc28` |
 
-三组归档中的 KB、任务和 prompt 哈希一致；3B/7B 的实际 KB/任务/messages 快照也与归档基准核对一致。任务文件为 [env_v1_diagnostic_tasks.json](configs/env_v1_diagnostic_tasks.json)。本次统计校验了原 summary、工具计费、重复次数及终止分布，均与 JSONL 重算一致。
+三组归档中的 KB、任务和 prompt 哈希一致；3B/7B 的实际 KB/任务/messages 快照也与归档基准核对一致。任务文件为 [env_v1_diagnostic_tasks.json](../../configs/env_v1_diagnostic_tasks.json)。本次统计校验了原 summary、工具计费、重复次数及终止分布，均与 JSONL 重算一致。
 
 统一配置为 failure_rate=0、do_sample=false、max_tool_calls=8、max_steps=9、max_parse_retries=1、max_new_tokens=256、max_context_tokens=16384、seed=2026；temperature=0.8/top_p=0.95 保持归档值，greedy 下不使用。1.5B 与云端两组存在设备、dtype、torch/transformers 版本差异，不能声称三组是纯参数量的严格对照；3B/7B 的记录则匹配上述运行条件。每级只有 5 题，单题即改变该级成功率 20 个百分点；只有一次 greedy rollout，不据此给出统计显著性或泛化保证。
 

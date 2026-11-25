@@ -183,7 +183,7 @@ def main():
                 log.write(json.dumps(dict(command=command))+'\n'); log.flush()
                 subprocess.run(command, stdout=log, stderr=subprocess.STDOUT, env=environment, check=True)
             validate_run(json.loads(summary_path.read_text()), contract, tasks, model, args.device, dtype)
-    write_report(args.output_root, contract, tasks, ROOT/'MODEL_SCALE_DIAGNOSTIC.md', dtype=None if args.prepare else dtype)
+    write_report(args.output_root, contract, tasks, ROOT/'docs/model-scale/MODEL_SCALE_DIAGNOSTIC.md', dtype=None if args.prepare else dtype)
 
 
 if __name__ == '__main__':

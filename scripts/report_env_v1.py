@@ -131,7 +131,7 @@ def reference_examples(rows):
 
 
 def main():
-    output=ROOT.parent/'results/env_v1_baseline.jsonl'
+    output=ROOT/'results/env_v1_baseline.jsonl'
     rows=[json.loads(line) for line in output.read_text().splitlines()]
     summary=json.loads(output.with_suffix('.summary.json').read_text())
     if len(rows)!=40 or summary['task_count']!=40:raise ValueError('Full 40-task baseline required')
@@ -144,7 +144,7 @@ def main():
     reference=output.with_name('env_v1_reference.jsonl')
     if sum(r['success'] for r in rows)<2 and reference.exists():
         report+=reference_examples([json.loads(line) for line in reference.read_text().splitlines()])
-    (ROOT.parent/'ENV_V1_RESULTS.md').write_text(report)
+    (ROOT/'docs/environment/ENV_V1_RESULTS.md').write_text(report)
 
 
 if __name__=='__main__':main()
